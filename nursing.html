@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nursing & Healthcare Services — Venad Global Consultancy</title>
+<style>
+  :root {
+    --navy: #1B3A6B;
+    --gold: #C9A227;
+    --green: #1A6B3A;
+    --teal: #0D6B6B;
+    --light-green: #EBF7EF;
+    --light-blue: #EBF2FA;
+    --light-gold: #FDF6E3;
+    --gray: #F5F5F5;
+    --text: #222;
+    --muted: #555;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; color: var(--text); background: #fff; }
+
+  .hero {
+    background: linear-gradient(135deg, #0D3B1F 0%, #1A6B3A 100%);
+    color: #fff;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .hero .tag { color: var(--gold); font-size: 0.85rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.75rem; }
+  .hero h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .hero .sub { color: var(--gold); font-size: 1.1rem; margin-bottom: 1rem; }
+  .hero p { opacity: 0.85; max-width: 680px; margin: 0 auto; line-height: 1.7; }
+
+  .nav-bar {
+    background: var(--navy);
+    padding: 0.75rem 2rem;
+    display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;
+  }
+  .nav-bar .brand { color: var(--gold); font-weight: bold; font-size: 1rem; text-decoration: none; }
+  .nav-bar a { color: #ccc; text-decoration: none; font-size: 0.85rem; }
+  .nav-bar a:hover { color: var(--gold); }
+
+  main { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+  .section-title {
+    font-size: 1.5rem; font-weight: 700; color: var(--navy);
+    border-bottom: 3px solid var(--gold);
+    padding-bottom: 0.5rem; margin: 2.5rem 0 1.25rem;
+  }
+
+  .why-box {
+    background: var(--light-green);
+    border-left: 5px solid var(--green);
+    border-radius: 0 8px 8px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.25rem 0;
+  }
+  .why-box h3 { color: var(--green); margin-bottom: 0.75rem; font-size: 1rem; }
+  .why-box ul { padding-left: 1.25rem; }
+  .why-box li { margin-bottom: 0.5rem; line-height: 1.6; font-size: 0.95rem; }
+
+  .warning-box {
+    background: #FFFBEB;
+    border-left: 5px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #7A5C00;
+  }
+  .warning-box strong { display: block; margin-bottom: 0.25rem; }
+
+  .country-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+  }
+  .country-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.25rem;
+    background: #fff;
+    border-top: 4px solid var(--navy);
+  }
+  .country-card.uk { border-top-color: #C41E3A; }
+  .country-card.au { border-top-color: #00843D; }
+  .country-card.me { border-top-color: #C9A227; }
+  .country-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+  .country-card .flag { font-size: 1.5rem; margin-bottom: 0.4rem; display: block; }
+  .country-card ul { padding-left: 1.1rem; }
+  .country-card li { font-size: 0.88rem; line-height: 1.6; color: var(--muted); margin-bottom: 0.3rem; }
+  .country-card .salary { font-size: 0.85rem; font-weight: bold; color: var(--green); margin-top: 0.6rem; }
+  .country-card .timeline { font-size: 0.82rem; color: var(--muted); }
+
+  table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.9rem; }
+  th { background: var(--navy); color: #fff; padding: 0.65rem 0.75rem; text-align: left; }
+  td { padding: 0.6rem 0.75rem; border-bottom: 1px solid #eee; vertical-align: top; }
+  tr:nth-child(even) td { background: var(--light-green); }
+  .step-num { font-weight: bold; color: var(--green); }
+
+  .compare-table th { background: var(--green); font-size: 0.85rem; }
+  .compare-table td { font-size: 0.85rem; }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .price-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.25rem;
+    background: #fff;
+  }
+  .price-card.featured { border: 2px solid var(--green); }
+  .price-card h3 { font-size: 0.95rem; color: var(--navy); margin-bottom: 0.4rem; }
+  .price-card .price { font-size: 1.35rem; font-weight: bold; color: var(--green); margin-bottom: 0.5rem; }
+  .price-card ul { padding-left: 1.1rem; }
+  .price-card li { font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.25rem; }
+  .price-free { background: var(--light-green); }
+
+  .cta-bar {
+    background: var(--green);
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 2.5rem 0;
+  }
+  .cta-bar h3 { font-size: 1.2rem; margin-bottom: 0.6rem; }
+  .cta-bar p { opacity: 0.9; margin-bottom: 1rem; font-size: 0.95rem; }
+  .cta-bar a {
+    background: var(--gold); color: var(--navy);
+    padding: 0.7rem 1.5rem; border-radius: 6px;
+    text-decoration: none; font-weight: bold; font-size: 0.95rem;
+    display: inline-block; margin: 0.3rem;
+  }
+
+  .disclaimer {
+    background: #FFF0F0;
+    border: 1px solid #F5CCCC;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 2rem 0;
+    font-size: 0.85rem;
+    color: #6B1A1A;
+    line-height: 1.7;
+  }
+  .disclaimer strong { display: block; margin-bottom: 0.4rem; color: #8B0000; }
+
+  footer {
+    background: var(--navy); color: #aaa;
+    text-align: center; padding: 1.5rem;
+    font-size: 0.85rem;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 1.7rem; }
+    table { font-size: 0.8rem; }
+    .country-cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav-bar">
+  <a href="index.html" class="brand">⚡ Venad Global Consultancy</a>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+    <a href="services.html">All Services</a>
+    <a href="nursing.html">Nursing</a>
+    <a href="sop.html">How It Works</a>
+    <a href="index.html">CV / Profile</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="tag">🏥 Healthcare Professionals Abroad</div>
+  <h1>Nursing & Allied Health Services</h1>
+  <div class="sub">🇨🇦 Canada &nbsp;|&nbsp; 🇬🇧 United Kingdom &nbsp;|&nbsp; 🇦🇺 Australia &nbsp;|&nbsp; 🇦🇪 Middle East</div>
+  <p>Honest, experience-based guidance for Kerala nurses seeking opportunities abroad. We helped our own family member reach the UK — we know the real process, real timelines, and real challenges.</p>
+</div>
+
+<main>
+
+  <div class="why-box">
+    <h3>🌟 Why Kerala Nurses Trust Venad Global</h3>
+    <ul>
+      <li><strong>Personal experience</strong> — our founder assisted a family member to successfully relocate to the United Kingdom as a nurse.</li>
+      <li><strong>Canada expertise</strong> — Atlantic Immigration Program (AIP) guidance is our primary strength. Nurses are among the most in-demand professions in Atlantic Canada.</li>
+      <li><strong>Honest assessment</strong> — we will tell you exactly which pathway suits your qualification (GNM / BSc / Post-Basic / MSc) and which country is most realistic.</li>
+      <li><strong>No hidden agency fees</strong> — transparent consultancy fee only. We do not take cuts from visa applications or employer referrals.</li>
+      <li><strong>First consultation is always FREE</strong> — 30 minutes, no obligation, no payment.</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">Destination Overview</h2>
+
+  <div class="country-cards">
+    <div class="country-card">
+      <span class="flag">🇨🇦</span>
+      <h3>Canada — AIP</h3>
+      <ul>
+        <li>21,000+ nurse vacancies nationally</li>
+        <li>No CRS competition — employer-driven</li>
+        <li>NCLEX-RN + NNAS credential assessment</li>
+        <li>Nova Scotia: 600 extra CRS points via NSNP</li>
+        <li>Family can join — full PR pathway</li>
+      </ul>
+      <div class="salary">CAD $70,000–$95,000 / year</div>
+      <div class="timeline">Timeline: 12–24 months</div>
+    </div>
+    <div class="country-card uk">
+      <span class="flag">🇬🇧</span>
+      <h3>United Kingdom — NHS</h3>
+      <ul>
+        <li>Health &amp; Care Worker Visa — lower fees</li>
+        <li>No Immigration Health Surcharge (saves £1,035+/yr)</li>
+        <li>NMC registration: CBT (India) + OSCE (UK)</li>
+        <li>NHS Trusts cover sponsorship &amp; relocation</li>
+        <li>ILR (permanent residence) after 5 years</li>
+      </ul>
+      <div class="salary">£27,735–£42,000 / year (Band 5–7)</div>
+      <div class="timeline">Timeline: 8–18 months</div>
+    </div>
+    <div class="country-card au">
+      <span class="flag">🇦🇺</span>
+      <h3>Australia — Skills in Demand</h3>
+      <ul>
+        <li>AHPRA registration + ANMAC assessment</li>
+        <li>Employer sponsorship required</li>
+        <li>IELTS Academic 7.0 or OET Grade B</li>
+        <li>PR pathway after 2 years of work</li>
+      </ul>
+      <div class="salary">AUD $70,000–$85,000 / year</div>
+      <div class="timeline">Timeline: 12–18 months</div>
+    </div>
+    <div class="country-card me">
+      <span class="flag">🇦🇪</span>
+      <h3>Middle East — GCC</h3>
+      <ul>
+        <li>UAE, Saudi Arabia, Qatar, Kuwait, Oman</li>
+        <li>Fastest route — 3–6 months typically</li>
+        <li>Tax-free salary + accommodation often provided</li>
+        <li>DHA / MOH / HAAD licensing via employer</li>
+        <li>20+ years GCC experience — our strength</li>
+      </ul>
+      <div class="salary">AED 48,000–96,000 / year (tax-free)</div>
+      <div class="timeline">Timeline: 3–6 months</div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Canada — Step-by-Step Pathway</h2>
+
+  <table>
+    <tr><th>Step</th><th>Action</th><th>Where</th><th>Cost</th></tr>
+    <tr><td class="step-num">1</td><td>IELTS General Training — minimum Band 6.0 (CLB 6 for AIP TEER 2/3)</td><td>britishcouncil.in</td><td>~Rs. 16,500</td></tr>
+    <tr><td class="step-num">2</td><td>NNAS credential assessment — Canadian nursing standards review</td><td>nnas.ca</td><td>CAD $465–650</td></tr>
+    <tr><td class="step-num">3</td><td>Provincial regulatory body registration (CRNNS, ARNNL, NANB, ARNPEI)</td><td>Province website</td><td>CAD $200–500</td></tr>
+    <tr><td class="step-num">4</td><td>NCLEX-RN exam — can be taken in India at Pearson VUE centres</td><td>pearsonvue.com/nmc</td><td>USD $200</td></tr>
+    <tr><td class="step-num">5</td><td>Jurisprudence Exam — provincial laws and nursing ethics</td><td>Online</td><td>CAD $50–100</td></tr>
+    <tr><td class="step-num">6</td><td>Job offer from AIP-designated employer (NS Health, hospitals, LTC homes)</td><td>jobbank.gc.ca / LinkedIn</td><td>Free</td></tr>
+    <tr><td class="step-num">7</td><td>AIP Endorsement — employer endorses through province</td><td>Employer handles</td><td>Free</td></tr>
+    <tr><td class="step-num">8</td><td>PR Application to IRCC</td><td>ircc.canada.ca</td><td>CAD $1,365</td></tr>
+  </table>
+
+  <div class="warning-box">
+    <strong>⚠ Important for GNM Holders</strong>
+    GNM (General Nursing & Midwifery diploma) holders are eligible for international nursing but the pathway varies by country. In Canada, GNM qualifies for Licensed Practical Nurse (LPN/RPN) registration in most provinces — not RN. In the UK, GNM qualifies as a Registered Nurse (RGN) through NMC. Always clarify your specific qualification with us in your free consultation before starting.
+  </div>
+
+  <h2 class="section-title">United Kingdom — Step-by-Step Pathway</h2>
+
+  <table>
+    <tr><th>Step</th><th>Action</th><th>Notes</th></tr>
+    <tr><td class="step-num">1</td><td>IELTS Academic min. 7.0 each band OR OET Grade B each section</td><td>Can use IELTS you already have if it meets NMC requirements</td></tr>
+    <tr><td class="step-num">2</td><td>NMC application — submit degree, INC registration, references</td><td>nmc.org.uk — Decision Letter in ~60 working days</td></tr>
+    <tr><td class="step-num">3</td><td>CBT (Computer Based Test) — theoretical nursing knowledge</td><td>Taken in India at Pearson VUE centres</td></tr>
+    <tr><td class="step-num">4</td><td>Job search — NHS Jobs, nursing recruitment agencies</td><td>jobs.nhs.uk — search 'international nursing'</td></tr>
+    <tr><td class="step-num">5</td><td>Certificate of Sponsorship (CoS) — issued by NHS Trust</td><td>NHS Trust handles — free for you</td></tr>
+    <tr><td class="step-num">6</td><td>Health &amp; Care Worker Visa application — online, biometrics at VFS India</td><td>Reduced fee (£232–464). No IHS surcharge.</td></tr>
+    <tr><td class="step-num">7</td><td>Travel to UK — OSCE training funded by NHS Trust (6–12 weeks)</td><td>3 attempts allowed. Employer funds training.</td></tr>
+    <tr><td class="step-num">8</td><td>NMC PIN — full Registered Nurse status. Career begins!</td><td>After passing OSCE</td></tr>
+  </table>
+
+  <div class="warning-box">
+    <strong>⚠ Care Worker Roles EXCLUDED from Health &amp; Care Worker Visa (since July 22, 2025)</strong>
+    This guide applies to <strong>registered nurses (NMC-registered RGN/RN) only</strong>. Care assistant and support worker roles are no longer eligible for this visa route.
+  </div>
+
+  <h2 class="section-title">Country Comparison at a Glance</h2>
+
+  <table class="compare-table">
+    <tr><th>Factor</th><th>🇨🇦 Canada</th><th>🇬🇧 UK</th><th>🇦🇺 Australia</th><th>🇦🇪 Middle East</th></tr>
+    <tr><td><strong>Salary</strong></td><td>CAD $70K–95K</td><td>£28K–42K</td><td>AUD $70K–85K</td><td>AED 48K–96K (tax-free)</td></tr>
+    <tr><td><strong>PR Pathway</strong></td><td>AIP / Express Entry</td><td>ILR after 5 yrs</td><td>After 2 yrs work</td><td>Very difficult</td></tr>
+    <tr><td><strong>Language Test</strong></td><td>IELTS 6.0</td><td>IELTS 7.0 / OET B</td><td>IELTS 7.0 / OET B</td><td>Not always required</td></tr>
+    <tr><td><strong>Licensing Exam</strong></td><td>NCLEX-RN (can sit in India)</td><td>CBT (India) + OSCE (UK)</td><td>AHPRA assessment</td><td>MOH / DHA exam</td></tr>
+    <tr><td><strong>Family</strong></td><td>Yes — full AIP</td><td>Yes — NHS</td><td>Yes</td><td>Employer dependent</td></tr>
+    <tr><td><strong>Timeline</strong></td><td>12–24 months</td><td>8–18 months</td><td>12–18 months</td><td>3–6 months</td></tr>
+    <tr><td><strong>Best For</strong></td><td>BSc + PR goal</td><td>GNM + BSc</td><td>BSc + PR goal</td><td>Quick income, save money</td></tr>
+  </table>
+
+  <h2 class="section-title">Our Services &amp; Fees</h2>
+
+  <div class="pricing-grid">
+    <div class="price-card price-free">
+      <h3>🤝 Free Initial Consultation</h3>
+      <div class="price">FREE</div>
+      <ul>
+        <li>30-minute WhatsApp or video call</li>
+        <li>Honest eligibility assessment</li>
+        <li>Best country recommendation for your qualification</li>
+        <li>Realistic timeline and cost overview</li>
+        <li>No payment, no obligation</li>
+      </ul>
+    </div>
+    <div class="price-card featured">
+      <h3>🇨🇦 Canada AIP — Nursing Complete</h3>
+      <div class="price">Rs. 10,000–18,000</div>
+      <ul>
+        <li>NNAS guidance &amp; document checklist</li>
+        <li>NCLEX prep roadmap &amp; resources</li>
+        <li>IELTS strategy for nursing</li>
+        <li>Canadian nursing CV &amp; cover letters</li>
+        <li>Designated employer job search</li>
+        <li>AIP process end-to-end support</li>
+        <li>Instalments available</li>
+      </ul>
+    </div>
+    <div class="price-card">
+      <h3>🇬🇧 UK Health &amp; Care Worker Visa</h3>
+      <div class="price">Rs. 8,000–15,000</div>
+      <ul>
+        <li>NMC registration guidance</li>
+        <li>CBT exam prep roadmap</li>
+        <li>IELTS / OET strategy</li>
+        <li>NHS job search strategy</li>
+        <li>CoS and visa process guidance</li>
+        <li>OSCE preparation tips</li>
+      </ul>
+    </div>
+    <div class="price-card">
+      <h3>🇦🇺 Australia Nursing Guidance</h3>
+      <div class="price">Rs. 7,000–12,000</div>
+      <ul>
+        <li>ANMAC assessment guidance</li>
+        <li>AHPRA registration process</li>
+        <li>IELTS / OET strategy</li>
+        <li>Australian nursing CV</li>
+        <li>Employer search strategy</li>
+      </ul>
+    </div>
+    <div class="price-card">
+      <h3>🇦🇪 Middle East Nursing Package</h3>
+      <div class="price">Rs. 3,500–7,000</div>
+      <ul>
+        <li>Gulf-format nursing CV</li>
+        <li>Direct hospital email strategy</li>
+        <li>DHA / MOH / HAAD overview</li>
+        <li>Bayt, Naukrigulf, LinkedIn guidance</li>
+        <li>20+ years GCC experience</li>
+      </ul>
+    </div>
+    <div class="price-card">
+      <h3>📄 Nursing CV &amp; Cover Letter</h3>
+      <div class="price">Rs. 1,500–3,000</div>
+      <ul>
+        <li>Country-specific nursing CV format</li>
+        <li>Tailored cover letter</li>
+        <li>ATS-optimised for Canada / UK / AU</li>
+        <li>1 revision included</li>
+      </ul>
+    </div>
+    <div class="price-card">
+      <h3>📝 IELTS / OET Prep Guidance</h3>
+      <div class="price">Rs. 2,000</div>
+      <ul>
+        <li>Customised study plan</li>
+        <li>Free resource list</li>
+        <li>Writing practice &amp; feedback (3 sessions)</li>
+        <li>Exam registration guidance</li>
+      </ul>
+    </div>
+    <div class="price-card">
+      <h3>📚 NCLEX / CBT Preparation Guide</h3>
+      <div class="price">Rs. 2,000</div>
+      <ul>
+        <li>Study roadmap</li>
+        <li>Resource list (free &amp; paid)</li>
+        <li>Exam registration step-by-step</li>
+        <li>Timeline planning</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cta-bar">
+    <h3>Ready to Start Your Nursing Journey Abroad?</h3>
+    <p>First consultation is always FREE. Let us give you an honest picture before you invest a single rupee.</p>
+    <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20am%20a%20nurse%20from%20Kerala%20interested%20in%20working%20abroad.%20I%20would%20like%20a%20free%20consultation.">💬 WhatsApp for Free Consultation</a>
+    <a href="mailto:venadglobal@gmail.com">venadglobal@gmail.com</a>
+  </div>
+
+  <div class="disclaimer">
+    <strong>⚠ Important Disclaimer</strong>
+    Venad Global Consultancy provides career guidance and document preparation services only. We are not licensed immigration lawyers, registered nurses, or certified nursing educators. We do not register candidates with NNAS, AHPRA, NMC, or any regulatory body — we guide you through those processes. We do not guarantee visa approvals, job offers, exam pass rates, or nursing licensure. All requirements are subject to change — always verify current requirements at official government and regulatory body websites. Guidance on Canada immigration does not constitute legal immigration advice.
+  </div>
+
+</main>
+
+<footer>
+  <p>⚡ <strong style="color:#C9A227">Venad Global Consultancy</strong> &nbsp;|&nbsp; Kollam, Kerala, India &nbsp;|&nbsp; <a href="https://wa.me/918589895659">+91 8589895659</a> &nbsp;|&nbsp; <a href="mailto:venadglobal@gmail.com">venadglobal@gmail.com</a></p>
+  <div style="display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;margin-top:0.5rem">
+    <a href="https://www.facebook.com/venadglobalconsultancy

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Venad Global Consultancy — All Links</title>
+<meta name="description" content="Honest career guidance from Kerala — Canada AIP, UK, Australia, Nursing, Website Development. Free consultation always."/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Arial,sans-serif;
+  background:#0D1F3C;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:2rem 1rem 3rem;
+}
+
+/* Background pattern */
+body::before{
+  content:'';
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background-image:
+    repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(201,162,39,0.03) 40px,rgba(201,162,39,0.03) 41px);
+  pointer-events:none;
+  z-index:0;
+}
+
+.container{
+  width:100%;
+  max-width:480px;
+  position:relative;
+  z-index:1;
+}
+
+/* TOP BAR */
+.top-bar{
+  height:4px;
+  background:linear-gradient(90deg,#1A6B3A,#C9A227,#1B3A6B);
+  border-radius:2px;
+  margin-bottom:2rem;
+}
+
+/* PROFILE */
+.profile{
+  text-align:center;
+  margin-bottom:2rem;
+}
+.logo-circle{
+  width:80px;
+  height:80px;
+  background:#1B3A6B;
+  border:3px solid #C9A227;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 1rem;
+  font-family:Georgia,serif;
+  font-size:28px;
+  font-weight:700;
+  color:#C9A227;
+  letter-spacing:1px;
+}
+.profile-name{
+  font-family:Georgia,serif;
+  font-size:1.5rem;
+  font-weight:700;
+  color:#FFFFFF;
+  letter-spacing:1px;
+  margin-bottom:2px;
+}
+.profile-sub{
+  font-size:0.78rem;
+  color:#C9A227;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:0.75rem;
+}
+.profile-bio{
+  font-size:0.88rem;
+  color:rgba(255,255,255,0.65);
+  line-height:1.6;
+  max-width:360px;
+  margin:0 auto;
+}
+
+/* DIVIDER */
+.divider{
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,162,39,0.4),transparent);
+  margin:1.5rem 0;
+}
+
+/* SECTION LABEL */
+.section-label{
+  font-size:0.68rem;
+  font-weight:700;
+  color:rgba(255,255,255,0.35);
+  letter-spacing:3px;
+  text-transform:uppercase;
+  text-align:center;
+  margin-bottom:0.75rem;
+}
+
+/* LINK BUTTONS */
+.link-btn{
+  display:flex;
+  align-items:center;
+  gap:0.9rem;
+  width:100%;
+  padding:0.9rem 1.1rem;
+  border-radius:12px;
+  text-decoration:none;
+  margin-bottom:0.65rem;
+  transition:transform 0.15s, opacity 0.15s;
+  border:1px solid transparent;
+}
+.link-btn:hover{
+  transform:translateY(-2px);
+  opacity:0.92;
+  text-decoration:none;
+}
+.link-btn:active{transform:scale(0.98)}
+
+.link-icon{
+  font-size:1.3rem;
+  width:32px;
+  text-align:center;
+  flex-shrink:0;
+}
+.link-text{flex:1}
+.link-title{
+  font-size:0.95rem;
+  font-weight:700;
+  line-height:1.2;
+}
+.link-desc{
+  font-size:0.75rem;
+  opacity:0.8;
+  margin-top:1px;
+  line-height:1.3;
+}
+.link-arrow{
+  font-size:0.9rem;
+  opacity:0.5;
+  flex-shrink:0;
+}
+
+/* BUTTON STYLES */
+.btn-gold{
+  background:#C9A227;
+  color:#1B3A6B;
+  border-color:#C9A227;
+}
+.btn-wa{
+  background:#25D366;
+  color:#fff;
+  border-color:#25D366;
+}
+.btn-navy{
+  background:#1B3A6B;
+  color:#fff;
+  border-color:rgba(201,162,39,0.4);
+}
+.btn-green{
+  background:#1A6B3A;
+  color:#fff;
+  border-color:rgba(201,162,39,0.3);
+}
+.btn-web{
+  background:#1A4A8B;
+  color:#fff;
+  border-color:rgba(255,255,255,0.15);
+}
+.btn-fb{
+  background:#1877F2;
+  color:#fff;
+  border-color:#1877F2;
+}
+.btn-ig{
+  background:linear-gradient(135deg,#833AB4,#FD1D1D,#FCAF45);
+  color:#fff;
+  border-color:transparent;
+}
+.btn-outline{
+  background:rgba(255,255,255,0.05);
+  color:#fff;
+  border-color:rgba(255,255,255,0.2);
+}
+.btn-x{
+  background:#000;
+  color:#fff;
+  border-color:rgba(255,255,255,0.2);
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  margin-top:2.5rem;
+  padding-top:1.5rem;
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+.footer-name{
+  font-family:Georgia,serif;
+  font-size:0.8rem;
+  color:rgba(255,255,255,0.4);
+  letter-spacing:1px;
+  margin-bottom:0.3rem;
+}
+.footer-tagline{
+  font-size:0.72rem;
+  color:rgba(201,162,39,0.5);
+  letter-spacing:2px;
+}
+
+/* BADGE */
+.badge{
+  font-size:0.62rem;
+  font-weight:700;
+  padding:2px 6px;
+  border-radius:4px;
+  background:rgba(255,255,255,0.2);
+  color:#fff;
+  margin-left:6px;
+  vertical-align:middle;
+}
+.badge-free{background:#1A6B3A;color:#fff}
+.badge-new{background:#C9A227;color:#1B3A6B}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2BZDPM9EZM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2BZDPM9EZM');
+</script>
+</head>
+<body>
+<div class="container">
+
+  <div class="top-bar"></div>
+
+  <!-- PROFILE -->
+  <div class="profile">
+    <div class="logo-circle">VG</div>
+    <div class="profile-name">VENAD GLOBAL</div>
+    <div class="profile-sub">Consultancy &nbsp;·&nbsp; Kollam, Kerala</div>
+    <div class="profile-bio">Honest career guidance based on 30+ years of real international experience. No fake promises. First consultation always free.</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CONSULT -->
+  <div class="section-label">Start Here</div>
+
+  <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20would%20like%20a%20free%20consultation%20with%20Venad%20Global" class="link-btn btn-wa">
+    <span class="link-icon">💬</span>
+    <div class="link-text">
+      <div class="link-title">WhatsApp — Free Consultation <span class="badge badge-free">FREE</span></div>
+      <div class="link-desc">Send a message — I reply personally</div>
+    </div>
+    <span class="link-arrow">›</span>
+  </a>
+
+  <div class="divider"></div>
+
+  <!-- SERVICES -->
+  <div class="section-label">Our Services</div>
+
+  <a href="services.html" class="link-btn btn-navy">
+    <span class="link-icon">🌐</span>
+    <div class="link-text">
+      <div class="link-title">All Services &amp; Pricing</div>
+      <div class="link-desc">Canada · UK · Australia · NZ · Germany · Middle East</div>
+    </div>
+    <span class="link-arrow">›</span>
+  </a>
+
+  <a href="nursing.html" class="link-btn btn-green">
+    <span class="link-icon">🏥</span>
+    <div class="link-text">
+      <div class="link-title">Nursing &amp; Healthcare Abroad <span class="badge badge-new">NEW</span></div>
+      <div class="link-desc">Canada · UK · Australia · Gulf — Real family success story</div>
+    </div>
+    <span class="link-arrow">›</span>
+  </a>
+
+  <a href="https://venadglobal.github.io/Venad_Global_Pricing_Guide_v2.pdf" class="link-btn btn-gold">
+    <span class="link-icon">📋</span>
+    <div class="link-text">
+      <div class="link-title">Download Pricing Guide (PDF)</div>
+      <div class="link-desc">All services, all prices — transparent &amp; honest</div>
+    </div>
+    <span class="link-arrow">›</span>
+  </a>
+
+  <a href="https://venadglobal.github.io/VG_Nursing_Services_Guide.pdf" class="link-btn btn-green">
+    <span class="link-icon">📥</span>
+    <div class="link-text">
+      <div class="link-title">Nursing Guide (PDF)</div>
+      <div class="link-desc">Complete guide for nurses going abroad</div>
+    </div>
+    <span class="link-arrow">›</span>
+  </a>
+
+  <a href="https://venadglobal.github.io/Venad_Global_Service_Agreement.pdf" class="link-btn btn-outline">
+    <span class="link-icon">📄</span>
+    <div class="link-text">
+      <div class="link-title">Service Agreement (PDF)</div>
+      <div class="link-desc">No surprises — read before we begin</div>
+    </div>
+    <span class="link-arrow">›</span>
+  </a>
+
+  <div class="divider"></div>
+
+  <!-- SOCIAL -->
+  <div class="section-label">Find Us Online</div>
+
+  <a href="https://www.facebook.com/venadglobalconsultancy" class="link-btn btn-fb">
+    <span class="link-icon">📘</span>
+    <div class="link-text">
+      <div class="link-title">Facebook</div>
+      <div class="link-desc">facebook.com/venadglobalconsultancy</div>
+    </div>
+    <span class="link-arrow">›</span>
+  </a>
+
+  <a href="https://www.instagram.com/venadglobal/" class="link-btn btn-ig">
+    <span class="link-icon">📸</span>
+    <div class="link-text">
+      <div class="link-title">Instagram</div>
+      <div class="link-desc">@venadglobal</div>
+    </div>
+    <span class="link-arrow">›</span>
+  </a>
+
+  <a href="https://x.com/venadglobal" class="link-btn btn-x">
+    <span class="link-icon">✖</span>
+    <div class="link-text">
+      <div class="link-title">X (Twitter)</div>
+      <div class="link-desc">@venadglobal</div>
+    </div>
+    <span class="link-arrow">›</span>
+  </a>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT -->
+  <div class="section-label">About Antony</div>
+
+  <a href="https://idivet.github.io/cv/" target="_blank" class="link-btn btn-navy">
+    <span class="link-icon">👤</span>
+    <div class="link-text">
+      <div class="link-title">Antony Ancil — CV</div>
+      <div class="link-desc">30+ years international experience · HCT UAE · AIP Candidate</div>
+    </div>
+    <span class="link-arrow">›</span>
+  </a>
+
+  <a href="https://linkedin.com/in/idivet" class="link-btn btn-web">
+    <span class="link-icon">🔗</span>
+    <div class="link-text">
+      <div class="link-title">LinkedIn Profile</div>
+      <div class="link-desc">linkedin.com/in/idivet</div>
+    </div>
+    <span class="link-arrow">›</span>
+  </a>
+
+  <a href="https://idivet.github.io/ar/" class="link-btn btn-outline">
+    <span class="link-icon">🇦🇪</span>
+    <div class="link-text">
+      <div class="link-title">Arabic Version — النسخة العربية</div>
+      <div class="link-desc">idivet.github.io/ar/</div>
+    </div>
+    <span class="link-arrow">›</span>
+  </a>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-name">⚡ VENAD GLOBAL CONSULTANCY</div>
+    <div class="footer-tagline">KOLLAM · KERALA · EST. 2026 · IDIVET = THUNDER</div>
+  </div>
+
+</div>
+</body>
+</html>

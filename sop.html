@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>How It Works — Venad Global Consultancy</title>
+<meta name="description" content="Complete transparency — from your first WhatsApp message to your final goal. No hidden steps, no surprises."/>
+<style>
+:root{--navy:#1B3A6B;--gold:#C9A227;--green:#1A6B3A;--white:#fff;--light:#F8F9FB;--muted:#555;--border:#E2E8F0;--dark:#0D1F3C}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#1a1a1a;line-height:1.6;background:#fff}
+a{text-decoration:none;color:var(--navy)}
+a:hover{text-decoration:underline}
+
+.nav{background:var(--navy);padding:0.7rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;position:sticky;top:0;z-index:100}
+.nav-brand{color:var(--gold);font-family:Georgia,serif;font-size:1.1rem;font-weight:700;letter-spacing:1px}
+.nav-brand span{color:#fff;font-size:0.75rem;display:block;letter-spacing:3px;font-family:Arial,sans-serif;font-weight:400}
+.nav-links{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center}
+.nav-links a{color:#ccc;font-size:0.8rem;padding:4px 10px;border-radius:4px}
+.nav-links a:hover{color:var(--gold);text-decoration:none}
+.nav-links .cta{background:var(--gold);color:var(--navy);font-weight:700;padding:5px 12px;border-radius:5px}
+
+.hero{background:linear-gradient(135deg,var(--dark) 0%,var(--navy) 100%);color:#fff;padding:3rem 1.5rem;text-align:center}
+.hero-tag{color:var(--gold);font-size:0.75rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;margin-bottom:0.75rem}
+.hero h1{font-family:Georgia,serif;font-size:2.2rem;margin-bottom:0.5rem}
+.hero p{color:rgba(255,255,255,0.75);max-width:600px;margin:0 auto;font-size:0.95rem}
+
+.content{max-width:800px;margin:0 auto;padding:3rem 1.5rem}
+
+.steps-section h2{font-family:Georgia,serif;font-size:1.6rem;color:var(--navy);margin-bottom:0.3rem}
+.steps-section .sub{color:var(--muted);margin-bottom:2.5rem;font-size:0.9rem}
+
+.step-card{display:flex;gap:1.25rem;margin-bottom:1.75rem;background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.25rem;border-left:4px solid var(--navy)}
+.step-card.gold{border-left-color:var(--gold)}
+.step-card.green{border-left-color:var(--green)}
+.step-num-col{flex-shrink:0;text-align:center}
+.step-num{width:44px;height:44px;background:var(--navy);color:var(--gold);font-weight:700;font-size:1rem;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:0.3rem}
+.step-timing{font-size:0.68rem;color:var(--muted);text-align:center;line-height:1.3;max-width:44px}
+.step-body h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem}
+.step-body .step-tag{font-size:0.7rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem;display:block}
+.step-body p{font-size:0.87rem;color:var(--muted);line-height:1.65;margin-bottom:0.5rem}
+.step-tip{background:var(--light);border-left:3px solid var(--gold);padding:0.5rem 0.75rem;font-size:0.82rem;color:var(--muted);border-radius:0 6px 6px 0;margin-top:0.5rem}
+
+.section-divider{height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin:2.5rem 0}
+
+.docs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:2rem}
+.doc-card{background:var(--light);border:1px solid var(--border);border-radius:8px;padding:1rem;text-align:center}
+.doc-icon{font-size:1.4rem;margin-bottom:0.4rem}
+.doc-card h4{font-size:0.85rem;color:var(--navy);font-weight:700;margin-bottom:0.3rem}
+.doc-card p{font-size:0.75rem;color:var(--muted)}
+
+.commitments{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2rem}
+@media(max-width:600px){.commitments{grid-template-columns:1fr}}
+.commit-card{border-radius:10px;padding:1.25rem}
+.commit-yes{background:#F0FDF4;border:1px solid #BBF7D0}
+.commit-ask{background:#FFF7ED;border:1px solid #FED7AA}
+.commit-card h3{font-size:0.95rem;font-weight:700;margin-bottom:0.75rem}
+.commit-yes h3{color:var(--green)}
+.commit-ask h3{color:#92400E}
+.commit-card li{font-size:0.82rem;color:var(--muted);margin-bottom:0.4rem;padding-left:0.5rem;list-style:none;padding-left:1.2rem;position:relative}
+.commit-card li::before{position:absolute;left:0}
+.commit-yes li::before{content:"✅"}
+.commit-ask li::before{content:"🤝"}
+
+.important-box{background:#FFFBEB;border:1px solid var(--gold);border-radius:10px;padding:1.5rem;margin-bottom:2rem}
+.important-box h3{font-size:1rem;color:var(--navy);font-weight:700;margin-bottom:1rem}
+.important-item{margin-bottom:0.75rem;font-size:0.87rem;color:var(--muted);line-height:1.6;padding-left:1.5rem;position:relative}
+.important-item::before{position:absolute;left:0}
+
+.agreement-steps{display:flex;gap:0.5rem;flex-wrap:wrap;margin:1rem 0;justify-content:center}
+.ag-step{background:var(--navy);color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;flex-shrink:0}
+.ag-label{font-size:0.75rem;color:var(--muted);text-align:center;margin-top:0.2rem}
+.ag-item{text-align:center}
+
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:2rem}
+.contact-card{background:var(--light);border:1px solid var(--border);border-radius:8px;padding:1rem;text-align:center}
+.contact-card .icon{font-size:1.4rem;margin-bottom:0.4rem}
+.contact-card h4{font-size:0.85rem;color:var(--navy);font-weight:700;margin-bottom:0.3rem}
+.contact-card p{font-size:0.78rem;color:var(--muted);line-height:1.5}
+
+.cta-box{background:var(--navy);color:#fff;border-radius:12px;padding:2rem;text-align:center;margin-bottom:2rem}
+.cta-box h2{font-family:Georgia,serif;font-size:1.4rem;margin-bottom:0.5rem}
+.cta-box p{opacity:0.8;font-size:0.9rem;margin-bottom:1.25rem}
+.cta-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+.btn-gold{background:var(--gold);color:var(--navy);padding:0.65rem 1.4rem;border-radius:6px;font-weight:700;font-size:0.9rem}
+.btn-gold:hover{background:#E8C84A;text-decoration:none;color:var(--navy)}
+.btn-outline{border:2px solid rgba(255,255,255,0.4);color:#fff;padding:0.6rem 1.4rem;border-radius:6px;font-size:0.9rem}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);text-decoration:none}
+
+footer{background:var(--dark);color:#aaa;padding:1.5rem;text-align:center}
+footer strong{color:var(--gold)}
+.footer-links{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:0.6rem 0}
+.footer-links a{color:#ccc;font-size:0.8rem}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{margin-top:0.75rem;font-size:0.7rem;opacity:0.35;letter-spacing:1px}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2BZDPM9EZM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2BZDPM9EZM');
+</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">VENAD GLOBAL<span>CONSULTANCY</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="nursing.html">🏥 Nursing</a>
+    <a href="links.html">All Links</a>
+    <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20would%20like%20a%20free%20consultation" class="cta">💬 Free Consult</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Our Process</div>
+  <h1>How It Works</h1>
+  <p>Complete transparency — from your first WhatsApp message to your final goal. No hidden steps. No surprises. No fake promises.</p>
+</div>
+
+<div class="content">
+
+  <div class="steps-section">
+    <h2>Your Journey with Venad Global</h2>
+    <p class="sub">Every client follows the same clear, transparent process. Here is exactly what happens at each stage.</p>
+
+    <div class="step-card gold">
+      <div class="step-num-col">
+        <div class="step-num">1</div>
+        <div class="step-timing">Day 1 · Free · No Obligation</div>
+      </div>
+      <div class="step-body">
+        <span class="step-tag">Free Initial Consultation</span>
+        <h3>WhatsApp or Call — 30 Minutes — FREE</h3>
+        <p>You WhatsApp or call me at <strong>+91 8589895659</strong>. We have a 30-minute conversation about your goals, background, qualifications, and which country or service is right for you. I give you an honest assessment — including if I think the pathway is not realistic for you. No pressure, no payment, no obligation.</p>
+        <div class="step-tip">💡 Come prepared with your basic details — education, work experience, and your target country or goal.</div>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num-col">
+        <div class="step-num">2</div>
+        <div class="step-timing">Day 1–2 · Choose Freely</div>
+      </div>
+      <div class="step-body">
+        <span class="step-tag">Choose Your Service</span>
+        <h3>Pick the Right Package for Your Budget</h3>
+        <p>Based on our consultation, I recommend the right service and tier (Basic, Standard, or Complete). You review our <strong>Pricing Guide</strong> and decide what works for your budget. No hard selling — ever. Take all the time you need.</p>
+        <div class="step-tip">💡 Download the Pricing Guide from this website to compare exactly what each tier includes.</div>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num-col">
+        <div class="step-num">3</div>
+        <div class="step-timing">Day 2–3 · Both Parties Protected</div>
+      </div>
+      <div class="step-body">
+        <span class="step-tag">Sign the Service Agreement</span>
+        <h3>Simple Agreement — No Surprises</h3>
+        <p>Before any work begins, we sign a simple <strong>Service Agreement</strong>. This document clearly states: which services are included, the exact fee, the payment schedule, timelines, and what happens if anything goes wrong. <strong>This protects you as much as it protects us.</strong> Download, fill, sign, and WhatsApp the photo to me.</p>
+        <div class="step-tip">💡 Read every clause carefully. Ask me if anything is unclear before signing.</div>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num-col">
+        <div class="step-num">4</div>
+        <div class="step-timing">Day 3 · Small Advance Only</div>
+      </div>
+      <div class="step-body">
+        <span class="step-tag">Pay Advance &amp; Work Begins</span>
+        <h3>Small Deposit — Instalments Available</h3>
+        <p>A small advance deposit confirms your booking. <strong>Instalment payments available</strong> — you do not pay everything upfront. Payment via Google Pay, PhonePe, UPI, or Bank Transfer. Receipt sent immediately via WhatsApp. Work starts within 24 hours of deposit received.</p>
+        <div class="step-tip">💡 Keep your payment screenshots. We maintain records of all transactions.</div>
+      </div>
+    </div>
+
+    <div class="step-card green">
+      <div class="step-num-col">
+        <div class="step-num">5</div>
+        <div class="step-timing">3–5 Days · Per Document</div>
+      </div>
+      <div class="step-body">
+        <span class="step-tag">Document Delivery</span>
+        <h3>CV, Cover Letters &amp; Guidance — On Time</h3>
+        <p>CVs and cover letters delivered within <strong>3–5 working days</strong> of receiving your information. All documents sent via WhatsApp and email. Revisions included as per your tier. Guidance sessions via WhatsApp call or video call at mutually agreed times.</p>
+        <div class="step-tip">💡 Respond promptly when I request information — delays from your side extend the timeline.</div>
+      </div>
+    </div>
+
+    <div class="step-card green">
+      <div class="step-num-col">
+        <div class="step-num">6</div>
+        <div class="step-timing">Ongoing · Until Goal</div>
+      </div>
+      <div class="step-body">
+        <span class="step-tag">Ongoing Support</span>
+        <h3>With You Until Your Goal is Achieved</h3>
+        <p>I continue supporting you throughout your job search, application process, or admission journey. Progress updates, employer follow-up advice, interview tips — all included as per your package tier. I respond within 24 hours on working days. <strong>Your goal is my goal.</strong></p>
+        <div class="step-tip">💡 Keep me updated on every response you receive — good or bad. The more I know, the better I can help.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <h2 style="font-family:Georgia,serif;font-size:1.4rem;color:var(--navy);margin-bottom:0.3rem">What to Have Ready</h2>
+  <p style="color:var(--muted);margin-bottom:1.5rem;font-size:0.9rem">Having these documents ready speeds up the process significantly.</p>
+  <div class="docs-grid">
+    <div class="doc-card">
+      <div class="doc-icon">📋</div>
+      <h4>Personal</h4>
+      <p>Full name, date of birth, address, Aadhaar, phone, email</p>
+    </div>
+    <div class="doc-card">
+      <div class="doc-icon">🎓</div>
+      <h4>Education</h4>
+      <p>Degree/diploma certificates, mark sheets, institution names, dates</p>
+    </div>
+    <div class="doc-card">
+      <div class="doc-icon">💼</div>
+      <h4>Work Experience</h4>
+      <p>Employer names, job titles, dates, key responsibilities, reference contacts</p>
+    </div>
+    <div class="doc-card">
+      <div class="doc-icon">🌍</div>
+      <h4>For Immigration</h4>
+      <p>Passport copy, visa history, IELTS score, police clearance, target country</p>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <h2 style="font-family:Georgia,serif;font-size:1.4rem;color:var(--navy);margin-bottom:1.25rem">Our Commitments — and Yours</h2>
+  <div class="commitments">
+    <div class="commit-card commit-yes">
+      <h3>✅ We Commit to You</h3>
+      <ul>
+        <li>Honest assessment — no false hope</li>
+        <li>Documents delivered on time</li>
+        <li>WhatsApp reply within 24 hours</li>
+        <li>Your data kept strictly confidential</li>
+        <li>No hidden fees — ever</li>
+        <li>Receipt for every payment immediately</li>
+        <li>Tell you if a pathway is not suitable</li>
+        <li>Support until your goal is achieved</li>
+      </ul>
+    </div>
+    <div class="commit-card commit-ask">
+      <h3>🤝 We Ask from You</h3>
+      <ul>
+        <li>Provide accurate, honest information</li>
+        <li>Respond to messages in reasonable time</li>
+        <li>Read the Service Agreement carefully</li>
+        <li>Keep payment screenshots as proof</li>
+        <li>Inform us of any changes in situation</li>
+        <li>Verify documents before submitting</li>
+        <li>Understand outcomes are not guaranteed</li>
+        <li>Communicate openly if anything is unclear</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <h2 style="font-family:Georgia,serif;font-size:1.4rem;color:var(--navy);margin-bottom:1rem">Download &amp; Sign the Service Agreement</h2>
+  <div class="agreement-steps" style="gap:1.5rem;margin-bottom:1.25rem">
+    <div class="ag-item"><div class="ag-step">1</div><div class="ag-label">Download PDF</div></div>
+    <div class="ag-item"><div class="ag-step">2</div><div class="ag-label">Fill Details</div></div>
+    <div class="ag-item"><div class="ag-step">3</div><div class="ag-label">Sign It</div></div>
+    <div class="ag-item"><div class="ag-step">4</div><div class="ag-label">WhatsApp Photo</div></div>
+    <div class="ag-item"><div class="ag-step" style="background:var(--green)">5</div><div class="ag-label">We Begin!</div></div>
+  </div>
+  <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:2rem">
+    <a href="Venad_Global_Service_Agreement.pdf" class="btn-gold" style="display:inline-block;padding:0.6rem 1.25rem;background:var(--navy);color:var(--gold);border-radius:6px;font-weight:700;font-size:0.9rem">⬇ Download Agreement (PDF)</a>
+    <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20have%20filled%20the%20service%20agreement" style="display:inline-block;padding:0.6rem 1.25rem;background:#25D366;color:#fff;border-radius:6px;font-weight:700;font-size:0.9rem">💬 Send Signed Copy</a>
+  </div>
+
+  <div class="important-box">
+    <h3>⚠️ Important — Please Read Before Starting</h3>
+    <div class="important-item" style="color:#7C3AED"><span style="position:absolute;left:0">⚠️</span> <strong>No Visa Guarantee</strong> — We do NOT guarantee any visa approval, job offer, or immigration outcome. These decisions are made by governments and employers — not consultants. Anyone claiming otherwise is lying.</div>
+    <div class="important-item" style="color:var(--green)"><span style="position:absolute;left:0">✅</span> <strong>Honest Assessment First</strong> — We will always tell you honestly whether a pathway is realistic for your profile — even if it's not what you want to hear.</div>
+    <div class="important-item" style="color:var(--green)"><span style="position:absolute;left:0">✅</span> <strong>Your Data is Safe</strong> — All personal information is kept strictly confidential and never shared with any third party without written permission.</div>
+    <div class="important-item" style="color:#B45309"><span style="position:absolute;left:0">⚠️</span> <strong>No Refund for Rejections</strong> — Fees for completed services are non-refundable if your visa or application is rejected. This is clearly stated in our Service Agreement.</div>
+    <div class="important-item" style="color:var(--green)"><span style="position:absolute;left:0">✅</span> <strong>Instalment Payments Available</strong> — You do not need to pay the full amount upfront. A small advance confirms the booking.</div>
+    <div class="important-item" style="color:#B45309"><span style="position:absolute;left:0">⚠️</span> <strong>We Are Not Immigration Lawyers</strong> — Venad Global provides career guidance and document preparation — not legal immigration advice. For complex legal matters, we recommend a registered RCIC or licensed lawyer.</div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <h2 style="font-family:Georgia,serif;font-size:1.4rem;color:var(--navy);margin-bottom:1rem">How We Communicate</h2>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="icon">💬</div>
+      <h4>WhatsApp (Primary)</h4>
+      <p>+91 8589895659<br>Reply within 24 hours<br>Mon–Sat working days</p>
+    </div>
+    <div class="contact-card">
+      <div class="icon">✉️</div>
+      <h4>Email</h4>
+      <p><a href="mailto:venadglobal@gmail.com">venadglobal@gmail.com</a><br>For documents &amp; formal matters<br>Reply within 24 hours</p>
+    </div>
+    <div class="contact-card">
+      <div class="icon">📞</div>
+      <h4>Voice / Video Call</h4>
+      <p>By appointment only<br>Book via WhatsApp<br>Free consultation calls</p>
+    </div>
+    <div class="contact-card">
+      <div class="icon">🌐</div>
+      <h4>Website</h4>
+      <p><a href="index.html">venadglobal.github.io</a><br>Services, pricing &amp; downloads<br>Available 24/7</p>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <h2>Ready to Begin?</h2>
+    <p>The first step costs nothing. WhatsApp me now for your free 30-minute consultation — no commitment, no payment, just honest advice.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20have%20read%20the%20process%20and%20would%20like%20a%20free%20consultation" class="btn-gold">💬 Start with a Free Call</a>
+      <a href="services.html" class="btn-outline">← View All Services</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>⚡ <strong>Venad Global Consultancy</strong> &nbsp;·&nbsp; Kollam, Kerala, India</p>
+  <p style="margin-top:0.4rem">
+    <a href="https://wa.me/918589895659" style="color:var(--gold)">+91 8589895659</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:venadglobal@gmail.com" style="color:var(--gold)">venadglobal@gmail.com</a>
+  </p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="nursing.html">🏥 Nursing</a>
+    <a href="sop.html">How It Works</a>
+    <a href="links.html">All Links</a>
+    <a href="Venad_Global_Pricing_Guide_v2.pdf">📋 Pricing Guide</a>
+    <a href="Venad_Global_Service_Agreement.pdf">📄 Agreement</a>
+    <a href="https://www.facebook.com/venadglobalconsultancy" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/venadglobal/" target="_blank">Instagram</a>
+  </div>
+  <div class="footer-bottom">NAMED AFTER KOLLAM'S ANCIENT VENAD KINGDOM — 1,000 YEARS CONNECTING KERALA TO THE WORLD · ⚡ IDIVET = THUNDER</div>
+</footer>
+
+</body>
+</html>

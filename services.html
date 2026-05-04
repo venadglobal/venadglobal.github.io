@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Venad Global Consultancy — Career Services</title>
+<style>
+:root{--navy:#1B3A6B;--gold:#C9A227;--green:#1A6B3A;--web:#1A4A8B;--text:#1a1a1a;--muted:#555;--bg:#fff;--light:#f8f9fb;--border:#e2e8f0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+a{color:var(--navy);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* NAV */
+.nav{background:var(--navy);padding:0.65rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}
+.nav-brand{display:flex;align-items:center;gap:0.5rem;text-decoration:none}
+.nav-logo{background:var(--gold);color:var(--navy);font-weight:900;font-size:0.8rem;padding:4px 8px;border-radius:4px;line-height:1.2;text-align:center}
+.nav-name{color:#fff;font-weight:700;font-size:0.9rem}
+.nav-links{display:flex;flex-wrap:wrap;gap:0.6rem;align-items:center}
+.nav-links a{color:#ccc;font-size:0.8rem;padding:3px 8px;border-radius:4px}
+.nav-links a:hover{color:var(--gold);text-decoration:none}
+.nav-links .hl{background:rgba(201,162,39,0.2);color:var(--gold);border:1px solid var(--gold)}
+.nav-links .nursing{background:rgba(26,107,58,0.3);color:#7FD99F;border:1px solid #1A6B3A}
+.nav-links .web{background:rgba(26,74,139,0.4);color:#90B4F0;border:1px solid #1A4A8B}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0D1F3C 0%,var(--navy) 100%);color:#fff;padding:3.5rem 1.5rem;text-align:center}
+.hero-tag{color:var(--gold);font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:0.75rem}
+.hero h1{font-size:2.4rem;font-weight:800;margin-bottom:0.6rem}
+.hero-sub{color:var(--gold);font-size:0.95rem;margin-bottom:1rem;line-height:1.7}
+.hero p{opacity:0.85;max-width:650px;margin:0 auto 1.5rem;font-size:0.95rem}
+.hero-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+.btn-gold{background:var(--gold);color:var(--navy);padding:0.65rem 1.4rem;border-radius:6px;font-weight:700;font-size:0.9rem;text-decoration:none}
+.btn-outline{border:2px solid rgba(255,255,255,0.5);color:#fff;padding:0.6rem 1.4rem;border-radius:6px;font-size:0.9rem;text-decoration:none}
+.trust-bar{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem}
+.trust-item{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);padding:0.5rem 1rem;border-radius:6px;font-size:0.82rem;color:var(--gold)}
+
+/* WHY */
+.why-section{background:var(--light);padding:3rem 1.5rem}
+.why-section h2{text-align:center;font-size:1.6rem;color:var(--navy);margin-bottom:0.4rem}
+.why-section .sub{text-align:center;color:var(--muted);margin-bottom:2rem;font-size:0.95rem}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;max-width:960px;margin:0 auto}
+.why-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.25rem}
+.why-card .icon{font-size:1.6rem;margin-bottom:0.5rem}
+.why-card h3{font-size:0.95rem;color:var(--navy);margin-bottom:0.4rem}
+.why-card p{font-size:0.87rem;color:var(--muted);line-height:1.6}
+
+/* NEGOTIATE */
+.negotiate{background:var(--navy);color:#fff;padding:1.5rem;text-align:center}
+.negotiate strong{color:var(--gold)}
+.negotiate p{font-size:0.9rem;opacity:0.9;margin-bottom:0.75rem}
+.neg-links{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+.neg-links a{background:rgba(255,255,255,0.1);color:var(--gold);border:1px solid var(--gold);padding:0.4rem 1rem;border-radius:5px;font-size:0.85rem;text-decoration:none}
+
+/* SERVICES */
+.services-section{padding:3rem 1.5rem;max-width:1100px;margin:0 auto}
+.services-section>h2{font-size:1.6rem;color:var(--navy);margin-bottom:0.3rem}
+.services-section>.sub{color:var(--muted);margin-bottom:2rem;font-size:0.9rem}
+.section-label{font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--border);padding-bottom:0.4rem;margin:2rem 0 1.25rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+
+/* SERVICE CARD */
+.card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.5rem;border-top:4px solid var(--navy);display:flex;flex-direction:column}
+.card.canada{border-top-color:#E63946}
+.card.australia{border-top-color:#006B3C}
+.card.nz{border-top-color:#00247D}
+.card.uk{border-top-color:#C41E3A}
+.card.germany{border-top-color:#000}
+.card.me{border-top-color:var(--gold)}
+.card.nursing{border-top-color:#1A6B3A}
+.card.website{border-top-color:var(--web)}
+.card.cv{border-top-color:#7B2FBE}
+.card.uni{border-top-color:#D97706}
+.card.cl{border-top-color:#0891B2}
+.card.free{border-top-color:#059669;background:#F0FDF4}
+.card-icon{font-size:1.8rem;margin-bottom:0.5rem}
+.badge{font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:10px;display:inline-block;margin-bottom:0.4rem}
+.badge-best{background:#FEF3C7;color:#92400E}
+.badge-new{background:#DBEAFE;color:#1E40AF}
+.badge-new-green{background:#D1FAE5;color:#065F46}
+.card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem}
+.card-sub{font-size:0.82rem;color:var(--muted);margin-bottom:0.6rem;font-style:italic}
+.card p{font-size:0.87rem;color:var(--muted);margin-bottom:0.75rem;line-height:1.6}
+.card ul{padding-left:1.1rem;margin-bottom:0.75rem;flex:1}
+.card li{font-size:0.85rem;color:var(--muted);margin-bottom:0.3rem;line-height:1.5}
+.price{font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem}
+.price-note{font-size:0.78rem;color:var(--muted);margin-bottom:0.75rem}
+.card-btns{display:flex;flex-direction:column;gap:0.4rem;margin-top:auto}
+.btn-wa{background:#25D366;color:#fff;padding:0.5rem 1rem;border-radius:6px;text-align:center;font-weight:600;font-size:0.85rem;text-decoration:none}
+.btn-navy{background:var(--navy);color:#fff;padding:0.5rem 1rem;border-radius:6px;text-align:center;font-weight:600;font-size:0.85rem;text-decoration:none}
+.btn-green{background:var(--green);color:#fff;padding:0.5rem 1rem;border-radius:6px;text-align:center;font-weight:600;font-size:0.85rem;text-decoration:none}
+.btn-web{background:var(--web);color:#fff;padding:0.5rem 1rem;border-radius:6px;text-align:center;font-weight:600;font-size:0.85rem;text-decoration:none}
+.btn-web-demo{background:#0D3B6B;color:var(--gold);padding:0.45rem 1rem;border-radius:6px;text-align:center;font-weight:600;font-size:0.82rem;text-decoration:none}
+
+/* PAYMENT */
+.payment-section{background:var(--light);padding:2.5rem 1.5rem}
+.payment-section h2{text-align:center;font-size:1.3rem;color:var(--navy);margin-bottom:1.5rem}
+.payment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;max-width:900px;margin:0 auto 1.5rem}
+.payment-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1rem;text-align:center}
+.payment-card .icon{font-size:1.5rem;margin-bottom:0.4rem}
+.payment-card h4{font-size:0.88rem;color:var(--navy);margin-bottom:0.3rem}
+.payment-card p{font-size:0.8rem;color:var(--muted)}
+.payment-methods{text-align:center;font-size:0.88rem;color:var(--muted)}
+.payment-methods strong{color:var(--navy)}
+
+/* PROCESS */
+.process-section{padding:3rem 1.5rem;max-width:800px;margin:0 auto}
+.process-section h2{font-size:1.5rem;color:var(--navy);margin-bottom:0.3rem}
+.process-section .sub{color:var(--muted);margin-bottom:2rem;font-size:0.9rem}
+.steps{display:flex;flex-direction:column;gap:1rem}
+.step{display:flex;gap:1rem;align-items:flex-start}
+.step-num{background:var(--navy);color:var(--gold);font-weight:700;font-size:0.9rem;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-body h4{font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem}
+.step-body p{font-size:0.87rem;color:var(--muted)}
+
+/* AGREEMENT */
+.agreement-section{background:var(--navy);color:#fff;padding:2.5rem 1.5rem;text-align:center}
+.agreement-section h2{font-size:1.3rem;margin-bottom:0.5rem}
+.agreement-section p{opacity:0.85;font-size:0.9rem;max-width:600px;margin:0 auto 1.25rem}
+.agreement-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+.agreement-btns a{padding:0.55rem 1.2rem;border-radius:6px;font-weight:600;font-size:0.88rem;text-decoration:none}
+.a-gold{background:var(--gold);color:var(--navy)}
+.a-outline{border:2px solid rgba(255,255,255,0.4);color:#fff}
+
+/* PROMISES */
+.promises-section{padding:2.5rem 1.5rem;max-width:960px;margin:0 auto}
+.promises-section h2{font-size:1.4rem;color:var(--navy);margin-bottom:0.3rem;text-align:center}
+.promises-section .sub{text-align:center;color:var(--muted);margin-bottom:1.5rem;font-size:0.9rem}
+.promises-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.promise{border:1px solid var(--border);border-radius:8px;padding:1rem}
+.promise.no{border-left:4px solid #EF4444}
+.promise.yes{border-left:4px solid #22C55E}
+.promise .icon{font-size:1.2rem;margin-bottom:0.3rem}
+.promise h4{font-size:0.9rem;font-weight:700;margin-bottom:0.3rem}
+.promise p{font-size:0.83rem;color:var(--muted)}
+
+/* ABOUT */
+.about-section{background:var(--light);padding:2.5rem 1.5rem}
+.about-inner{max-width:800px;margin:0 auto}
+.about-inner h2{font-size:1.4rem;color:var(--navy);margin-bottom:1rem}
+.about-inner p{color:var(--muted);font-size:0.92rem;margin-bottom:1rem;line-height:1.75}
+.certs{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1rem 0}
+.cert-pill{background:#fff;border:1px solid var(--border);padding:4px 12px;border-radius:20px;font-size:0.8rem;color:var(--navy)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem}
+.stat{text-align:center;background:#fff;border:1px solid var(--border);border-radius:8px;padding:1rem}
+.stat .num{font-size:1.5rem;font-weight:800;color:var(--navy)}
+.stat .label{font-size:0.78rem;color:var(--muted)}
+
+/* FAQ */
+.faq-section{padding:2.5rem 1.5rem;max-width:800px;margin:0 auto}
+.faq-section h2{font-size:1.4rem;color:var(--navy);margin-bottom:1.5rem;text-align:center}
+.faq-item{border:1px solid var(--border);border-radius:8px;margin-bottom:0.75rem;overflow:hidden}
+.faq-q{background:var(--light);padding:0.85rem 1rem;font-weight:600;font-size:0.9rem;color:var(--navy)}
+.faq-a{padding:0.85rem 1rem;font-size:0.87rem;color:var(--muted);line-height:1.65}
+
+/* FOOTER */
+footer{background:var(--navy);color:#aaa;text-align:center;padding:1.5rem}
+footer a{color:var(--gold)}
+.footer-links{display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;margin-top:0.6rem}
+.footer-links a{color:#ccc;font-size:0.82rem}
+.footer-links a:hover{color:var(--gold)}
+
+@media(max-width:600px){.hero h1{font-size:1.7rem}.stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2BZDPM9EZM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2BZDPM9EZM');
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="services.html" class="nav-brand">
+    <div class="nav-logo">VG<br>VENAD<br>GLOBAL</div>
+    <span class="nav-name">VENAD GLOBAL CONSULTANCY</span>
+  </a>
+  <div class="nav-links">
+    <a href="https://idivet.github.io/cv/" target="_blank">My CV</a>
+    <a href="#services">Services</a>
+    <a href="#process">How It Works</a>
+    <a href="nursing.html" class="nursing">🏥 Nursing</a>
+    <a href="#website" class="web">🌐 Websites</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="hl">Contact</a>
+  
+    <a href="https://t.me/VenadGlobalBot" target="_blank" style="background:#2AABEE;color:#fff;font-size:0.78rem;font-weight:700;padding:5px 12px;border-radius:4px;">✈️ Telegram</a></div>
+<a href="https://venadglobal.github.io/faq.html" style="color:#C9A227;font-weight:700;">❓ FAQ</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">✦ Honest Global Career Guidance</div>
+  <h1>Your Path Abroad<br>Guided by Real Experience</h1>
+  <div class="hero-sub">🇨🇦 Canada · 🇦🇺 Australia · 🇳🇿 NZ · 🇬🇧 UK · 🇩🇪 Germany · 🇦🇪 Middle East · 🏥 Nursing · 🌐 Websites</div>
+  <p>30+ years working internationally — AIP, Australia, New Zealand, UK, Germany, Middle East, university admissions, nursing, and website development. Honest guidance, fair prices, no fake promises.</p>
+  <div class="hero-btns">
+    <a href="https://wa.me/918589895659" class="btn-gold">💬 WhatsApp Me Now</a>
+    <a href="#services" class="btn-outline">View Services</a>
+  </div>
+  <div class="trust-bar">
+    <span class="trust-item">🇨🇦 Canada AIP — Lived It</span>
+    <span class="trust-item">🇦🇪 Middle East — 30+ Yrs UAE</span>
+    <span class="trust-item">🏥 Nursing — Family Success Story</span>
+    <span class="trust-item">🌐 Websites — See Ours Live</span>
+    <span class="trust-item">100% Honest — No Fake Promises</span>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why-section" id="about">
+  <h2>Real Experience. Real Guidance.</h2>
+  <p class="sub">Unlike fake agencies that take your money and disappear, I guide you based on what I have personally lived through.</p>
+  <div class="why-grid">
+    <div class="why-card"><div class="icon">🎯</div><h3>I've Done It Myself</h3><p>I personally navigated the Canadian AIP immigration process — built a Canadian CV, optimised LinkedIn, collected reference letters from a Canadian university Dean, and applied for jobs in Nova Scotia without paying a consultant.</p></div>
+    <div class="why-card"><div class="icon">🌍</div><h3>30 Years GCC Experience</h3><p>20+ years with the Higher Colleges of Technology in the UAE — one of the Gulf's most prestigious government institutions. I understand the Middle East job market from the inside.</p></div>
+    <div class="why-card"><div class="icon">🏥</div><h3>Nursing — Personal Story</h3><p>I helped a family member — a Radiographer — successfully relocate to the United Kingdom. We know the real process, real timelines, and real challenges of healthcare immigration.</p></div>
+    <div class="why-card"><div class="icon">🌐</div><h3>Websites — We Built Ours</h3><p>This bilingual English + Arabic website was built from scratch by us — professional, mobile-friendly, free hosting. We build the same quality for your business. <a href="index.html" target="_blank">See our CV site as a live example.</a></p></div>
+    <div class="why-card"><div class="icon">🤝</div><h3>No False Promises</h3><p>I will never guarantee a visa, job offer, or university admission. What I guarantee is honest guidance, real effort, and complete transparency — the opposite of fake agencies.</p></div>
+    <div class="why-card"><div class="icon">💰</div><h3>Affordable & Flexible</h3><p>Fair, transparent fees. No massive upfront payments. Instalment options available. I charge for my time and expertise — not for false hopes.</p></div>
+  </div>
+</section>
+
+<!-- NEGOTIATE -->
+<div class="negotiate">
+  <p><strong>💬 Prices Are Always Negotiable — Just Ask!</strong><br>Every situation is different. If a price seems high — talk to me. I would rather help you at a reduced rate than see you go to a fake agency.<br>Instalment payments · Student discounts · Family referral discounts · All available on request</p>
+  <div class="neg-links">
+    <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20want%20to%20discuss%20pricing">💬 Discuss Pricing</a>
+    <a href="mailto:venadglobal@gmail.com" style="color:#C9A227;">✉ venadglobal@gmail.com</a>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <h2>Global Career &amp; Immigration Services</h2>
+  <p class="sub">Honest, experience-based guidance for Canada, Australia, NZ, UK, Germany, Middle East, Nursing, Websites and more. All services include direct WhatsApp support throughout.</p>
+
+  <!-- IMMIGRATION -->
+  <div class="section-label">Immigration Pathways</div>
+  <div class="cards">
+
+    <div class="card canada">
+      <div class="card-icon">🇨🇦</div>
+      <span class="badge badge-best">⭐ Best Pathway</span>
+      <h3>Canada AIP Package</h3>
+      <p class="card-sub">Atlantic Immigration Program</p>
+      <p>My strongest service — I personally went through this process. Complete step-by-step guidance for permanent residency in Atlantic Canada.</p>
+      <ul>
+        <li>AIP eligibility &amp; NOC code assessment</li>
+        <li>Canadian CV &amp; LinkedIn optimisation</li>
+        <li>Cover letter for each application</li>
+        <li>Indeed &amp; LinkedIn profile setup</li>
+        <li>Job search strategy for Nova Scotia &amp; NL</li>
+        <li>WES/ECA &amp; IELTS guidance</li>
+        <li>Designated employer identification</li>
+        <li>Full support until job offer received</li>
+      </ul>
+      <div class="price">₹5,000 – ₹12,000</div>
+      <div class="price-note">Starting ₹5,000 · Payment in instalments available</div>
+      <div class="card-btns">
+        <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20am%20interested%20in%20the%20Canada%20AIP%20Package" class="btn-wa">💬 Enquire</a>
+      </div>
+    </div>
+
+    <div class="card australia">
+      <div class="card-icon">🇦🇺</div>
+      <h3>Australia Immigration</h3>
+      <p class="card-sub">Skills in Demand Visa — Employer Sponsored</p>
+      <p>Guidance through Australia's Skills in Demand visa — Core Skills Pathway. Targeting large companies open to international sponsorship.</p>
+      <ul>
+        <li>ANZSCO occupation code check</li>
+        <li>Skills assessment guidance</li>
+        <li>Australian CV preparation</li>
+        <li>Target employer identification (ISS, Sodexo, CBRE)</li>
+        <li>Cover letter &amp; application support</li>
+        <li>Visa pathway explanation</li>
+        <li>Salary threshold guidance (AUD 79,499)</li>
+        <li>State nomination options (491/190)</li>
+      </ul>
+      <div class="price">₹4,000 – ₹10,000</div>
+      <div class="price-note">Starting ₹4,000 · Flexible payment options</div>
+      <div class="card-btns">
+        <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20am%20interested%20in%20Australia%20immigration%20guidance" class="btn-wa">💬 Enquire</a>
+      </div>
+    </div>
+
+    <div class="card nz">
+      <div class="card-icon">🇳🇿</div>
+      <h3>New Zealand Immigration</h3>
+      <p class="card-sub">Skilled Migrant Category — New 2026 Pathways</p>
+      <p>New pathways launching August 2026 make NZ more accessible for skilled workers.</p>
+      <ul>
+        <li>SMC eligibility assessment</li>
+        <li>ANZSCO occupation code verification</li>
+        <li>NZ CV &amp; application preparation</li>
+        <li>Accredited employer job search strategy</li>
+        <li>AEWV work visa guidance</li>
+        <li>New Skilled Work Experience pathway (Aug 2026)</li>
+        <li>Salary &amp; points calculation</li>
+        <li>NZQA qualification assessment guidance</li>
+      </ul>
+      <div class="price">₹4,000 – ₹8,000</div>
+      <div class="price-note">Starting ₹4,000 · Pay as you go available</div>
+      <div class="card-btns">
+        <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20am%20interested%20in%20New%20Zealand%20immigration%20guidance" class="btn-wa">💬 Enquire</a>
+      </div>
+    </div>
+
+    <div class="card uk">
+      <div class="card-icon">🇬🇧</div>
+      <h3>United Kingdom</h3>
+      <p class="card-sub">Skilled Worker Visa — Employer Sponsored</p>
+      <p>Guidance through the UK Skilled Worker Visa — finding licensed sponsors, meeting salary thresholds (£41,700/yr).</p>
+      <ul>
+        <li>Occupation eligibility check (UK SOL)</li>
+        <li>UK-format CV preparation</li>
+        <li>Licensed sponsor employer search</li>
+        <li>Certificate of Sponsorship guidance</li>
+        <li>Salary threshold verification</li>
+        <li>English language requirement advice</li>
+        <li>VFS Global application process</li>
+        <li>Indefinite Leave to Remain pathway</li>
+      </ul>
+      <div class="price">₹3,500 – ₹8,000</div>
+      <div class="price-note">Starting ₹3,500 · Flexible based on support needed</div>
+      <div class="card-btns">
+        <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20am%20interested%20in%20UK%20immigration%20guidance" class="btn-wa">💬 Enquire</a>
+      </div>
+    </div>
+
+    <div class="card germany">
+      <div class="card-icon">🇩🇪</div>
+      <h3>Germany — EU Blue Card</h3>
+      <p class="card-sub">Skilled Immigration Act 2026</p>
+      <p>Germany's EU Blue Card — no employer sponsorship licence needed! One of Europe's most accessible pathways.</p>
+      <ul>
+        <li>EU Blue Card eligibility check</li>
+        <li>Qualification recognition guidance (ZAB)</li>
+        <li>German-format CV preparation</li>
+        <li>Job search strategy for Germany</li>
+        <li>Salary threshold guidance (€45,934+)</li>
+        <li>Embassy application process</li>
+        <li>Permanent residence pathway (21 months)</li>
+      </ul>
+      <div class="price">₹3,500 – ₹8,000</div>
+      <div class="price-note">Starting ₹3,500 · Flexible payment welcome</div>
+      <div class="card-btns">
+        <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20am%20interested%20in%20Germany%20EU%20Blue%20Card%20guidance" class="btn-wa">💬 Enquire</a>
+      </div>
+    </div>
+
+    <div class="card me">
+      <div class="card-icon">🇦🇪</div>
+      <span class="badge badge-best">⭐ 30+ Yrs UAE Experience</span>
+      <h3>Middle East Job Search</h3>
+      <p class="card-sub">UAE, Saudi, Qatar, Kuwait, Oman</p>
+      <p>My home ground — 20+ years in the GCC. I know exactly how to approach Middle East employers and get results.</p>
+      <ul>
+        <li>Middle East format CV creation</li>
+        <li>Tailored cover letter writing</li>
+        <li>Direct employer email strategy</li>
+        <li>Target company identification</li>
+        <li>GCC job portal guidance</li>
+        <li>Interview preparation tips</li>
+        <li>Salary negotiation guidance</li>
+        <li>Work permit process overview</li>
+      </ul>
+      <div class="price">₹2,500 – ₹6,000</div>
+      <div class="price-note">Starting ₹2,500 · Very flexible for GCC seekers</div>
+      <div class="card-btns">
+        <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20need%20help%20finding%20a%20job%20in%20the%20Middle%20East" class="btn-wa">💬 Enquire</a>
+      </div>
+    </div>
+
+  </div><!-- end immigration cards -->
+
+  <!-- NURSING -->
+  <div class="section-label" id="nursing-section">🏥 Nursing &amp; Healthcare</div>
+  <div class="cards">
+    <div class="card nursing" style="grid-column:1/-1">
+      <div class="card-icon">🏥</div>
+      <span class="badge badge-new-green">NEW SERVICE</span>
+      <h3>Nursing &amp; Healthcare Professionals Abroad</h3>
+      <p class="card-sub">🇨🇦 Canada · 🇬🇧 UK · 🇦🇺 Australia · 🇦🇪 Middle East</p>
+      <p>Dedicated guidance for Kerala nurses and allied healthcare professionals (including Radiographers, Lab Technicians, and Allied Health). We helped a family member — a Radiographer — successfully relocate to the UK. We know the real process, real timelines, and real challenges.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.5rem;margin-bottom:0.75rem">
+        <ul>
+          <li>Canada AIP — NNAS, NCLEX-RN, CRNNS registration</li>
+          <li>UK Health &amp; Care Worker Visa — NMC, CBT, OSCE</li>
+          <li>Australia — AHPRA, ANMAC, Skills in Demand</li>
+          <li>Middle East — DHA, MOH, HAAD licensing</li>
+        </ul>
+        <ul>
+          <li>Radiographers — HCPC (UK), CAMRT (Canada), AHPRA</li>
+          <li>Nursing CV in country-specific format</li>
+          <li>IELTS / OET preparation strategy</li>
+          <li>NCLEX / CBT preparation roadmap</li>
+          <li>Free consultation — honest eligibility assessment</li>
+        </ul>
+      </div>
+      <div class="price">₹2,000 – ₹18,000</div>
+      <div class="price-note">Free initial consultation · Full guide available to download · Instalments available</div>
+      <div class="card-btns" style="flex-direction:row;flex-wrap:wrap">
+        <a href="nursing.html" class="btn-green" style="flex:1;min-width:200px">🏥 View Full Nursing Guide</a>
+        <a href="https://venadglobal.github.io/VG_Nursing_Services_Guide.pdf" class="btn-navy" style="flex:1;min-width:200px">⬇ Download Nursing Guide (PDF)</a>
+        <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20am%20a%20healthcare%20professional%20interested%20in%20working%20abroad.%20I%20would%20like%20a%20free%20consultation." class="btn-wa" style="flex:1;min-width:200px">💬 Free Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEBSITE DEVELOPMENT -->
+  <div class="section-label" id="website">🌐 Website Development &amp; Hosting</div>
+  <div class="cards">
+    <div class="card website" style="grid-column:1/-1">
+      <div class="card-icon">🌐</div>
+      <span class="badge badge-new">NEW SERVICE</span>
+      <h3>Website Development &amp; Hosting</h3>
+      <p class="card-sub">India · UAE · GCC · Any Business, Any Size</p>
+      <p>Professional, mobile-friendly websites for small and medium businesses. Our founder built this bilingual English + Arabic professional website from scratch — we deliver the same quality for your business. From simple brochure sites to full corporate websites with Arabic version.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.5rem;margin-bottom:0.75rem">
+        <ul>
+          <li>3 to 7 page business website — fully mobile responsive</li>
+          <li>WhatsApp button &amp; contact form integration</li>
+          <li>Custom domain setup (e.g. yourcompany.com)</li>
+          <li>Hosting setup &amp; configuration (GitHub Pages = FREE forever)</li>
+          <li>Google Analytics &amp; Google My Business setup</li>
+        </ul>
+        <ul>
+          <li>Photo gallery &amp; social media links</li>
+          <li>Bilingual English + Arabic version available</li>
+          <li>SEO basics included in Complete package</li>
+          <li>3 months post-launch support</li>
+          <li>Monthly maintenance retainer available</li>
+        </ul>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem;margin-bottom:0.75rem;background:#EBF0FA;padding:0.75rem;border-radius:8px">
+        <div style="text-align:center"><div style="font-weight:700;color:var(--web);font-size:0.85rem">Basic</div><div style="font-size:1.1rem;font-weight:800;color:var(--navy)">₹8,000–12,000</div><div style="font-size:0.75rem;color:var(--muted)">3 pages · Free hosting</div></div>
+        <div style="text-align:center"><div style="font-weight:700;color:var(--web);font-size:0.85rem">Standard</div><div style="font-size:1.1rem;font-weight:800;color:var(--navy)">₹15,000–25,000</div><div style="font-size:0.75rem;color:var(--muted)">5 pages · Domain + hosting</div></div>
+        <div style="text-align:center"><div style="font-weight:700;color:var(--web);font-size:0.85rem">Complete</div><div style="font-size:1.1rem;font-weight:800;color:var(--navy)">₹30,000–50,000</div><div style="font-size:0.75rem;color:var(--muted)">Full site + Arabic + SEO</div></div>
+        <div style="text-align:center"><div style="font-weight:700;color:var(--web);font-size:0.85rem">Arabic Add-on</div><div style="font-size:1.1rem;font-weight:800;color:var(--navy)">+₹8,000–15,000</div><div style="font-size:0.75rem;color:var(--muted)">Full bilingual version</div></div>
+      </div>
+      <div class="card-btns" style="flex-direction:row;flex-wrap:wrap">
+        <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20am%20interested%20in%20a%20website%20for%20my%20business.%20I%20would%20like%20a%20free%20consultation." class="btn-web" style="flex:1;min-width:200px">💬 Discuss Your Website</a>
+        <a href="index.html" target="_blank" class="btn-web-demo" style="flex:1;min-width:200px">🌐 See Our Live Website Example</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAREER & DOCUMENT -->
+  <div class="section-label">Career &amp; Document Services</div>
+  <div class="cards">
+
+    <div class="card cv">
+      <div class="card-icon">📄</div>
+      <h3>CV &amp; LinkedIn Optimisation</h3>
+      <p class="card-sub">Any Country Standard</p>
+      <p>ATS-optimised CV and LinkedIn profile tailored to your target country.</p>
+      <ul>
+        <li>Country-specific CV format</li>
+        <li>ATS optimisation &amp; keyword alignment</li>
+        <li>LinkedIn profile complete overhaul</li>
+        <li>Open To Work setup &amp; strategy</li>
+        <li>Indeed profile setup</li>
+        <li>Up to 2 revisions included</li>
+      </ul>
+      <div class="price">₹1,500 – ₹5,000</div>
+      <div class="price-note">Starting ₹1,500 · CV only or full package</div>
+      <div class="card-btns">
+        <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20need%20CV%20and%20LinkedIn%20help" class="btn-wa">💬 Enquire</a>
+      </div>
+    </div>
+
+    <div class="card uni">
+      <div class="card-icon">🎓</div>
+      <h3>Foreign University Admissions</h3>
+      <p class="card-sub">Canada, UK, Australia, Germany, UAE</p>
+      <p>Honest guidance for students and families — without the risk of fake agents.</p>
+      <ul>
+        <li>University shortlisting &amp; research</li>
+        <li>Application requirement guidance</li>
+        <li>Statement of Purpose (SOP) support</li>
+        <li>Document checklist preparation</li>
+        <li>Scholarship research assistance</li>
+        <li>Pre-departure guidance</li>
+        <li>Ongoing WhatsApp support</li>
+      </ul>
+      <div class="price">₹3,000 – ₹8,000</div>
+      <div class="price-note">Starting ₹3,000 · Student discounts available</div>
+      <div class="card-btns">
+        <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20need%20help%20with%20foreign%20university%20admission" class="btn-wa">💬 Enquire</a>
+      </div>
+    </div>
+
+    <div class="card cl">
+      <div class="card-icon">✉️</div>
+      <h3>Cover Letter Writing</h3>
+      <p class="card-sub">Any Country — Any Role</p>
+      <p>Tailored, professionally written cover letters for each job application.</p>
+      <ul>
+        <li>Fully tailored to each job posting</li>
+        <li>AIP / visa pathway explanation included</li>
+        <li>Employer-specific research</li>
+        <li>Professional tone &amp; formatting</li>
+        <li>One revision included</li>
+      </ul>
+      <div class="price">₹300 – ₹500</div>
+      <div class="price-note">₹300/letter · Bulk discount for 3+ letters</div>
+      <div class="card-btns">
+        <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20need%20a%20cover%20letter" class="btn-wa">💬 Enquire</a>
+      </div>
+    </div>
+
+    <div class="card free">
+      <div class="card-icon">🤝</div>
+      <h3>Free Initial Consultation</h3>
+      <p class="card-sub">Always FREE — No Obligation</p>
+      <p>Not sure which pathway is right for you? Let's talk first — completely free, no pressure.</p>
+      <ul>
+        <li>30-minute WhatsApp or video call</li>
+        <li>Honest eligibility assessment</li>
+        <li>Best pathway recommendation</li>
+        <li>Realistic expectations set</li>
+        <li>No payment — no obligation</li>
+      </ul>
+      <div class="price" style="color:#059669">FREE</div>
+      <div class="price-note">Understand your options first</div>
+      <div class="card-btns">
+        <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20would%20like%20a%20free%20consultation" class="btn-wa">💬 Book Free Call</a>
+      </div>
+    </div>
+
+  </div><!-- end career cards -->
+
+</section><!-- end services section -->
+
+<!-- PAYMENT -->
+<section class="payment-section">
+  <h2>Flexible Payment Options</h2>
+  <div class="payment-grid">
+    <div class="payment-card"><div class="icon">💳</div><h4>Instalment Pay</h4><p>Pay in 2–3 parts as work progresses. No full payment upfront.</p></div>
+    <div class="payment-card"><div class="icon">🎓</div><h4>Student Discount</h4><p>Special reduced rates for students applying to foreign universities.</p></div>
+    <div class="payment-card"><div class="icon">👨‍👩‍👧</div><h4>Family Referral</h4><p>Refer a friend or family member — both get a discount.</p></div>
+    <div class="payment-card"><div class="icon">🤝</div><h4>Just Ask Me</h4><p>Budget tight? Tell me honestly. I will always try to find a way to help.</p></div>
+  </div>
+  <p class="payment-methods">Payment via: <strong>Google Pay · PhonePe · Bank Transfer · UPI</strong> · All accepted</p>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section" id="process">
+  <h2>How It Works — Step by Step</h2>
+  <p class="sub">Transparent. Simple. Honest. Here is exactly what happens from your first message to your final goal.</p>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Free Consultation</h4><p>WhatsApp or call me. We discuss your goals, background, and realistic options — completely free, no obligation.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Choose Your Package</h4><p>I recommend the right service and tier for your needs and budget. You decide — no hard selling, ever.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Sign Agreement</h4><p>We sign a simple Service Agreement — so both of us are clear on what is agreed, what is included, and what the fees are. No surprises.</p></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><h4>Pay Advance</h4><p>A small advance deposit confirms the booking. Instalment payments available. Receipt sent immediately via WhatsApp.</p></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-body"><h4>We Deliver</h4><p>Your CV, cover letters, guidance reports, and documents are delivered on time. All WhatsApp communication kept in writing.</p></div></div>
+    <div class="step"><div class="step-num">6</div><div class="step-body"><h4>Ongoing Support</h4><p>I continue to support you until your goal is achieved — job offer, university admission, or visa application submitted.</p></div></div>
+  </div>
+</section>
+
+<!-- AGREEMENT -->
+<section class="agreement-section">
+  <h2>📄 Download Our Service Agreement</h2>
+  <p>Before we begin any work, we sign a simple Service Agreement — so you know exactly what you are paying for and what to expect. This is what separates us from fake agencies.</p>
+  <div class="agreement-btns">
+    <a href="https://venadglobal.github.io/Venad_Global_Service_Agreement.pdf" class="a-gold">⬇ Download Agreement (PDF)</a>
+    <a href="https://venadglobal.github.io/Venad_Global_Pricing_Guide_v2.pdf" class="a-gold">📋 Download Pricing Guide (PDF)</a>
+    <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20have%20filled%20the%20service%20agreement%20and%20ready%20to%20proceed" class="a-outline">💬 Send Signed Agreement</a>
+  </div>
+  <p style="margin-top:1rem;font-size:0.82rem;opacity:0.7">Download → Fill your details → Sign → WhatsApp photo to +91 8589895659</p>
+</section>
+
+<!-- PROMISES -->
+<section class="promises-section">
+  <h2>My Promise to You</h2>
+  <p class="sub">Too many agencies have broken people's trust. Here is my commitment to every client.</p>
+  <div class="promises-grid">
+    <div class="promise no"><div class="icon">🚫</div><h4>No Fake Guarantees</h4><p>I will never guarantee a visa approval, job offer, or university acceptance. Anyone who does is lying to you.</p></div>
+    <div class="promise no"><div class="icon">🚫</div><h4>No Large Upfront Fees</h4><p>Fair, transparent fees for actual work done. No collecting lakhs of rupees before doing anything.</p></div>
+    <div class="promise no"><div class="icon">🚫</div><h4>No Disappearing Acts</h4><p>I am available on WhatsApp and respond promptly. Your questions matter throughout the entire process.</p></div>
+    <div class="promise yes"><div class="icon">✅</div><h4>Always Honest</h4><p>If your profile is not suitable for a pathway, I will tell you honestly — and help you find a better option.</p></div>
+    <div class="promise yes"><div class="icon">✅</div><h4>Real Guidance</h4><p>Everything I advise is based on real experience — processes I have personally gone through or thoroughly researched.</p></div>
+    <div class="promise yes"><div class="icon">✅</div><h4>Your Success First</h4><p>My reputation depends on your success. I have no reason to mislead you — and every reason to help you succeed.</p></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="about-inner">
+    <h2>About Antony Ancil</h2>
+    <p>I am an Administration and Facilities Management professional with over 30 years of international experience — 20 of which were spent with the Higher Colleges of Technology in the UAE, one of the Gulf's most prestigious government institutions.</p>
+    <p>I have recently navigated the Canadian immigration process myself through the Atlantic Immigration Program — building a Canadian CV, optimising LinkedIn, collecting recommendation letters from a Canadian university Dean (Concordia University, Montreal), and applying for jobs in Nova Scotia — all without paying a consultant.</p>
+    <p>I also helped a family member — a Radiographer — successfully relocate to the United Kingdom, and I launched this bilingual English + Arabic website entirely from scratch. Having seen how fake agencies exploit vulnerable people — especially from Kerala — I felt a responsibility to offer genuine, affordable, and honest guidance.</p>
+    <div class="certs">
+      <span class="cert-pill">🎓 IOSH Managing Safely</span>
+      <span class="cert-pill">📋 ISO 9001 Certified</span>
+      <span class="cert-pill">🇦🇪 20 Years HCT UAE</span>
+      <span class="cert-pill">🇨🇦 AIP Candidate</span>
+      <span class="cert-pill">🌐 Multilingual</span>
+      <span class="cert-pill">🏥 Healthcare Immigration Experience</span>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">30+</div><div class="label">Years Experience</div></div>
+      <div class="stat"><div class="num">20+</div><div class="label">Years in UAE</div></div>
+      <div class="stat"><div class="num">8</div><div class="label">Countries Served</div></div>
+      <div class="stat"><div class="num">5</div><div class="label">Languages</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">Will you guarantee that I get a visa or job?</div><div class="faq-a"><strong>No — and anyone who does is lying to you.</strong> Visa approvals are decided by government authorities, not consultants. Job offers are made by employers. We provide honest guidance, professional documents, and real support — but we cannot and will not make false promises.</div></div>
+  <div class="faq-item"><div class="faq-q">Can I pay in instalments?</div><div class="faq-a"><strong>Yes, absolutely.</strong> A small advance deposit confirms your booking and work begins. The remaining balance is paid in agreed instalments as work progresses. We accept Google Pay, PhonePe, UPI, and Bank Transfer.</div></div>
+  <div class="faq-item"><div class="faq-q">What if my application is rejected — do I get a refund?</div><div class="faq-a"><strong>No refund for visa or job rejections</strong> — because we provide guidance services, not outcome guarantees. However, if we fail to deliver agreed documents or services without valid reason, we will discuss a fair refund. This is explained in our Service Agreement.</div></div>
+  <div class="faq-item"><div class="faq-q">Do I need a driver's licence or vehicle for Canada?</div><div class="faq-a">Not for all roles, but it helps for many positions — especially live-in building manager or operations roles. An Indian driving licence is valid for initial use, and you can convert to a Nova Scotia licence easily once you arrive.</div></div>
+  <div class="faq-item"><div class="faq-q">I am a nurse with a GNM diploma — can I go to Canada or UK?</div><div class="faq-a">Yes — but the pathway differs. In Canada, GNM typically qualifies for Licensed Practical Nurse (LPN) registration rather than RN. In the UK, GNM qualifies as RGN through NMC. Book a free consultation and we will assess your specific situation honestly.</div></div>
+  <div class="faq-item"><div class="faq-q">What kind of websites do you build?</div><div class="faq-a">We build professional business websites — brochure sites, service company websites, personal portfolio sites, and bilingual English + Arabic websites. We use proven free and paid hosting platforms. See our own live website at <a href="index.html">idivet.github.io/cv</a> as an example of quality and style.</div></div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <p>⚡ <strong style="color:var(--gold)">Venad Global Consultancy</strong> &nbsp;·&nbsp; Kollam, Kerala, India</p>
+  <p style="margin-top:0.4rem"><a href="https://wa.me/918589895659">+91 8589895659</a> &nbsp;·&nbsp; <a href="mailto:venadglobal@gmail.com" style="color:#C9A227;">venadglobal@gmail.com</a></p>
+  <div class="footer-links">
+    <a href="https://idivet.github.io/cv/" target="_blank">My CV</a>
+    <a href="nursing.html">🏥 Nursing</a>
+    <a href="sop.html">How It Works</a>
+    <a href="https://www.facebook.com/venadglobalconsultancy" target="_blank">Facebook</a>
+    <a href="https://youtube.com/@VenadGlobal" target="_blank">▶️ YouTube</a>
+    <a hre<!-- Floating Back Button -->
+<style>
+.float-back{position:fixed;bottom:24px;left:24px;z-index:9999;background:#1B3A6B;color:#C9A227;border:2px solid #C9A227;border-radius:50px;padding:10px 18px;font-size:13px;font-weight:700;font-family:Arial,sans-serif;text-decoration:none;display:flex;align-items:center;gap:6px;box-shadow:0 4px 12px rgba(0,0,0,0.3);transition:background 0.2s,color 0.2s;}
+.float-back:hover{background:#C9A227;color:#1B3A6B;text-decoration:none;}
+@media(max-width:480px){.float-back{bottom:16px;left:16px;padding:8px 14px;font-size:12px;}}
+
+/* ── STICKY NAV UPGRADE ── */
+.nav, .nav-bar, nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9000 !important;
+}
+.social-icons-nav {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.social-icons-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity 0.15s, transform 0.15s;
+  flex-shrink: 0;
+}
+.social-icons-nav a:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.sn-wa  { background:#25D366; color:#fff; }
+.sn-tg  { background:#2AABEE; color:#fff; }
+.sn-yt  { background:#FF0000; color:#fff; }
+.sn-fb  { background:#1877F2; color:#fff; }
+.sn-ig  { background:linear-gradient(135deg,#833AB4,#FD1D1D,#FCAF45); color:#fff; }
+.sn-li  { background:#0A66C2; color:#fff; }
+
+</style>
+<a href="https://venadglobal.github.io" class="float-back">&#8592; Home</a>

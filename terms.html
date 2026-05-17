@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LF31LBNXP6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LF31LBNXP6');
+</script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Terms of Service — Venad Global Consultancy</title>
@@ -89,5 +97,58 @@ footer a{color:#C9A227}
 <footer>
   © 2026 Venad Global Consultancy · <a href="https://venadglobal.github.io">Home</a> · <a href="privacy.html">Privacy</a> · <a href="disclaimer.html">Disclaimer</a>
 </footer>
+
+<!-- Enhanced GA4 Event Tracking — VGC -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // WhatsApp clicks
+  document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'whatsapp_click', { event_category: 'engagement', event_label: window.location.pathname });
+    });
+  });
+  // Email clicks
+  document.querySelectorAll('a[href*="mailto"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'email_click', { event_category: 'engagement', event_label: el.href });
+    });
+  });
+  // Phone clicks
+  document.querySelectorAll('a[href*="tel:"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'phone_click', { event_category: 'engagement', event_label: el.href });
+    });
+  });
+  // External links
+  document.querySelectorAll('a[href^="http"]').forEach(function(el) {
+    if (!el.href.includes(window.location.hostname)) {
+      el.addEventListener('click', function() {
+        gtag('event', 'external_link_click', { event_category: 'engagement', event_label: el.href });
+      });
+    }
+  });
+  // Scroll depth
+  var depths = [25,50,75,100], reached = [];
+  window.addEventListener('scroll', function() {
+    var pct = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+    depths.forEach(function(d) {
+      if (pct >= d && !reached.includes(d)) {
+        reached.push(d);
+        gtag('event', 'scroll_depth', { event_category: 'engagement', event_label: d+'%', value: d });
+      }
+    });
+  });
+  // Time on page
+  var t = 0;
+  var ti = setInterval(function() {
+    t += 30;
+    if ([30,60,120,180,300].includes(t)) {
+      gtag('event', 'time_on_page', { event_category: 'engagement', event_label: t+'s', value: t });
+    }
+    if (t >= 300) clearInterval(ti);
+  }, 30000);
+});
+</script>
+
 </body>
 </html>

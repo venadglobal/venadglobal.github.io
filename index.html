@@ -1315,3 +1315,28 @@ function toggleFaq(el) {
 @media(max-width:480px){.wa-bubble{bottom:16px;right:16px;padding:10px 14px 10px 12px}.wa-label{font-size:12px}}
 </style>
 <a href="#top" class="float-back">&#8593; Top</a>
+
+<script>
+function animateCounter(el, target, duration, suffix) {
+  var step = target / (duration / 16);
+  var current = 0;
+  var timer = setInterval(function() {
+    current += step;
+    if (current >= target) { current = target; clearInterval(timer); }
+    el.textContent = Math.floor(current) + suffix;
+  }, 16);
+}
+var countersStarted = false;
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting && !countersStarted) {
+      countersStarted = true;
+      document.querySelectorAll('.stat-num[data-target]').forEach(function(el) {
+        animateCounter(el, parseInt(el.getAttribute('data-target')), 2000, el.getAttribute('data-suffix') || '');
+      });
+    }
+  });
+}, { threshold: 0.3 });
+var s = document.querySelector('.stats');
+if (s) observer.observe(s);
+</script>

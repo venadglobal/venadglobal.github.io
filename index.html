@@ -132,7 +132,7 @@ img{max-width:100%}
 /* STATS */
 .stats{background:var(--dark);padding:2rem 1.5rem}
 .stats-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;max-width:900px;margin:0 auto;text-align:center}
-.stat-num{font-family:Georgia,serif;font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1}
+.stat-num{font-family:Georgia,serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1;transition:all 0.3s}
 .stat-label{font-size:0.78rem;color:rgba(255,255,255,0.55);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
 
 /* WHY */
@@ -280,10 +280,10 @@ footer strong{color:var(--gold)}
 <!-- STATS -->
 <div class="stats">
   <div class="stats-inner">
-    <div><div class="stat-num">30+</div><div class="stat-label">Years Experience</div></div>
-    <div><div class="stat-num">20+</div><div class="stat-label">Years HCT UAE</div></div>
-    <div><div class="stat-num">8</div><div class="stat-label">Countries Guided</div></div>
-    <div><div class="stat-num">5</div><div class="stat-label">Languages Spoken</div></div>
+    <div><div class="stat-num" data-target="30" data-suffix="+">30+</div><div class="stat-label">Years Experience</div></div>
+    <div><div class="stat-num" data-target="20" data-suffix="+">20+</div><div class="stat-label">Years HCT UAE</div></div>
+    <div><div class="stat-num" data-target="8" data-suffix="">8</div><div class="stat-label">Countries Guided</div></div>
+    <div><div class="stat-num" data-target="5" data-suffix="">5</div><div class="stat-label">Languages Spoken</div></div>
     <div><div class="stat-num">FREE</div><div class="stat-label">First Consultation</div></div>
   </div>
 </div>
@@ -939,6 +939,112 @@ function showCountry(country) {
 <!-- ══════════════════════════════════════════════════════
      FAQ SECTION
 ════════════════════════════════════════════════════════ -->
+
+<!-- ══════════════════════════════════════════════════════
+     FEE CALCULATOR
+════════════════════════════════════════════════════════ -->
+<section style="background:#050810;padding:3.5rem 1.5rem">
+<div style="max-width:700px;margin:0 auto">
+  <div style="text-align:center;margin-bottom:2rem">
+    <div style="font-family:monospace;font-size:0.7rem;letter-spacing:4px;color:#C9A227;text-transform:uppercase;margin-bottom:0.5rem">✦ Transparent Pricing</div>
+    <h2 style="font-size:1.8rem;color:#F5F0E8;font-weight:700">Quick Fee Estimate</h2>
+    <p style="color:#8892a4;margin-top:0.5rem;font-size:0.95rem">Select your destination and service level to get an instant estimate</p>
+  </div>
+
+  <div style="background:#0d1628;border:1px solid rgba(201,162,39,0.2);border-radius:16px;padding:2rem">
+    
+    <!-- Destination -->
+    <div style="margin-bottom:1.25rem">
+      <label style="color:#F5F0E8;font-size:0.9rem;font-weight:500;display:block;margin-bottom:0.5rem">🌍 Destination Country</label>
+      <select id="calc-country" onchange="calculateFee()" style="width:100%;background:#050810;border:1px solid rgba(201,162,39,0.3);color:#F5F0E8;padding:0.75rem 1rem;border-radius:8px;font-size:0.95rem;font-family:inherit">
+        <option value="">Select destination...</option>
+        <option value="canada">🇨🇦 Canada — Atlantic Immigration Program</option>
+        <option value="uk">🇬🇧 United Kingdom — Skilled Worker</option>
+        <option value="australia">🇦🇺 Australia — Skills in Demand</option>
+        <option value="germany">🇩🇪 Germany — EU Blue Card</option>
+        <option value="uae">🇦🇪 Middle East — UAE/Saudi/Qatar</option>
+        <option value="nursing">🏥 Nursing Abroad</option>
+      </select>
+    </div>
+
+    <!-- Service Level -->
+    <div style="margin-bottom:1.25rem">
+      <label style="color:#F5F0E8;font-size:0.9rem;font-weight:500;display:block;margin-bottom:0.5rem">📋 Service Level</label>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem">
+        <div class="level-card" onclick="selectLevel('basic')" id="level-basic">
+          <div style="font-size:1.1rem;margin-bottom:0.25rem">📄</div>
+          <div style="font-size:0.8rem;font-weight:600">Basic</div>
+          <div style="font-size:0.7rem;color:#8892a4">CV + Guidance</div>
+        </div>
+        <div class="level-card active" onclick="selectLevel('standard')" id="level-standard">
+          <div style="font-size:1.1rem;margin-bottom:0.25rem">⭐</div>
+          <div style="font-size:0.8rem;font-weight:600">Standard</div>
+          <div style="font-size:0.7rem;color:#8892a4">Full Support</div>
+        </div>
+        <div class="level-card" onclick="selectLevel('complete')" id="level-complete">
+          <div style="font-size:1.1rem;margin-bottom:0.25rem">🏆</div>
+          <div style="font-size:0.8rem;font-weight:600">Complete</div>
+          <div style="font-size:0.7rem;color:#8892a4">Until Job Offer</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div id="fee-result" style="background:rgba(201,162,39,0.08);border:1px solid rgba(201,162,39,0.3);border-radius:10px;padding:1.25rem;text-align:center;display:none">
+      <div style="color:#8892a4;font-size:0.8rem;margin-bottom:0.25rem">ESTIMATED FEE RANGE</div>
+      <div id="fee-amount" style="color:#C9A227;font-size:2rem;font-weight:700;font-family:Georgia,serif"></div>
+      <div id="fee-desc" style="color:#8892a4;font-size:0.85rem;margin-top:0.5rem"></div>
+      <div style="margin-top:1rem;display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap">
+        <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20want%20to%20discuss%20fees%20for%20my%20application" target="_blank" style="background:#25D366;color:#000;padding:0.6rem 1.25rem;border-radius:8px;font-weight:700;font-size:0.85rem;text-decoration:none">💬 Confirm & Start</a>
+        <a href="https://venadglobal.github.io/Venad_Global_Pricing_Guide_v2.pdf" target="_blank" style="background:rgba(201,162,39,0.1);color:#C9A227;border:1px solid rgba(201,162,39,0.3);padding:0.6rem 1.25rem;border-radius:8px;font-size:0.85rem;text-decoration:none">📋 Full Price Guide</a>
+      </div>
+    </div>
+
+    <p style="color:#555;font-size:0.75rem;text-align:center;margin-top:1rem">* Estimates only. Final fee confirmed after free initial consultation. Instalment options available on all services.</p>
+  </div>
+</div>
+</section>
+
+<style>
+.level-card{background:#050810;border:1px solid rgba(201,162,39,0.15);border-radius:8px;padding:0.75rem;text-align:center;cursor:pointer;color:#8892a4;transition:all 0.2s}
+.level-card:hover{border-color:rgba(201,162,39,0.4);color:#F5F0E8}
+.level-card.active{background:rgba(201,162,39,0.1);border-color:#C9A227;color:#C9A227}
+</style>
+
+<script>
+var selectedLevel = 'standard';
+var fees = {
+  canada:    { basic: [3000,5000],    standard: [5000,8000],    complete: [8000,12000]  },
+  uk:        { basic: [2500,4000],    standard: [4000,6500],    complete: [6500,9000]   },
+  australia: { basic: [2500,4000],    standard: [4000,7000],    complete: [7000,10000]  },
+  germany:   { basic: [2000,3500],    standard: [3500,6000],    complete: [6000,8000]   },
+  uae:       { basic: [1500,2500],    standard: [2500,4500],    complete: [4500,6000]   },
+  nursing:   { basic: [2000,3500],    standard: [3500,6000],    complete: [6000,8000]   },
+};
+var descs = {
+  basic: 'CV preparation + destination briefing + job portal setup',
+  standard: 'Full support — CV, cover letter, employer search, application assistance',
+  complete: 'End-to-end support until job offer received — includes all standard services plus ongoing follow-up'
+};
+
+function selectLevel(level) {
+  selectedLevel = level;
+  document.querySelectorAll('.level-card').forEach(function(el) { el.classList.remove('active'); });
+  document.getElementById('level-' + level).classList.add('active');
+  calculateFee();
+}
+
+function calculateFee() {
+  var country = document.getElementById('calc-country').value;
+  if (!country) { document.getElementById('fee-result').style.display = 'none'; return; }
+  var range = fees[country][selectedLevel];
+  document.getElementById('fee-amount').textContent = '₹' + range[0].toLocaleString() + ' – ₹' + range[1].toLocaleString();
+  document.getElementById('fee-desc').textContent = descs[selectedLevel];
+  document.getElementById('fee-result').style.display = 'block';
+  gtag('event', 'fee_calculator_use', { event_category: 'engagement', event_label: country + '_' + selectedLevel });
+}
+</script>
+
 <section id="faq" style="background:#050810;padding:3.5rem 1.5rem">
 <div style="max-width:780px;margin:0 auto">
   <div style="text-align:center;margin-bottom:2.5rem">

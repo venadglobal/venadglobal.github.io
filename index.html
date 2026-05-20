@@ -327,6 +327,243 @@ footer strong{color:var(--gold)}
 </section>
 
 <!-- SERVICES -->
+
+<!-- ══════════════════════════════════════════════════════
+     INTERACTIVE COUNTRY SELECTOR
+════════════════════════════════════════════════════════ -->
+<section id="country-selector" style="background:#0a0f1e;padding:3.5rem 1.5rem">
+<div style="max-width:900px;margin:0 auto">
+  <div style="text-align:center;margin-bottom:2rem">
+    <div style="font-family:monospace;font-size:0.7rem;letter-spacing:4px;color:#C9A227;text-transform:uppercase;margin-bottom:0.5rem">✦ Where Are You Headed?</div>
+    <h2 style="font-size:1.8rem;color:#F5F0E8;font-weight:700">Select Your Destination</h2>
+    <p style="color:#8892a4;margin-top:0.5rem;font-size:0.95rem">Click a country to see how we can help you get there</p>
+  </div>
+
+  <!-- Country Flags -->
+  <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;margin-bottom:2rem">
+    <button class="country-btn active" onclick="showCountry('canada')" id="btn-canada">🇨🇦 Canada</button>
+    <button class="country-btn" onclick="showCountry('uk')" id="btn-uk">🇬🇧 United Kingdom</button>
+    <button class="country-btn" onclick="showCountry('australia')" id="btn-australia">🇦🇺 Australia</button>
+    <button class="country-btn" onclick="showCountry('germany')" id="btn-germany">🇩🇪 Germany</button>
+    <button class="country-btn" onclick="showCountry('uae')" id="btn-uae">🇦🇪 Middle East</button>
+    <button class="country-btn" onclick="showCountry('nursing')" id="btn-nursing">🏥 Nursing Abroad</button>
+  </div>
+
+  <!-- Country Details Panel -->
+  <div id="country-panel" style="background:#0d1628;border:1px solid rgba(201,162,39,0.3);border-radius:16px;padding:2rem;transition:all 0.3s">
+
+    <!-- CANADA -->
+    <div class="country-detail" id="detail-canada">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+        <div>
+          <div style="font-size:2.5rem;margin-bottom:0.5rem">🇨🇦</div>
+          <h3 style="color:#C9A227;font-size:1.3rem;margin-bottom:0.5rem">Canada — Atlantic Immigration Program</h3>
+          <p style="color:#8892a4;font-size:0.9rem;margin-bottom:1rem">Our strongest service. Antony personally went through this process. Complete guidance for permanent residency in Atlantic Canada.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem">
+            <span class="service-tag">AIP Eligibility Check</span>
+            <span class="service-tag">NOC Code Assessment</span>
+            <span class="service-tag">Canadian CV</span>
+            <span class="service-tag">LinkedIn Setup</span>
+            <span class="service-tag">Employer Search</span>
+            <span class="service-tag">WES/IELTS Guidance</span>
+          </div>
+          <div style="color:#C9A227;font-size:1rem;font-weight:600;margin-bottom:1rem">₹5,000 – ₹12,000 · Instalment options available</div>
+        </div>
+        <div style="background:rgba(201,162,39,0.05);border-radius:10px;padding:1.25rem">
+          <div style="color:#F5F0E8;font-size:0.85rem;font-weight:600;margin-bottom:0.75rem">Why Canada Works for Kerala Professionals:</div>
+          <div style="color:#8892a4;font-size:0.85rem;line-height:1.8">
+            ✓ No employer sponsorship required initially<br>
+            ✓ Nova Scotia & Newfoundland actively recruiting<br>
+            ✓ Pathway to permanent residency<br>
+            ✓ Healthcare, IT, hospitality — all sectors open<br>
+            ✓ Family can follow once you are settled
+          </div>
+          <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20want%20to%20know%20about%20Canada%20AIP" target="_blank" style="display:block;background:#25D366;color:#000;text-align:center;padding:0.65rem;border-radius:8px;font-weight:700;font-size:0.85rem;text-decoration:none;margin-top:1rem">💬 Ask About Canada</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- UK -->
+    <div class="country-detail" id="detail-uk" style="display:none">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+        <div>
+          <div style="font-size:2.5rem;margin-bottom:0.5rem">🇬🇧</div>
+          <h3 style="color:#C9A227;font-size:1.3rem;margin-bottom:0.5rem">United Kingdom — Skilled Worker Visa</h3>
+          <p style="color:#8892a4;font-size:0.9rem;margin-bottom:1rem">The UK Shortage Occupation List is Kerala's opportunity. Healthcare professionals especially in high demand.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem">
+            <span class="service-tag">Shortage Occupation Check</span>
+            <span class="service-tag">UK CV Format</span>
+            <span class="service-tag">Sponsor Employer Search</span>
+            <span class="service-tag">CoS Guidance</span>
+            <span class="service-tag">VFS Application</span>
+            <span class="service-tag">ILR Pathway</span>
+          </div>
+          <div style="color:#C9A227;font-size:1rem;font-weight:600;margin-bottom:1rem">₹3,500 – ₹9,000 · Flexible payment</div>
+        </div>
+        <div style="background:rgba(201,162,39,0.05);border-radius:10px;padding:1.25rem">
+          <div style="color:#F5F0E8;font-size:0.85rem;font-weight:600;margin-bottom:0.75rem">UK Advantage for Kerala Professionals:</div>
+          <div style="color:#8892a4;font-size:0.85rem;line-height:1.8">
+            ✓ NHS actively recruits Kerala nurses<br>
+            ✓ English language advantage<br>
+            ✓ Clear pathway to settlement (ILR)<br>
+            ✓ Strong Kerala diaspora community<br>
+            ✓ Good salary — GBP earnings
+          </div>
+          <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20want%20to%20know%20about%20UK%20Skilled%20Worker%20Visa" target="_blank" style="display:block;background:#25D366;color:#000;text-align:center;padding:0.65rem;border-radius:8px;font-weight:700;font-size:0.85rem;text-decoration:none;margin-top:1rem">💬 Ask About UK</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AUSTRALIA -->
+    <div class="country-detail" id="detail-australia" style="display:none">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+        <div>
+          <div style="font-size:2.5rem;margin-bottom:0.5rem">🇦🇺</div>
+          <h3 style="color:#C9A227;font-size:1.3rem;margin-bottom:0.5rem">Australia — Skills in Demand Visa</h3>
+          <p style="color:#8892a4;font-size:0.9rem;margin-bottom:1rem">No employer sponsorship licence needed — one of Europe's most accessible pathways for skilled professionals.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem">
+            <span class="service-tag">ANZSCO Code Check</span>
+            <span class="service-tag">Skills Assessment</span>
+            <span class="service-tag">Australian CV</span>
+            <span class="service-tag">Employer Targeting</span>
+            <span class="service-tag">Salary Guidance</span>
+            <span class="service-tag">State Nomination</span>
+          </div>
+          <div style="color:#C9A227;font-size:1rem;font-weight:600;margin-bottom:1rem">₹4,000 – ₹10,000 · Flexible payment</div>
+        </div>
+        <div style="background:rgba(201,162,39,0.05);border-radius:10px;padding:1.25rem">
+          <div style="color:#F5F0E8;font-size:0.85rem;font-weight:600;margin-bottom:0.75rem">Australia Advantage:</div>
+          <div style="color:#8892a4;font-size:0.85rem;line-height:1.8">
+            ✓ High demand for skilled workers<br>
+            ✓ AUD 79,499+ salary threshold<br>
+            ✓ State nomination options (491/190)<br>
+            ✓ Large Kerala community in Melbourne/Sydney<br>
+            ✓ Permanent residency pathway available
+          </div>
+          <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20want%20to%20know%20about%20Australia%20visa" target="_blank" style="display:block;background:#25D366;color:#000;text-align:center;padding:0.65rem;border-radius:8px;font-weight:700;font-size:0.85rem;text-decoration:none;margin-top:1rem">💬 Ask About Australia</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- GERMANY -->
+    <div class="country-detail" id="detail-germany" style="display:none">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+        <div>
+          <div style="font-size:2.5rem;margin-bottom:0.5rem">🇩🇪</div>
+          <h3 style="color:#C9A227;font-size:1.3rem;margin-bottom:0.5rem">Germany — EU Blue Card</h3>
+          <p style="color:#8892a4;font-size:0.9rem;margin-bottom:1rem">Germany's EU Blue Card — no employer sponsorship licence needed. Permanent residence possible in just 21 months.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem">
+            <span class="service-tag">EU Blue Card Check</span>
+            <span class="service-tag">ZAB Recognition</span>
+            <span class="service-tag">German CV Format</span>
+            <span class="service-tag">Job Search Strategy</span>
+            <span class="service-tag">Salary Guidance</span>
+            <span class="service-tag">Embassy Process</span>
+          </div>
+          <div style="color:#C9A227;font-size:1rem;font-weight:600;margin-bottom:1rem">₹3,500 – ₹8,000 · Flexible payment</div>
+        </div>
+        <div style="background:rgba(201,162,39,0.05);border-radius:10px;padding:1.25rem">
+          <div style="color:#F5F0E8;font-size:0.85rem;font-weight:600;margin-bottom:0.75rem">Germany Advantage:</div>
+          <div style="color:#8892a4;font-size:0.85rem;line-height:1.8">
+            ✓ €45,934+ salary threshold<br>
+            ✓ PR possible in 21 months<br>
+            ✓ No employer sponsorship licence<br>
+            ✓ Strong demand for IT and engineers<br>
+            ✓ Growing Indian community
+          </div>
+          <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20want%20to%20know%20about%20Germany%20EU%20Blue%20Card" target="_blank" style="display:block;background:#25D366;color:#000;text-align:center;padding:0.65rem;border-radius:8px;font-weight:700;font-size:0.85rem;text-decoration:none;margin-top:1rem">💬 Ask About Germany</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- UAE/MIDDLE EAST -->
+    <div class="country-detail" id="detail-uae" style="display:none">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+        <div>
+          <div style="font-size:2.5rem;margin-bottom:0.5rem">🇦🇪</div>
+          <h3 style="color:#C9A227;font-size:1.3rem;margin-bottom:0.5rem">Middle East — UAE, Saudi, Qatar & More</h3>
+          <p style="color:#8892a4;font-size:0.9rem;margin-bottom:1rem">Our home ground — 30 years UAE experience. We know exactly how to approach Middle East employers.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem">
+            <span class="service-tag">Gulf Format CV</span>
+            <span class="service-tag">Cover Letter</span>
+            <span class="service-tag">Employer Strategy</span>
+            <span class="service-tag">GCC Job Portals</span>
+            <span class="service-tag">Interview Prep</span>
+            <span class="service-tag">Salary Negotiation</span>
+          </div>
+          <div style="color:#C9A227;font-size:1rem;font-weight:600;margin-bottom:1rem">₹2,500 – ₹6,000 · Very flexible</div>
+        </div>
+        <div style="background:rgba(201,162,39,0.05);border-radius:10px;padding:1.25rem">
+          <div style="color:#F5F0E8;font-size:0.85rem;font-weight:600;margin-bottom:0.75rem">Middle East Advantage:</div>
+          <div style="color:#8892a4;font-size:0.85rem;line-height:1.8">
+            ✓ 30+ years real UAE experience<br>
+            ✓ We know the culture from inside<br>
+            ✓ Tax-free salaries<br>
+            ✓ Fastest route for most Kerala professionals<br>
+            ✓ UAE, Saudi, Qatar, Kuwait, Oman covered
+          </div>
+          <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20want%20guidance%20for%20Middle%20East%20jobs" target="_blank" style="display:block;background:#25D366;color:#000;text-align:center;padding:0.65rem;border-radius:8px;font-weight:700;font-size:0.85rem;text-decoration:none;margin-top:1rem">💬 Ask About Middle East</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NURSING -->
+    <div class="country-detail" id="detail-nursing" style="display:none">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+        <div>
+          <div style="font-size:2.5rem;margin-bottom:0.5rem">🏥</div>
+          <h3 style="color:#C9A227;font-size:1.3rem;margin-bottom:0.5rem">Nursing & Healthcare Abroad</h3>
+          <p style="color:#8892a4;font-size:0.9rem;margin-bottom:1rem">Kerala nurses are in global demand. We guide you through licensing, exams and employment in UK, Canada, Australia and Gulf.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem">
+            <span class="service-tag">CBT/OSCE Guidance</span>
+            <span class="service-tag">NMC UK Process</span>
+            <span class="service-tag">NCLEX Guidance</span>
+            <span class="service-tag">Nursing CV</span>
+            <span class="service-tag">Hospital Search</span>
+            <span class="service-tag">IELTS/OET Tips</span>
+          </div>
+          <div style="color:#C9A227;font-size:1rem;font-weight:600;margin-bottom:1rem">₹3,000 – ₹8,000 · Family success story</div>
+        </div>
+        <div style="background:rgba(201,162,39,0.05);border-radius:10px;padding:1.25rem">
+          <div style="color:#F5F0E8;font-size:0.85rem;font-weight:600;margin-bottom:0.75rem">Why Kerala Nurses Succeed Abroad:</div>
+          <div style="color:#8892a4;font-size:0.85rem;line-height:1.8">
+            ✓ Kerala nursing training is globally respected<br>
+            ✓ NHS UK actively recruits<br>
+            ✓ Canada healthcare desperately needs nurses<br>
+            ✓ Gulf hospitals prefer Kerala nurses<br>
+            ✓ This is a family success story for us too
+          </div>
+          <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20am%20a%20nurse%20looking%20for%20guidance%20to%20go%20abroad" target="_blank" style="display:block;background:#25D366;color:#000;text-align:center;padding:0.65rem;border-radius:8px;font-weight:700;font-size:0.85rem;text-decoration:none;margin-top:1rem">💬 Ask About Nursing</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<style>
+.country-btn{background:#0d1628;border:1px solid rgba(201,162,39,0.2);color:#8892a4;padding:0.6rem 1.25rem;border-radius:8px;cursor:pointer;font-size:0.9rem;transition:all 0.2s;font-family:inherit}
+.country-btn:hover{border-color:rgba(201,162,39,0.5);color:#F5F0E8}
+.country-btn.active{background:rgba(201,162,39,0.15);border-color:#C9A227;color:#C9A227;font-weight:600}
+.service-tag{font-size:0.72rem;color:#8892a4;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:0.25rem 0.6rem;border-radius:12px}
+.country-detail{animation:fadeIn 0.3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){
+  .country-detail > div{grid-template-columns:1fr !important}
+}
+</style>
+
+<script>
+function showCountry(country) {
+  document.querySelectorAll('.country-detail').forEach(function(el) { el.style.display = 'none'; });
+  document.querySelectorAll('.country-btn').forEach(function(el) { el.classList.remove('active'); });
+  document.getElementById('detail-' + country).style.display = 'block';
+  document.getElementById('btn-' + country).classList.add('active');
+  gtag('event', 'country_selector_click', { event_category: 'engagement', event_label: country });
+}
+</script>
+
 <section class="services" id="services">
   <h2 class="section-title" style="text-align:left">All Services</h2>
   <p class="section-sub" style="text-align:left;margin-bottom:0">Honest, experience-based guidance. All services include direct WhatsApp support throughout.</p>

@@ -332,130 +332,90 @@ footer strong{color:var(--gold)}
      INTERACTIVE COUNTRY SELECTOR
 ════════════════════════════════════════════════════════ -->
 
-<!-- ══════════════════════════════════════════════════════
-     INTERACTIVE WORLD MAP
-════════════════════════════════════════════════════════ -->
+
+<!-- PROFESSIONAL WORLD MAP — Leaflet.js -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 <section style="background:#0a0f1e;padding:3.5rem 1.5rem;overflow:hidden">
 <div style="max-width:900px;margin:0 auto">
   <div style="text-align:center;margin-bottom:2rem">
     <div style="font-family:monospace;font-size:0.7rem;letter-spacing:4px;color:#C9A227;text-transform:uppercase;margin-bottom:0.5rem">✦ Our Reach</div>
     <h2 style="font-size:1.8rem;color:#F5F0E8;font-weight:700">Where We Guide People</h2>
-    <p style="color:#8892a4;margin-top:0.5rem;font-size:0.95rem">From Kollam, Kerala — to the world</p>
+    <p style="color:#8892a4;margin-top:0.5rem;font-size:0.95rem">From Kollam, Kerala to the world. Click any marker to learn more.</p>
   </div>
-
-  <!-- SVG World Map -->
-  <div style="position:relative;background:#050810;border:1px solid rgba(201,162,39,0.15);border-radius:16px;padding:1.5rem;overflow:hidden">
-    
-    <!-- Grid lines background -->
-    <svg viewBox="0 0 900 450" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">
-      <!-- Ocean background -->
-      <rect width="900" height="450" fill="#050810"/>
-      
-      <!-- Grid lines -->
-      <g stroke="rgba(201,162,39,0.06)" stroke-width="0.5">
-        <line x1="0" y1="75" x2="900" y2="75"/>
-        <line x1="0" y1="150" x2="900" y2="150"/>
-        <line x1="0" y1="225" x2="900" y2="225"/>
-        <line x1="0" y1="300" x2="900" y2="300"/>
-        <line x1="0" y1="375" x2="900" y2="375"/>
-        <line x1="150" y1="0" x2="150" y2="450"/>
-        <line x1="300" y1="0" x2="300" y2="450"/>
-        <line x1="450" y1="0" x2="450" y2="450"/>
-        <line x1="600" y1="0" x2="600" y2="450"/>
-        <line x1="750" y1="0" x2="750" y2="450"/>
-      </g>
-
-      <!-- Continents - simplified shapes -->
-      <!-- North America -->
-      <path d="M 80 80 L 180 70 L 220 90 L 240 130 L 220 180 L 200 220 L 170 240 L 150 220 L 120 200 L 90 160 L 70 120 Z" fill="#1a2744" stroke="rgba(201,162,39,0.2)" stroke-width="1"/>
-      <!-- South America -->
-      <path d="M 170 260 L 210 250 L 240 270 L 250 320 L 240 370 L 210 400 L 180 390 L 160 350 L 155 300 Z" fill="#1a2744" stroke="rgba(201,162,39,0.2)" stroke-width="1"/>
-      <!-- Europe -->
-      <path d="M 400 60 L 460 55 L 490 70 L 500 100 L 480 120 L 450 125 L 420 115 L 395 95 Z" fill="#1a2744" stroke="rgba(201,162,39,0.2)" stroke-width="1"/>
-      <!-- Africa -->
-      <path d="M 420 140 L 480 130 L 510 150 L 520 200 L 510 270 L 490 320 L 460 340 L 430 320 L 410 270 L 405 200 Z" fill="#1a2744" stroke="rgba(201,162,39,0.2)" stroke-width="1"/>
-      <!-- Middle East -->
-      <path d="M 500 120 L 560 110 L 590 130 L 585 170 L 550 180 L 510 170 L 495 145 Z" fill="#1a2744" stroke="rgba(201,162,39,0.2)" stroke-width="1"/>
-      <!-- Asia/India -->
-      <path d="M 560 100 L 680 90 L 750 110 L 770 150 L 750 200 L 700 220 L 650 210 L 600 190 L 570 160 L 555 130 Z" fill="#1a2744" stroke="rgba(201,162,39,0.2)" stroke-width="1"/>
-      <!-- Australia -->
-      <path d="M 700 280 L 790 270 L 820 300 L 815 350 L 780 370 L 730 360 L 695 330 Z" fill="#1a2744" stroke="rgba(201,162,39,0.2)" stroke-width="1"/>
-
-      <!-- HOME — Kollam, Kerala -->
-      <circle cx="620" cy="175" r="8" fill="#C9A227" opacity="0.9">
-        <animate attributeName="r" values="8;14;8" dur="2s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="620" cy="175" r="4" fill="#F0C060"/>
-      <text x="630" y="168" fill="#F0C060" font-size="11" font-family="Arial" font-weight="bold">🏠 Kollam</text>
-
-      <!-- Connection lines from Kerala -->
-      <!-- To Canada -->
-      <path d="M 620 175 Q 400 50 160 150" stroke="rgba(201,162,39,0.3)" stroke-width="1.5" fill="none" stroke-dasharray="5,3">
-        <animate attributeName="stroke-dashoffset" values="0;-100" dur="3s" repeatCount="indefinite"/>
-      </path>
-      <!-- To UK -->
-      <path d="M 620 175 Q 550 80 450 90" stroke="rgba(66,133,244,0.3)" stroke-width="1.5" fill="none" stroke-dasharray="5,3">
-        <animate attributeName="stroke-dashoffset" values="0;-100" dur="2.5s" repeatCount="indefinite"/>
-      </path>
-      <!-- To Australia -->
-      <path d="M 620 175 Q 700 250 750 310" stroke="rgba(52,168,83,0.3)" stroke-width="1.5" fill="none" stroke-dasharray="5,3">
-        <animate attributeName="stroke-dashoffset" values="0;-100" dur="2s" repeatCount="indefinite"/>
-      </path>
-      <!-- To UAE -->
-      <path d="M 620 175 Q 580 150 545 145" stroke="rgba(251,188,4,0.4)" stroke-width="1.5" fill="none" stroke-dasharray="5,3">
-        <animate attributeName="stroke-dashoffset" values="0;-100" dur="1.5s" repeatCount="indefinite"/>
-      </path>
-      <!-- To Germany -->
-      <path d="M 620 175 Q 560 100 445 80" stroke="rgba(234,67,53,0.3)" stroke-width="1.5" fill="none" stroke-dasharray="5,3">
-        <animate attributeName="stroke-dashoffset" values="0;-100" dur="2.8s" repeatCount="indefinite"/>
-      </path>
-
-      <!-- Destination markers -->
-      <!-- Canada -->
-      <circle cx="160" cy="150" r="6" fill="#4285F4" opacity="0.8"/>
-      <circle cx="160" cy="150" r="3" fill="white"/>
-      <text x="170" y="145" fill="#aab0c0" font-size="10" font-family="Arial">🇨🇦 Canada</text>
-
-      <!-- UK -->
-      <circle cx="450" cy="90" r="6" fill="#EA4335" opacity="0.8"/>
-      <circle cx="450" cy="90" r="3" fill="white"/>
-      <text x="460" y="85" fill="#aab0c0" font-size="10" font-family="Arial">🇬🇧 UK</text>
-
-      <!-- Australia -->
-      <circle cx="750" cy="310" r="6" fill="#34A853" opacity="0.8"/>
-      <circle cx="750" cy="310" r="3" fill="white"/>
-      <text x="760" y="305" fill="#aab0c0" font-size="10" font-family="Arial">🇦🇺 Australia</text>
-
-      <!-- UAE -->
-      <circle cx="545" cy="145" r="6" fill="#FBBC04" opacity="0.8"/>
-      <circle cx="545" cy="145" r="3" fill="#333"/>
-      <text x="555" y="140" fill="#aab0c0" font-size="10" font-family="Arial">🇦🇪 UAE</text>
-
-      <!-- Germany -->
-      <circle cx="445" cy="75" r="6" fill="#EA4335" opacity="0.8"/>
-      <circle cx="445" cy="75" r="3" fill="white"/>
-      <text x="455" y="70" fill="#aab0c0" font-size="10" font-family="Arial">🇩🇪 Germany</text>
-
-      <!-- New Zealand -->
-      <circle cx="820" cy="350" r="5" fill="#34A853" opacity="0.6"/>
-      <text x="825" y="345" fill="#aab0c0" font-size="9" font-family="Arial">🇳🇿 NZ</text>
-
-    </svg>
-
-    <!-- Map legend -->
-    <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(201,162,39,0.1)">
-      <div style="display:flex;align-items:center;gap:0.4rem;font-size:0.75rem;color:#8892a4">
-        <div style="width:8px;height:8px;border-radius:50%;background:#C9A227"></div> Kollam HQ
-      </div>
-      <div style="display:flex;align-items:center;gap:0.4rem;font-size:0.75rem;color:#8892a4">
-        <div style="width:24px;height:2px;background:rgba(201,162,39,0.5);border-top:1px dashed #C9A227"></div> Active guidance routes
-      </div>
-      <div style="color:#8892a4;font-size:0.75rem">6 destinations · 8 countries · 1 honest consultant</div>
+  <div style="border:1px solid rgba(201,162,39,0.2);border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.4)">
+    <div id="vgc-map" style="height:420px;width:100%;background:#050810"></div>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:center;margin-top:1.25rem">
+    <div style="display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:#8892a4">
+      <div style="width:12px;height:12px;border-radius:50%;background:#C9A227;box-shadow:0 0 6px #C9A227"></div> Home — Kollam, Kerala
     </div>
+    <div style="display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:#8892a4">
+      <div style="width:12px;height:12px;border-radius:50%;background:#4285F4;box-shadow:0 0 6px #4285F4"></div> Destinations we guide to
+    </div>
+    <div style="color:#8892a4;font-size:0.78rem">6 destinations · 8 countries · 1 honest consultant</div>
   </div>
 </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var map = L.map('vgc-map', {
+    center: [20, 50],
+    zoom: 2,
+    zoomControl: true,
+    scrollWheelZoom: false,
+    attributionControl: false
+  });
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    subdomains: 'abcd',
+    maxZoom: 10
+  }).addTo(map);
+
+  var styleEl = document.createElement('style');
+  styleEl.textContent = '@keyframes mapPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:0.6}}';
+  document.head.appendChild(styleEl);
+
+  function makeIcon(color, size) {
+    var s = size || 14;
+    return L.divIcon({
+      className: '',
+      html: '<div style="width:' + s + 'px;height:' + s + 'px;border-radius:50%;background:' + color + ';border:2px solid rgba(255,255,255,0.8);box-shadow:0 0 10px ' + color + ';animation:mapPulse 2s ease-in-out infinite"></div>',
+      iconSize: [s, s],
+      iconAnchor: [s/2, s/2],
+      popupAnchor: [0, -(s/2 + 4)]
+    });
+  }
+
+  var homePopup = '<div style="font-family:Arial;min-width:160px"><strong style="color:#C9A227">HOME — Kollam, Kerala</strong><br><span style="color:#666;font-size:12px">Venad Global HQ<br>Where every journey begins</span></div>';
+  L.marker([8.8932, 76.6141], {icon: makeIcon('#C9A227', 20)}).addTo(map).bindPopup(homePopup);
+
+  var dests = [
+    [56.13, -106.35, '#4285F4', 'Canada', 'Atlantic Immigration Program'],
+    [55.38, -3.44, '#EA4335', 'United Kingdom', 'Skilled Worker Visa'],
+    [-25.27, 133.78, '#34A853', 'Australia', 'Skills in Demand Visa'],
+    [51.17, 10.45, '#FBBC04', 'Germany', 'EU Blue Card'],
+    [23.42, 53.85, '#FF6B35', 'UAE & Middle East', '30+ Years Experience'],
+    [-40.90, 174.89, '#00BCD4', 'New Zealand', 'Skilled Migrant Category']
+  ];
+
+  dests.forEach(function(d) {
+    var popup = '<div style="font-family:Arial;min-width:160px"><strong style="color:' + d[2] + '">' + d[3] + '</strong><br><span style="color:#666;font-size:12px">' + d[4] + '</span><br><a href="#country-selector" style="color:#C9A227;font-size:12px">Learn more</a></div>';
+    L.marker([d[0], d[1]], {icon: makeIcon(d[2], 14)}).addTo(map).bindPopup(popup);
+    L.polyline([[8.8932, 76.6141], [d[0], d[1]]], {
+      color: d[2], weight: 1.5, opacity: 0.35, dashArray: '6,6'
+    }).addTo(map);
+  });
+
+  map.fitBounds([[-45,-130],[65,185]], {padding:[30,30]});
+
+  map.on('popupopen', function() {
+    if (typeof gtag !== 'undefined') gtag('event', 'map_click', {event_category:'engagement'});
+  });
+});
+</script>
 
 <section id="country-selector" style="background:#0a0f1e;padding:3.5rem 1.5rem">
 <div style="max-width:900px;margin:0 auto">

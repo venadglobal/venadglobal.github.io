@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://venadglobal.github.io/sitemap.xml
+Sitemap: https://venadglobal.org/sitemap.xml

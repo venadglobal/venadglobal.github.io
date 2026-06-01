@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Block search engines from indexing raw PDF files directly
+Disallow: /*.pdf$
+
+# Link to your XML sitemap
 Sitemap: https://venadglobal.org/sitemap.xml

@@ -249,7 +249,7 @@ footer strong{color:var(--gold)}
 <!-- VGC ANNOUNCEMENT BAR - Add immediately after <body> tag -->
 <!-- To update announcements: edit the items in the announcements array in the script -->
 <style>
-.vcg-announce-bar{
+.vgc-announce-bar{
   background:#0a0800;
   border-bottom:1px solid rgba(201,162,39,0.4);
   padding:0;
@@ -258,17 +258,17 @@ footer strong{color:var(--gold)}
   position:relative;
   z-index:200;
 }
-.vcg-announce-inner{
+.vgc-announce-inner{
   display:inline-flex;
   align-items:center;
   gap:0;
-  animation:vcgscroll 35s linear infinite;
+  animation:vgcscroll 35s linear infinite;
   padding:0.52rem 0;
 }
-.vcg-announce-bar:hover .vcg-announce-inner{
+.vgc-announce-bar:hover .vgc-announce-inner{
   animation-play-state:paused;
 }
-.vcg-item{
+.vgc-item{
   display:inline-flex;
   align-items:center;
   gap:0.6rem;
@@ -278,26 +278,26 @@ footer strong{color:var(--gold)}
   color:#f0c040;
   letter-spacing:0.04em;
 }
-.vcg-item .dot{
+.vgc-item .dot{
   width:5px;height:5px;
   border-radius:50%;
   background:#C9A227;
   flex-shrink:0;
 }
-.vcg-item a{
+.vgc-item a{
   color:#C9A227;
   text-decoration:none;
   border-bottom:1px solid rgba(201,162,39,0.3);
 }
-.vcg-item a:hover{color:#f0c040;border-bottom-color:rgba(240,192,64,0.6);}
-@keyframes vcgscroll{
+.vgc-item a:hover{color:#f0c040;border-bottom-color:rgba(240,192,64,0.6);}
+@keyframes vgcscroll{
   0%{transform:translateX(0);}
   100%{transform:translateX(-50%);}
 }
 </style>
 
-<div class="vcg-announce-bar" role="marquee" aria-label="VGC Announcements">
-  <div class="vcg-announce-inner" id="vcgBar"></div>
+<div class="vgc-announce-bar" role="marquee" aria-label="VGC Announcements">
+  <div class="vgc-announce-inner" id="vgcBar"></div>
 </div>
 
 <script>
@@ -305,15 +305,16 @@ footer strong{color:var(--gold)}
   var announcements = [
     "VGC does not authorise any third-party agents, brokers or representatives — contact us only through official channels.",
     "Official WhatsApp: +91 85898 95659 — no other number is authorised.",
+    "New on the blog: Cost of Secrecy - Why open architecture always defeats the hidden lineage?",
     "New on the blog: The Long Bridge — Why Malayalam Gets Left Behind.",
     "Consultations available for Kerala professionals — WhatsApp to book.",
     "Beware of fake agents claiming to represent VGC — we operate only through venadglobal.org and official WhatsApp.",
   ];
-  var bar = document.getElementById('vcgBar');
+  var bar = document.getElementById('vgcBar');
   var html = '';
   var doubled = announcements.concat(announcements);
   doubled.forEach(function(msg){
-    html += '<span class="vcg-item"><span class="dot"></span>' + msg + '</span>';
+    html += '<span class="vgc-item"><span class="dot"></span>' + msg + '</span>';
   });
   bar.innerHTML = html;
 })();

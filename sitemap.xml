@@ -93,6 +93,11 @@
     <loc>https://venadglobal.org/blog/before-you-sign-overseas-education.html</loc>
     <lastmod>2026-06-28</lastmod>
     <priority>0.80</priority>
+  <url>
+    <loc>https://venadglobal.org/blog/black-coffee-philosophy.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <priority>0.80</priority>
+  </url>
   </url>
   <url>
     <loc>https://venadglobal.org/blog/blood-and-water-john19.html</loc>
@@ -236,7 +241,7 @@
   </url>
   <url>
     <loc>https://venadglobal.org/blog/kerala-60-month-ultimatum.html</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-19</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
@@ -265,14 +270,19 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://venadglobal.org/blog/letter-of-wishes-burial-or-donation.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://venadglobal.org/blog/ksrtc-accountability.html</loc>
     <lastmod>2026-06-28</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://venadglobal.org/blog/letter-of-wishes-burial-or-donation.html</loc>
-    <lastmod>2026-07-18</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-07-21</lastmod>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://venadglobal.org/blog/libertarian-referee.html</loc>
@@ -297,6 +307,11 @@
   <url>
     <loc>https://venadglobal.org/blog/middle-class-kerala.html</loc>
     <lastmod>2026-06-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://venadglobal.org/blog/nasa-isro-strategic-synergy.html</loc>
+    <lastmod>2026-07-21</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
@@ -355,9 +370,24 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://venadglobal.org/blog/smartphone-software-illusion.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://venadglobal.org/blog/spain-argentina-world-cup-final-2026.html</loc>
     <lastmod>2026-07-20</lastmod>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://venadglobal.org/blog/sumud-under-the-stars.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://venadglobal.org/blog/the-borders-within.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://venadglobal.org/blog/the-climber.html</loc>
@@ -366,7 +396,7 @@
   </url>
   <url>
     <loc>https://venadglobal.org/blog/the-last-journey.html</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
@@ -414,11 +444,6 @@
     <lastmod>2026-06-28</lastmod>
     <priority>0.80</priority>
   </url>
-   <url>
-    <loc>https://venadglobal.org/blog/Sumud-Under-the-Stars.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.70</priority>
-  </url>
   <url>
     <loc>https://venadglobal.org/blog/rules-vs-trust.html</loc>
     <lastmod>2026-07-01</lastmod>
@@ -430,5 +455,4 @@
     <priority>0.70</priority>
   </url>
 
-  
 </urlset>

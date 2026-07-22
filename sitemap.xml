@@ -210,6 +210,11 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://venadglobal.org/blog/happy-birthday-vini.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://venadglobal.org/blog/health-is-wealth.html</loc>
     <lastmod>2026-07-02</lastmod>
     <priority>0.80</priority>
@@ -383,6 +388,11 @@
     <loc>https://venadglobal.org/blog/sumud-under-the-stars.html</loc>
     <lastmod>2026-07-18</lastmod>
     <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://venadglobal.org/blog/the-0-1-percent-rule.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://venadglobal.org/blog/the-borders-within.html</loc>

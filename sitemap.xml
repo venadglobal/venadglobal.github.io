@@ -70,6 +70,16 @@
 
   <!-- Blog Repository Articles -->
   <url>
+    <loc>https://venadglobal.org/blog/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <priority>0.80</priority>
+  </url>
+<url>
+    <loc>https://venadglobal.org/blog/index.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://venadglobal.org/blog/ai-camera-paradox.html</loc>
     <lastmod>2026-07-17</lastmod>
     <priority>0.80</priority>

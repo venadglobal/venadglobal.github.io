@@ -1,498 +1,533 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Core Website Root Pages -->
-  <url>
-    <loc>https://venadglobal.org/</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/index.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/cv.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/services.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/students.html</loc>
-    <lastmod>2026-07-03</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/nursing.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/sop.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/references.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/faq.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/links.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.60</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/privacy.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.50</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/terms.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.50</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/disclaimer.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.50</priority>
-  </url>
+<!-- Core Website Root Pages -->
+<url>
+<loc>https://venadglobal.org/</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/index.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/cv.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/services.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/students.html</loc>
+<lastmod>2026-07-03</lastmod>
+<priority>0.70</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/nursing.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/sop.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/references.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.70</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/faq.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.70</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/links.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.60</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/privacy.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.50</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/terms.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.50</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/disclaimer.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.50</priority>
+</url>
 
-  <!-- Blog Repository Articles -->
-  <url>
-    <loc>https://venadglobal.org/blog/</loc>
-    <lastmod>2026-07-25</lastmod>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/ai-camera-paradox.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/ai-jobs-kerala-professionals.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/anniversary-2026.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/arrogance-of-the-demand.html</loc>
-    <lastmod>2026-07-24</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/australia-migration-kerala.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/before-you-sign-overseas-education.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-    </url>
-  <url>
-    <loc>https://venadglobal.org/blog/black-coffee-philosophy.html</loc>
-    <lastmod>2026-07-18</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/blood-and-water-john19.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/canada-aip-kerala.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/citizenship-paradox.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/competitive-learner.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/cosmic-clock-human-accelerator.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/cost-of-secrecy.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/crab-basket-blueprint.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/crocodile-tears-educational-reform.html</loc>
-    <lastmod>2026-07-25</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/cs50-at-57.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/currency-of-gratitude.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/cv-mistakes-kerala.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/deficit-illusion-power-sector.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/digital-compartmentalization.html</loc>
-    <lastmod>2026-07-13</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/diy-architect.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/drishyam-3-mohanlal-review.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/e20-petrol-facts.html</loc>
-    <lastmod>2026-07-09</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/emotional-sovereignty.html</loc>
-    <lastmod>2026-07-01</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/germany-blue-card-kerala.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/google-io-2026-kerala-consultant.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/gulf-jobs-2026.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/happy-birthday-adil.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/happy-birthday-akil.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/happy-birthday-seema.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/happy-birthday-shajy.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/happy-birthday-vini.html</loc>
-    <lastmod>2026-07-22</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/health-is-wealth.html</loc>
-    <lastmod>2026-07-02</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/hct-operations-lessons.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/horizontal-network.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/illusion-of-consensus.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/jacintha-gancis-tribute.html</loc>
-    <lastmod>2026-07-06</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/jesus-calendar-research.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/kerala-60-month-ultimatum.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/kerala-brain-drain.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/kerala-campus-strikes</loc>
-    <lastmod>2026-07-11</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/kerala-rto-colour-change.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/kill-switch-economy.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/kseb-prosumer-injustice.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/letter-of-wishes-burial-or-donation.html</loc>
-    <lastmod>2026-07-18</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/ksrtc-accountability.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/letter-of-wishes-burial-or-donation.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/libertarian-referee.html</loc>
-    <lastmod>2026-07-16</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/loyalty-what-it-gets-you.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/map-and-meter.html</loc>
-    <lastmod>2026-07-03</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/messi-baptism-of-destiny.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/middle-class-kerala.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/nasa-isro-strategic-synergy.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/new-zealand-migration-kerala.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/nri-return-kerala.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/nursing-abroad.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/people-who-shaped-me.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/phoenix-bird.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/queen-of-the-night.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/rareeram-lullaby.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/seasonal.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/simbas-basin.html</loc>
-    <lastmod>2026-07-25</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/six-foot-blueprint.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/smartphone-software-illusion.html</loc>
-    <lastmod>2026-07-18</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/spain-argentina-world-cup-final-2026.html</loc>
-    <lastmod>2026-07-20</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/sumud-under-the-stars.html</loc>
-    <lastmod>2026-07-18</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/the-0-1-percent-rule.html</loc>
-    <lastmod>2026-07-22</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/the-backdoor-protocol.html</loc>
-    <lastmod>2026-07-22</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/the-borders-within.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/the-climber.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/the-last-journey.html</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/the-long-bridge.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/the-other-side-of-the-coin.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/the-outrage-economy.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/the-prescribed-milk.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/the-quiet-strength.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/the-silent-carriers.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/the-weight-of-the-shield.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/truth-fading-closed-doors.html</loc>
-    <lastmod>2026-07-03</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/uk-student-visa-kerala.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/what-simba-knows.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/when-family-comes-home.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://venadglobal.org/blog/rules-vs-trust.html</loc>
-    <lastmod>2026-07-01</lastmod>
-    <priority>0.70</priority>
-  </url>
-   <url>
-    <loc>https://venadglobal.org/blog/version-57.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <priority>0.70</priority>
-  </url>
+<!-- Blog Repository Articles -->
+<url>
+<loc>https://venadglobal.org/blog/</loc>
+<lastmod>2026-07-25</lastmod>
+<priority>0.90</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/ai-camera-paradox.html</loc>
+<lastmod>2026-07-17</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/ai-jobs-kerala-professionals.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/anniversary-2026.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/arrogance-of-the-demand.html</loc>
+<lastmod>2026-07-24</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/australia-migration-kerala.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/before-you-sign-overseas-education.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/black-coffee-philosophy.html</loc>
+<lastmod>2026-07-18</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/blood-and-water-john19.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/canada-aip-kerala.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/citizenship-paradox.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/competitive-learner.html</loc>
+<lastmod>2026-07-04</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/cosmic-clock-human-accelerator.html</loc>
+<lastmod>2026-07-17</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/cost-of-secrecy.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/crab-basket-blueprint.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/crocodile-tears-educational-reform.html</loc>
+<lastmod>2026-07-25</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/cs50-at-57.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/currency-of-gratitude.html</loc>
+<lastmod>2026-07-04</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/cv-mistakes-kerala.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/deficit-illusion-power-sector.html</loc>
+<lastmod>2026-07-15</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/digital-compartmentalization.html</loc>
+<lastmod>2026-07-13</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/diy-architect.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/drishyam-3-mohanlal-review.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/e20-petrol-facts.html</loc>
+<lastmod>2026-07-09</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/emotional-sovereignty.html</loc>
+<lastmod>2026-07-01</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/from-aggression-to-compassion.html</loc>
+<lastmod>2026-07-27</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/germany-blue-card-kerala.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/google-io-2026-kerala-consultant.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/gulf-jobs-2026.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/happy-birthday-adil.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/happy-birthday-akil.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/happy-birthday-seema.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/happy-birthday-shajy.html</loc>
+<lastmod>2026-07-23</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/happy-birthday-vini.html</loc>
+<lastmod>2026-07-22</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/health-is-wealth.html</loc>
+<lastmod>2026-07-02</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/hct-operations-lessons.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/horizontal-network.html</loc>
+<lastmod>2026-07-04</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/illusion-of-consensus.html</loc>
+<lastmod>2026-07-17</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/jacintha-gancis-tribute.html</loc>
+<lastmod>2026-07-06</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/jesus-calendar-research.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/kerala-60-month-ultimatum.html</loc>
+<lastmod>2026-07-19</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/kerala-brain-drain.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/kerala-campus-strikes</loc>
+<lastmod>2026-07-11</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/kerala-rto-colour-change.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/kill-switch-economy.html</loc>
+<lastmod>2026-07-04</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/kseb-prosumer-injustice.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/letter-of-wishes-burial-or-donation.html</loc>
+<lastmod>2026-07-18</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/ksrtc-accountability.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/letter-of-wishes-burial-or-donation.html</loc>
+<lastmod>2026-07-21</lastmod>
+<priority>0.70</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/libertarian-referee.html</loc>
+<lastmod>2026-07-16</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/loyalty-what-it-gets-you.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/map-and-meter.html</loc>
+<lastmod>2026-07-03</lastmod>
+priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/messi-baptism-of-destiny.html</loc>
+<lastmod>2026-07-21</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/middle-class-kerala.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/nasa-isro-strategic-synergy.html</loc>
+<lastmod>2026-07-21</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/new-zealand-migration-kerala.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/nri-return-kerala.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/nursing-abroad.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/old-crap-stories-reality-check.html</loc>
+<lastmod>2026-07-27</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/people-who-shaped-me.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/phoenix-bird.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/queen-of-the-night.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/rareeram-lullaby.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/seasonal.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/simbas-basin.html</loc>
+<lastmod>2026-07-25</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/six-foot-blueprint.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/smartphone-software-illusion.html</loc>
+<lastmod>2026-07-18</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/spain-argentina-world-cup-final-2026.html</loc>
+<lastmod>2026-07-20</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/sumud-under-the-stars.html</loc>
+<lastmod>2026-07-18</lastmod>
+<priority>0.70</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-0-1-percent-rule.html</loc>
+<lastmod>2026-07-22</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-15-second-philosopher.html</loc>
+<lastmod>2026-07-27</lastmod>
+<priority>0.80</priority>
+</url>
+  <url>
+<loc>https://venadglobal.org/blog/the-atheist-at-the-funeral.html</loc>
+<lastmod>2026-07-27</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-backdoor-protocol.html</loc>
+<lastmod>2026-07-22</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-borders-within.html</loc>
+<lastmod>2026-07-21</lastmod>
+<priority>0.70</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-climber.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-last-journey.html</loc>
+<lastmod>2026-07-07</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-legacy-engine.html</loc>
+<lastmod>2026-07-27</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-long-bridge.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-monkeys-grandson.html</loc>
+<lastmod>2026-07-27</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-monkeys-pride.html</loc>
+<lastmod>2026-07-27</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-other-side-of-the-coin.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-outrage-economy.html</loc>
+<lastmod>2026-07-23</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-prescribed-milk.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-quiet-strength.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-silent-carriers.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/the-weight-of-the-shield.html</loc>
+<lastmod>2026-07-17</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/truth-fading-closed-doors.html</loc>
+<lastmod>2026-07-03</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/uk-student-visa-kerala.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/what-simba-knows.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/when-family-comes-home.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/rules-vs-trust.html</loc>
+<lastmod>2026-07-01</lastmod>
+<priority>0.70</priority>
+</url>
+<url>
+<loc>https://venadglobal.org/blog/version-57.html</loc>
+<lastmod>2026-06-28</lastmod>
+<priority>0.70</priority>
+</url>
 
 </urlset>

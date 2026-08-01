@@ -14,6 +14,21 @@
 <meta property="og:image" content="assets/Ponmudi_Kallar_River_Eco_Tourism1.jpeg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2BZDPM9EZM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2BZDPM9EZM');
+    const scrollMarks=[25,50,75,100],firedMarks=new Set();
+    window.addEventListener('scroll',()=>{
+      const pct=Math.round((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100);
+      scrollMarks.forEach(m=>{if(pct>=m&&!firedMarks.has(m)){firedMarks.add(m);gtag('event','scroll_depth',{depth:m,page:'firewall_fallacy'});}});
+    });
+    [30,60,120,180].forEach(s=>setTimeout(()=>gtag('event','time_on_page',{seconds:s,page:'firewall_fallacy'}),s*1000));
+  </script>
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}

@@ -24,9 +24,9 @@
     const scrollMarks=[25,50,75,100],firedMarks=new Set();
     window.addEventListener('scroll',()=>{
       const pct=Math.round((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100);
-      scrollMarks.forEach(m=>{if(pct>=m&&!firedMarks.has(m)){firedMarks.add(m);gtag('event','scroll_depth',{depth:m,page:'firewall_fallacy'});}});
+      scrollMarks.forEach(m=>{if(pct>=m&&!firedMarks.has(m)){firedMarks.add(m);gtag('event','scroll_depth',{depth:m,page:'ponmudi-river-eco-tourism-resort'});}});
     });
-    [30,60,120,180].forEach(s=>setTimeout(()=>gtag('event','time_on_page',{seconds:s,page:'firewall_fallacy'}),s*1000));
+    [30,60,120,180].forEach(s=>setTimeout(()=>gtag('event','time_on_page',{seconds:s,page:'ponmudi-river-eco-tourism-resort'}),s*1000));
   </script>
 
 <style>

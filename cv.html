@@ -21,14 +21,14 @@
 <meta property="og:type" content="profile">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
 <style>
-/* ── RESET & BASE ─────────────────────────────────────────────────────────── */
+/* ── RESET & BASE ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:#0d1117;color:#ccd6f0;font-family:'DM Sans',sans-serif;overflow-x:hidden;line-height:1.6}
-
-/* ── CSS VARIABLES ───────────────────────────────────────────────────────── */
 :root{
   --bg:#0d1117;
   --surface:#161b22;
@@ -42,9 +42,12 @@ body{background:#0d1117;color:#ccd6f0;font-family:'DM Sans',sans-serif;overflow-
   --muted:#8b949e;
   --text:#ccd6f0;
 }
+/* Arabic font */
+html[lang="ar"] body{font-family:'Cairo','DM Sans',sans-serif}
+.ltr{unicode-bidi:embed;direction:ltr;display:inline-block}
 
-/* ── LANG BAR ────────────────────────────────────────────────────────────── */
-.lang-bar{background:#010409;padding:10px 0;border-bottom:1px solid var(--border)}
+/* ── LANG BAR ── */
+.lang-bar{background:#010409;padding:10px 0;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
 .lang-bar .wrap{display:flex;justify-content:space-between;align-items:center}
 .lang-bar-left{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:2px}
 .lang-bar-left span{color:var(--gold)}
@@ -52,10 +55,10 @@ body{background:#0d1117;color:#ccd6f0;font-family:'DM Sans',sans-serif;overflow-
 .lang-btn{background:none;border:1px solid var(--border);color:var(--muted);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2px;padding:4px 14px;border-radius:2px;cursor:pointer;transition:all .2s;text-transform:uppercase}
 .lang-btn.active,.lang-btn:hover{background:var(--gold);border-color:var(--gold);color:#000}
 
-/* ── WRAP ────────────────────────────────────────────────────────────────── */
+/* ── WRAP ── */
 .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
 
-/* ── HERO ────────────────────────────────────────────────────────────────── */
+/* ── HERO ── */
 .hero{
   background:linear-gradient(135deg,#0d1117 0%,#161b22 50%,#0d1117 100%);
   border-bottom:1px solid var(--border);
@@ -70,25 +73,28 @@ body{background:#0d1117;color:#ccd6f0;font-family:'DM Sans',sans-serif;overflow-
 .hero-name{font-family:'Cinzel',serif;font-size:clamp(42px,7vw,72px);font-weight:700;color:var(--white);line-height:1;margin-bottom:8px;letter-spacing:2px}
 .hero-aka{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:3px;margin-bottom:20px}
 .hero-title{font-size:16px;color:var(--gold);font-weight:500;margin-bottom:8px}
-.hero-sub{font-size:13px;color:var(--muted);margin-bottom:28px}
-.hero-contact{display:flex;flex-wrap:wrap;gap:12px}
+.hero-sub{font-size:13px;color:var(--muted);margin-bottom:12px}
+.hero-contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
 .hc-link{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:.5px;transition:color .2s;display:flex;align-items:center;gap:5px}
 .hc-link:hover{color:var(--gold)}
-
-/* LOGO */
 .hero-logo{width:120px;height:120px;object-fit:contain;filter:drop-shadow(0 4px 16px rgba(196,146,42,.3));opacity:.9}
 @media(max-width:600px){.hero-logo{width:80px;height:80px;margin:0 auto}}
 
-/* ── STATS ROW ───────────────────────────────────────────────────────────── */
+/* ── STATS ROW ── FIXED LOGICAL */
 .stats-row{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 0}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
 @media(max-width:600px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
-.stat-item{text-align:center;padding:8px 16px;border-right:1px solid var(--border)}
-.stat-item:last-child{border-right:none}
+.stat-item{text-align:center;padding:8px 16px;border-inline-end:1px solid var(--border)}
+.stat-item:last-child{border-inline-end:none}
+@media(max-width:600px){
+  .stat-item:nth-child(2){border-inline-end:none}
+  .stat-item:nth-child(1),.stat-item:nth-child(2){border-bottom:1px solid var(--border);padding-bottom:16px}
+  .stat-item:nth-child(3),.stat-item:nth-child(4){padding-top:16px}
+}
 .stat-num{font-family:'Cinzel',serif;font-size:28px;font-weight:700;color:var(--gold);line-height:1}
 .stat-lbl{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px}
 
-/* ── ELIGIBILITY SECTION ─────────────────────────────────────────────────── */
+/* ── ELIGIBILITY ── */
 .elig-section{padding:48px 0}
 .sec-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:12px}
 .sec-label::after{content:'';flex:1;height:1px;background:var(--border)}
@@ -104,7 +110,7 @@ body{background:#0d1117;color:#ccd6f0;font-family:'DM Sans',sans-serif;overflow-
   position:relative;
   overflow:hidden;
 }
-.elig-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);opacity:0;transition:opacity .2s}
+.elig-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);opacity:0;transition:opacity .2s}
 .elig-card:hover{border-color:var(--gold);transform:translateY(-2px)}
 .elig-card:hover::before{opacity:1}
 .elig-flag{font-size:22px;margin-bottom:6px}
@@ -112,12 +118,11 @@ body{background:#0d1117;color:#ccd6f0;font-family:'DM Sans',sans-serif;overflow-
 .elig-category{font-size:11px;color:var(--gold);line-height:1.4}
 .elig-note{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4}
 
-/* ── ABOUT ───────────────────────────────────────────────────────────────── */
+/* ── ABOUT ── */
 .about-section{padding:0 0 48px}
-.about-text{font-size:16px;color:var(--text);line-height:1.8;max-width:760px}
-.about-text.ar{font-size:17px;line-height:2;direction:rtl;text-align:right}
+.about-text{font-size:16px;color:var(--text);line-height:1.8;max-width:100%;width:100%}
 
-/* ── SKILLS ──────────────────────────────────────────────────────────────── */
+/* ── SKILLS ── */
 .skills-section{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:48px 0}
 .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 @media(max-width:600px){.skills-grid{grid-template-columns:1fr}}
@@ -125,7 +130,7 @@ body{background:#0d1117;color:#ccd6f0;font-family:'DM Sans',sans-serif;overflow-
 .skill-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
 .skill-value{font-size:13px;color:var(--text);line-height:1.6}
 
-/* ── EXPERIENCE ──────────────────────────────────────────────────────────── */
+/* ── EXPERIENCE ── */
 .exp-section{padding:48px 0}
 .exp-item{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--border)}
 .exp-item:last-child{border-bottom:none}
@@ -135,25 +140,25 @@ body{background:#0d1117;color:#ccd6f0;font-family:'DM Sans',sans-serif;overflow-
 .exp-org{font-size:13px;color:var(--gold);font-weight:500;margin-bottom:4px}
 .exp-loc{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.5px;margin-bottom:10px}
 .exp-bullets{list-style:none;display:flex;flex-direction:column;gap:5px}
-.exp-bullets li{font-size:13px;color:var(--muted);padding-left:16px;position:relative;line-height:1.5}
-.exp-bullets li::before{content:'▸';position:absolute;left:0;color:var(--gold);font-size:10px;top:3px}
+.exp-bullets li{font-size:13px;color:var(--muted);padding-inline-start:16px;position:relative;line-height:1.5}
+.exp-bullets li::before{content:'▸';position:absolute;inset-inline-start:0;color:var(--gold);font-size:10px;top:3px}
 
-/* ── CERTS ───────────────────────────────────────────────────────────────── */
+/* ── CERTS ── */
 .certs-section{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:48px 0}
 .certs-grid{display:flex;flex-wrap:wrap;gap:8px}
-.cert-badge{font-family:'DM Mono',monospace;font-size:10px;padding:6px 14px;border:1px solid var(--border);border-radius:2px;color:var(--muted);background:var(--surface2);display:flex;align-items:center;gap:6px;letter-spacing:.5px}
+.cert-badge{font-family:'DM Mono',monospace;font-size:10px;padding:6px 14px;border:1px solid var(--border);border-radius:2px;color:var(--muted);background:var(--surface2);display:flex;align-items:center;gap:6px;letter-spacing:.5px;max-width:100%;word-break:break-word}
 .cert-badge span{color:var(--gold)}
 
-/* ── REFS ────────────────────────────────────────────────────────────────── */
+/* ── REFS ── */
 .refs-section{padding:48px 0}
 .refs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 @media(max-width:600px){.refs-grid{grid-template-columns:1fr}}
-.ref-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:18px;border-left:3px solid var(--gold)}
+.ref-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:18px;border-inline-start:3px solid var(--gold)}
 .ref-name{font-family:'Cinzel',serif;font-size:15px;color:var(--white);margin-bottom:4px}
 .ref-title{font-size:12px;color:var(--gold);margin-bottom:4px}
 .ref-org{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.5px}
 
-/* ── FOOTER ──────────────────────────────────────────────────────────────── */
+/* ── FOOTER ── */
 footer{border-top:1px solid var(--border);padding:32px 0;margin-top:48px}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 .footer-brand{display:flex;align-items:center;gap:12px}
@@ -161,24 +166,21 @@ footer{border-top:1px solid var(--border);padding:32px 0;margin-top:48px}
 .footer-text{font-family:'Cinzel',serif;font-size:13px;color:var(--gold);letter-spacing:2px}
 .footer-copy{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;text-align:right}
 
-/* ── ARABIC ──────────────────────────────────────────────────────────────── */
+/* ── ARABIC ── FIXED WITH LOGICAL PROPERTIES */
 .ar-text{display:none}
 .en-text{display:block}
-body.ar-mode .ar-text{display:block}
-body.ar-mode .en-text{display:none}
-body.ar-mode{direction:rtl}
-body.ar-mode .wrap{direction:rtl}
-body.ar-mode .sec-label{flex-direction:row-reverse}
-body.ar-mode .sec-label::after{display:none}
-body.ar-mode .sec-label::before{content:'';flex:1;height:1px;background:var(--border)}
-body.ar-mode .exp-item{direction:rtl}
-body.ar-mode .exp-bullets li{padding-left:0;padding-right:16px}
-body.ar-mode .exp-bullets li::before{left:auto;right:0}
-body.ar-mode .elig-card{text-align:right}
-body.ar-mode .hc-link{direction:ltr}
-body.ar-mode .hero-contact{direction:ltr}
+html[lang="ar"] .ar-text{display:block !important}
+html[lang="ar"] .en-text{display:none !important}
+html[dir="rtl"] .sec-label{flex-direction:row-reverse}
+html[dir="rtl"] .sec-label::after{display:none}
+html[dir="rtl"] .sec-label::before{content:'';flex:1;height:1px;background:var(--border)}
+html[dir="rtl"] .exp-item{direction:rtl}
+html[dir="rtl"] .elig-card{text-align:right}
+html[dir="rtl"] .footer-copy{text-align:left}
+/* Keep contact LTR even in AR mode */
+html[dir="rtl"] .hero-contact{justify-content:flex-end}
 
-/* ── ANIMATIONS ──────────────────────────────────────────────────────────── */
+/* ── ANIMATIONS ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 .hero{animation:fadeUp .6s ease both}
 </style>
@@ -188,7 +190,7 @@ body.ar-mode .hero-contact{direction:ltr}
 <!-- LANG BAR -->
 <div class="lang-bar">
   <div class="wrap">
-    <div class="lang-bar-left"><span>IDIVET</span> · Antony Ancil · CV Portfolio</div>
+    <div class="lang-bar-left"><span>idivet</span> · Antony Ancil · CV Portfolio</div>
     <div class="lang-btns">
       <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
       <button class="lang-btn" onclick="setLang('ar')" id="btn-ar">عربي</button>
@@ -196,50 +198,25 @@ body.ar-mode .hero-contact{direction:ltr}
   </div>
 </div>
 
-<!-- HERO -->
+<!-- HERO - FIXED STRUCTURE -->
 <section class="hero">
   <div class="wrap">
     <div class="hero-inner">
       <div>
-        <div class="hero-tag en-text">IT Support · Administration · Facilities · IELTS/OET</div>
-        <div class="hero-tag ar-text">دعم تقنية المعلومات · الإدارة · المرافق · أيلتس/أويت</div>
-        <h1 class="hero-name">ANTONY<br>ANCIL</h1>
-        <div class="hero-aka en-text">IDIVET · THUNDER ⚡</div>
-        <div class="hero-aka ar-text">إيديفيت · ثاندر ⚡</div>
+        <div class="hero-tag en-text">IT Support · Administration · Facilities · IELTS/OET . Op-Ed Writer</div>
+        <div class="hero-tag ar-text">دعم تقنية المعلومات · الإدارة · المرافق · أيلتس/أويت · كاتب مقالات رأي</div>
+        <h1 class="hero-name">ANTONY ANCIL</h1>
+        <div class="hero-aka en-text">idivet ⚡</div>
+        <div class="hero-aka ar-text">idivet ⚡</div>
         <p class="hero-title en-text">Multi-Skilled IT & Operations Professional | Principal Author</p>
         <p class="hero-title ar-text">المؤلف الرئيسي  | متخصص متعدد المهارات في تقنية المعلومات والعمليات</p>
         <p class="hero-sub en-text">36 Years Experience · 30 Years UAE · 6 Years India · British Council Certified · IELTS/OET 11yr 9m</p>
         <p class="hero-sub ar-text">36 عامًا من الخبرة · 30 عامًا في الإمارات · 6 سنوات في الهند · معتمد من المجلس الثقافي البريطاني</p>
-        <p class="hero-sub en-text">📰 Available for Paid Media Syndication, Guest Op-Eds, and Strategic Commentary Worldwide.</p>
-        <p class="hero-sub ar-text">📰 متاح للنشر الإعلامي المدفوع، ومقالات الرأي كضيف، والتعليق الاستراتيجي في جميع أنحاء العالم.</p>
-<!-- REFS -->
-<section class="refs-section">
-  <div class="wrap">
-    <div class="sec-label en-text">Professional References</div>
-    <div class="sec-label ar-text">مراجع مهنية</div>
-    <div class="refs-grid">
-      <a href="https://venadglobal.org/references" style="text-decoration:none;display:block">
-        <div class="ref-card">
-          <div class="ref-name">View Professional References</div>
-          <div class="ref-title en-text">Verified Recommendations & Testimonials</div>
-          <div class="ref-title ar-text">توصيات وشهادات موثقة</div>
-          <div class="ref-org">venadglobal.org/references</div>
-        </div>
-      </a>
-      <a href="https://linkedin.com/in/idivet" target="_blank" style="text-decoration:none;display:block">
-        <div class="ref-card">
-          <div class="ref-name">LinkedIn Profile</div>
-          <div class="ref-title en-text">Industry Peers & Direct Endorsements</div>
-          <div class="ref-title ar-text">زملاء الصناعة والمشرفون المباشرون</div>
-          <div class="ref-org">linkedin.com/in/idivet</div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
+        <p class="hero-sub en-text">📰 Available for Relocation & Paid Media Syndication, Op-Ed Writer, and Strategic Commentary Worldwide.</p>
+        <p class="hero-sub ar-text">📰 متاح للانتقال وإعادة التوطين والنشر الإعلامي المدفوع، كاتب مقالات رأي، والتعليق الاستراتيجي في جميع أنحاء العالم.</p>
         <div class="hero-contact">
-          <a href="tel:+918589895659" class="hc-link">📞 +91 85898 95659</a>
-          <a href="mailto:venadglobal@gmail.com" class="hc-link">✉ venadglobal@gmail.com</a>
+          <a href="tel:+918589895659" class="hc-link"><span class="ltr">📞 +91 85898 95659</span></a>
+          <a href="mailto:venadglobal@gmail.com" class="hc-link"><span class="ltr">✉ venadglobal@gmail.com</span></a>
           <a href="https://linkedin.com/in/idivet" class="hc-link" target="_blank">🔗 linkedin.com/in/idivet</a>
           <a href="https://venadglobal.org" class="hc-link" target="_blank">🌐 venadglobal.org</a>
           <span class="hc-link" style="cursor:default">📍 Kollam, Kerala, India</span>
@@ -257,7 +234,7 @@ body.ar-mode .hero-contact{direction:ltr}
   <div class="wrap">
     <div class="stats-grid">
       <div class="stat-item">
-        <div class="stat-num">36</div>
+        <div class="stat-num">36+</div>
         <div class="stat-lbl en-text">Years Total</div>
         <div class="stat-lbl ar-text">سنوات الخبرة</div>
       </div>
@@ -280,14 +257,12 @@ body.ar-mode .hero-contact{direction:ltr}
   </div>
 </div>
 
-<!-- GLOBAL ELIGIBILITY -->
+<!-- GLOBAL ELIGIBILITY - SAME 12 CARDS -->
 <section class="elig-section">
   <div class="wrap">
     <div class="sec-label en-text">Global Work Eligibility — Open to Employer Sponsorship Worldwide</div>
     <div class="sec-label ar-text">الأهلية للعمل العالمي — منفتح على رعاية صاحب العمل في جميع أنحاء العالم</div>
-
     <div class="elig-grid">
-
       <div class="elig-card">
         <div class="elig-flag">🇨🇦</div>
         <div class="elig-country en-text">Canada</div>
@@ -297,7 +272,6 @@ body.ar-mode .hero-contact{direction:ltr}
         <div class="elig-note en-text">NOC 22220 · NOC 13100 · Employer sponsored · Active applications</div>
         <div class="elig-note ar-text">نوك 22220 · 13100 · طلبات نشطة</div>
       </div>
-
       <div class="elig-card">
         <div class="elig-flag">🇦🇺</div>
         <div class="elig-country en-text">Australia</div>
@@ -307,7 +281,6 @@ body.ar-mode .hero-contact{direction:ltr}
         <div class="elig-note en-text">ANZSCO 2631 ICT Support · 482 Visa pathway</div>
         <div class="elig-note ar-text">دعم تقنية المعلومات · مسار تأشيرة 482</div>
       </div>
-
       <div class="elig-card">
         <div class="elig-flag">🇳🇿</div>
         <div class="elig-country en-text">New Zealand</div>
@@ -317,7 +290,6 @@ body.ar-mode .hero-contact{direction:ltr}
         <div class="elig-note en-text">ANZSCO 2631 · Employer accreditation required</div>
         <div class="elig-note ar-text">اعتماد صاحب العمل مطلوب</div>
       </div>
-
       <div class="elig-card">
         <div class="elig-flag">🇩🇪</div>
         <div class="elig-country en-text">Germany</div>
@@ -327,7 +299,6 @@ body.ar-mode .hero-contact{direction:ltr}
         <div class="elig-note en-text">Fachkräfteeinwanderungsgesetz · IT shortage occupation</div>
         <div class="elig-note ar-text">قانون الهجرة المهنية · مهنة نقص تقنية المعلومات</div>
       </div>
-
       <div class="elig-card">
         <div class="elig-flag">🇱🇺</div>
         <div class="elig-country en-text">Luxembourg</div>
@@ -337,7 +308,6 @@ body.ar-mode .hero-contact{direction:ltr}
         <div class="elig-note en-text">ISCO 2523 · Financial & tech hub · Multilingual fit</div>
         <div class="elig-note ar-text">مركز مالي وتقني · ملاءمة متعددة اللغات</div>
       </div>
-
       <div class="elig-card">
         <div class="elig-flag">🇳🇱</div>
         <div class="elig-country en-text">Netherlands</div>
@@ -347,7 +317,6 @@ body.ar-mode .hero-contact{direction:ltr}
         <div class="elig-note en-text">Amazon shortlisted ✅ · IND recognised sponsor required</div>
         <div class="elig-note ar-text">أمازون اختصرت ✅ · راعي معترف به مطلوب</div>
       </div>
-
       <div class="elig-card">
         <div class="elig-flag">🇫🇮</div>
         <div class="elig-country en-text">Finland</div>
@@ -357,7 +326,6 @@ body.ar-mode .hero-contact{direction:ltr}
         <div class="elig-note en-text">ISCO 2523 · English-friendly · Strong tech sector</div>
         <div class="elig-note ar-text">قطاع تقني قوي · بيئة عمل إنجليزية</div>
       </div>
-
       <div class="elig-card">
         <div class="elig-flag">🇸🇬</div>
         <div class="elig-country en-text">Singapore</div>
@@ -367,7 +335,6 @@ body.ar-mode .hero-contact{direction:ltr}
         <div class="elig-note en-text">British Council IELTS/OET — 11yr 9m · MyCareersFuture active</div>
         <div class="elig-note ar-text">أيلتس/أويت المجلس الثقافي البريطاني — 11 سنة 9 أشهر</div>
       </div>
-
       <div class="elig-card">
         <div class="elig-flag">🇴🇲</div>
         <div class="elig-country en-text">Oman</div>
@@ -377,7 +344,6 @@ body.ar-mode .hero-contact{direction:ltr}
         <div class="elig-note en-text">Arabic working knowledge · Walk-in interviews welcome</div>
         <div class="elig-note ar-text">معرفة عمل باللغة العربية · مقابلات مباشرة مرحب بها</div>
       </div>
-
       <div class="elig-card">
         <div class="elig-flag">🇸🇦</div>
         <div class="elig-country en-text">Saudi Arabia</div>
@@ -387,7 +353,6 @@ body.ar-mode .hero-contact{direction:ltr}
         <div class="elig-note en-text">Iqama sponsorship · Gulf culture fluent · Arabic working</div>
         <div class="elig-note ar-text">كفالة إقامة · خبرة ثقافة الخليج · عربي عملي</div>
       </div>
-
       <div class="elig-card">
         <div class="elig-flag">🇬🇧</div>
         <div class="elig-country en-text">United Kingdom</div>
@@ -397,7 +362,6 @@ body.ar-mode .hero-contact{direction:ltr}
         <div class="elig-note en-text">SOC 2136 IT Systems · Sponsorship licence required</div>
         <div class="elig-note ar-text">أنظمة تقنية المعلومات · ترخيص الرعاية مطلوب</div>
       </div>
-
       <div class="elig-card" style="border-color:rgba(196,146,42,.3);background:rgba(196,146,42,.04)">
         <div class="elig-flag">🌍</div>
         <div class="elig-country en-text">Open to All Offers</div>
@@ -407,12 +371,11 @@ body.ar-mode .hero-contact{direction:ltr}
         <div class="elig-note en-text">Ready to relocate immediately · Open work permit preferred</div>
         <div class="elig-note ar-text">مستعد للانتقال فورًا</div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ABOUT - SAME CONTENT -->
 <section class="about-section">
   <div class="wrap">
     <div class="sec-label en-text">About</div>
@@ -428,7 +391,7 @@ body.ar-mode .hero-contact{direction:ltr}
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- SKILLS - SAME 6 CARDS -->
 <section class="skills-section">
   <div class="wrap">
     <div class="sec-label en-text">Core Skills</div>
@@ -480,7 +443,7 @@ body.ar-mode .hero-contact{direction:ltr}
   </div>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- EXPERIENCE - SAME 4 ITEMS -->
 <section class="exp-section">
   <div class="wrap">
     <div class="sec-label en-text">Professional Experience</div>
@@ -540,7 +503,7 @@ body.ar-mode .hero-contact{direction:ltr}
           <li class="en-text">Supervised 5KW OnGrid solar installation — full HSE compliance</li>
           <li class="ar-text">الإشراف على تركيب الطاقة الشمسية 5 كيلوواط — امتثال HSE كامل</li>
           <li class="en-text">Architect of the VGC blog ecosystem. Writing and publishing precision-guided, highly analytical articles on corporate strategy, legacy systems, and human psychology, aimed at an executive audience.</li>
-          <li class="ar-text">• الكاتب الرئيسي وقائد الفكر:</strong> مهندس نظام مدونة VGC. كتابة ونشر مقالات دقيقة وعالية التحليل حول استراتيجية الشركات والأنظمة التقليدية وعلم النفس البشري، موجهة لجمهور من المسؤولين التنفيذيين.</li>
+          <li class="ar-text">مهندس نظام مدونة VGC. كتابة ونشر مقالات دقيقة وعالية التحليل حول استراتيجية الشركات والأنظمة التقليدية وعلم النفس البشري، موجهة لجمهور من المسؤولين التنفيذيين.</li>
         </ul>
       </div>
     </div>
@@ -562,42 +525,25 @@ body.ar-mode .hero-contact{direction:ltr}
   </div>
 </section>
 
-<!-- CERTS -->
+<!-- CERTS - SAME CONTENT + PYTHON -->
 <section class="certs-section">
   <div class="wrap">
     <div class="sec-label en-text">Certifications & Education</div>
     <div class="sec-label ar-text">الشهادات والتعليم</div>
     <div class="certs-grid">
-      <!-- LATEST CERTIFICATION -->
-
-<div class="cert-badge"><span>✓</span> <span class="en-text">Python Essentials 1 (PE1) - Cisco Networking Academy x OpenEDG Python Institute(August 2026)· <a href="https://www.credly.com/badges/c97771dd-5f8b-4d08-90e0-03f00f45a97c" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">إأساسيات بايثون 1 (PE1)- أكاديمية سيسكو للشبكات بالتعاون مع معهد بايثون OpenEDG</span></div>
-
-<div class="cert-badge"><span>✓</span> <span class="en-text">Discovering Entrepreneurship - Cisco Networking Academy! (August 2026)· <a href="https://www.credly.com/badges/5c3b6e5e-589f-46b4-a67b-9396889fa93b" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">إاكتشاف ريادة الأعمال - أكاديمية سيسكو للشبكات!</span></div>
-
-<div class="cert-badge"><span>✓</span> <span class="en-text">Google Cloud Computing Foundations: Networking & Security in Google Cloud (August 2026)· <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/26479427" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">إأساسيات الحوسبة السحابية من Google: الشبكات والأمان في Google Cloud</span></div>
-
+<div class="cert-badge"><span>✓</span> <span class="en-text">Python Essentials 1 (PE1) - Cisco Networking Academy x OpenEDG Python Institute(August 2026)· <a href="https://www.credly.com/badges/c97771dd-5f8b-4d08-90e0-03f00f45a97c" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">أساسيات بايثون 1 (PE1)- أكاديمية سيسكو للشبكات بالتعاون مع معهد بايثون OpenEDG</span></div>
+<div class="cert-badge"><span>✓</span> <span class="en-text">Discovering Entrepreneurship - Cisco Networking Academy! (August 2026)· <a href="https://www.credly.com/badges/5c3b6e5e-589f-46b4-a67b-9396889fa93b" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">اكتشاف ريادة الأعمال - أكاديمية سيسكو للشبكات!</span></div>
+<div class="cert-badge"><span>✓</span> <span class="en-text">Google Cloud Computing Foundations: Networking & Security in Google Cloud (August 2026)· <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/26479427" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">أساسيات الحوسبة السحابية من Google: الشبكات والأمان في Google Cloud</span></div>
 <div class="cert-badge"><span>✓</span> <span class="en-text">Set Up an App Dev Environment on Google Cloud (August 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/26439616" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">إعداد بيئة تطوير تطبيقات على Google Cloud</span></div>
-      
 <div class="cert-badge"><span>✓</span> <span class="en-text">Google Cloud Computing Foundations: Infrastructure in Google Cloud (August 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/26404822" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">أساسيات الحوسبة السحابية من Google: البنية التحتية في Google Cloud | Google</span></div>
-
 <div class="cert-badge"><span>✓</span> <span class="en-text">Build a Certification Study Guide: ACE Exam Prep — Google Skillshop (July 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/25597915" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">إعداد دليل دراسي للحصول على الشهادة: التحضير لاختبار ACE | Google</span></div>
-
 <div class="cert-badge"><span>✓</span> <span class="en-text">Google Cloud Computing Foundations — Google Skillshop (July 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/25402441" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">أساسيات الحوسبة السحابية من Google</span></div>
-
-      <!-- PREVIOUSLY ADDED -->
       <div class="cert-badge"><span>✓</span> <span class="en-text">AI Digital Transformation with Google Cloud — Google Skillshop (June 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/24933602" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">التحول الرقمي بالذكاء الاصطناعي مع Google Cloud</span></div>
-      
       <div class="cert-badge"><span>✓</span> <span class="en-text">Implementing Cloud Load Balancing for Compute Engine — Google Skillshop (June 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/24941088" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">تنفيذ موازنة حمل السحابة لـ Compute Engine</span></div>
-      
       <div class="cert-badge"><span>✓</span> <span class="en-text">Maximize Productivity with AI Tools — Google/Coursera (June 2026) · <a href="https://www.coursera.org/account/accomplishments/verify/8KG7FC1XKE1W" target="_blank" style="color:var(--gold)">Verify</a></span><span class="ar-text">تعظيم الإنتاجية باستخدام أدوات الذكاء الاصطناعي</span></div>
-      
       <div class="cert-badge"><span>✓</span> <span class="en-text">Google Analytics Certification — Google Skillshop (April 2026) · <a href="https://skillshop.credential.net/4bb7df29-b270-4326-8861-1e8f7ed212aa#acc.0DyAnwUh" target="_blank" style="color:var(--gold)">Verify</a></span><span class="ar-text">شهادة Google Analytics</span></div>
-      
       <div class="cert-badge"><span>✓</span> <span class="en-text">Introduction to Cybersecurity — Cisco Networking Academy (May 2026) · <a href="https://www.credly.com/users/antony-ancil/badges/credly" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">مقدمة في الأمن السيبراني — أكاديمية سيسكو</span></div>
-      
       <div class="cert-badge"><span>✓</span> <span class="en-text">Introduction to Generative AI — Google Skillshop (May 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/23941339" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">مقدمة في الذكاء الاصطناعي التوليدي</span></div>
-
-      <!-- EXISTING CERTIFICATIONS -->
       <div class="cert-badge"><span>✓</span> <span class="en-text">Create Digital Content & Collaborate Online — Cisco Networking Academy (April 2026). <a href="https://www.credly.com/badges/9009c7a2-cfeb-4ebc-b47c-b86cf797db60" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">المحتوى الرقمي — أكاديمية سيسكو</span></div>
       <div class="cert-badge"><span>✓</span> <span class="en-text">Digital Marketing — Wadhwani Foundation (April 2026). <a href="https://venadglobal.org/25_Digital_Marketing_Certificate.pdf" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">التسويق الرقمي — مؤسسة واذواني</span></div>
       <div class="cert-badge"><span>✓</span> <span class="en-text">Child Protection Awareness — British Council UAE (2019)</span><span class="ar-text">توعية حماية الطفل — المجلس الثقافي البريطاني</span></div>
@@ -611,13 +557,11 @@ body.ar-mode .hero-contact{direction:ltr}
   </div>
 </section>
 
-<!-- REFS & CERTS LINK -->
+<!-- CERTS LINK -->
 <section class="refs-section">
   <div class="wrap">
-    <!-- Updated Labels Below -->
     <div class="sec-label en-text">Certifications and Documentation</div>
     <div class="sec-label ar-text">الشهادات والوثائق</div>
-    
     <a href="https://venadglobal.org/references" style="text-decoration:none;display:block">
       <div class="ref-card">
         <div class="ref-name">View Full Credentials & References</div>
@@ -629,7 +573,7 @@ body.ar-mode .hero-contact{direction:ltr}
   </div>
 </section>
 
-<!-- REFERENCES -->
+<!-- REFERENCES - SAME 7 CARDS -->
 <section class="refs-section">
   <div class="wrap">
     <div class="sec-label en-text">References</div>
@@ -638,17 +582,10 @@ body.ar-mode .hero-contact{direction:ltr}
 <div class="ref-card">
     <div class="ref-info">
     <div class="ref-name">Dr. Aidan Thorne 🇬🇧 ⭐ May 2026</div>
-    
-    <!-- English -->
     <div class="ref-title en-text">Master Trainer — IELTS Global Team · The British Council · Wales, UK</div>
-    <!-- Arabic -->
     <div class="ref-title ar-text">مدرب رئيسي — فريق أيلتس العالمي · المجلس الثقافي البريطاني · ويلز، المملكة المتحدة</div>
-    
     <div class="ref-org">Educational Doctorate · University of Exeter · British Council · ECAE · HCT UAE</div>
-    
-    <!-- English -->
     <div class="ref-title en-text" style="color:#059669;margin-top:4px">✅ Super Reference — 4 May 2026 · IELTS & OET · 11 Yrs 9 Months · Zero Incidents · Recommended without hesitation</div>
-    <!-- Arabic -->
     <div class="ref-title ar-text" style="color:#059669;margin-top:4px">✅ مرجع متميز — 4 مايو 2026 · أيلتس وأويت · 11 سنة و9 أشهر · صفر حوادث · موصى به دون تردد</div>
   </div>
 </div>
@@ -688,11 +625,17 @@ body.ar-mode .hero-contact{direction:ltr}
         <div class="ref-title ar-text">عضو هيئة تدريس سابق في كليات التقنية العليا</div>
         <div class="ref-org">Brisbane · Australia 🇦🇺</div>
       </div>
+      <div class="ref-card">
+        <div class="ref-name">Blaizy George</div>
+        <div class="ref-title en-text">Managing Director</div>
+        <div class="ref-title ar-text">المدير العام</div>
+        <div class="ref-org">The Farm Story · Kerala, India 🇮🇳</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FOOTER - SAME -->
 <footer>
   <div class="wrap">
     <div class="footer-inner">
@@ -709,30 +652,42 @@ body.ar-mode .hero-contact{direction:ltr}
       </div>
     </div>
   </div>
-  <p style="text-align:center;font-family:'DM Mono',monospace;font-size:0.75rem;color:#6b7280;margin-top:1rem;">© Last updated: July 2026 Antony Ancil — Venad Global Consultancy. All rights reserved.</p>
+  <p style="text-align:center;font-family:'DM Mono',monospace;font-size:0.75rem;color:#6b7280;margin-top:1rem;">© Last updated: August 2026 Antony Ancil — Venad Global Consultancy. All rights reserved.</p>
   <p style="text-align:center;margin-top:0.4rem;font-family:'DM Mono',monospace;font-size:0.75rem;color:#6b7280;">Content published on this site is the original work of Antony Ancil. Unauthorised reproduction is prohibited.</p>
 </footer>
 
 <script>
+// FIXED TOGGLE - SAME CONTENT, PROPER LOGIC
 function setLang(lang) {
-  if(lang === 'ar') {
-    document.body.classList.add('ar-mode');
-    document.documentElement.setAttribute('dir','rtl');
-    document.getElementById('btn-ar').classList.add('active');
-    document.getElementById('btn-en').classList.remove('active');
-    document.getElementById('cv-btns-en').style.display = 'none';
-    document.getElementById('cv-btns-ar').style.display = 'flex';
-  } else {
-    document.body.classList.remove('ar-mode');
-    document.documentElement.setAttribute('dir','ltr');
-    document.getElementById('btn-en').classList.add('active');
-    document.getElementById('btn-ar').classList.remove('active');
-    document.getElementById('cv-btns-en').style.display = 'flex';
-    document.getElementById('cv-btns-ar').style.display = 'none';
+  const isAr = lang === 'ar';
+  try {
+    localStorage.setItem('cv_lang', lang);
+  } catch(e){}
+  document.documentElement.lang = lang;
+  document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+  document.body.classList.toggle('ar-mode', isAr);
+  document.getElementById('btn-en').classList.toggle('active', !isAr);
+  document.getElementById('btn-ar').classList.toggle('active', isAr);
+  // Safe check for non-existing elements (old bug)
+  const enBtns = document.getElementById('cv-btns-en');
+  const arBtns = document.getElementById('cv-btns-ar');
+  if(enBtns && arBtns) {
+    enBtns.style.display = isAr ? 'none' : 'flex';
+    arBtns.style.display = isAr ? 'flex' : 'none';
   }
 }
+// Load saved language
+(function(){
+  try {
+    const saved = localStorage.getItem('cv_lang');
+    if(saved) setLang(saved);
+    else {
+      const bl = (navigator.language||'').toLowerCase();
+      if(bl.startsWith('ar')) setLang('ar');
+    }
+  } catch(e){}
+})();
 </script>
-
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {

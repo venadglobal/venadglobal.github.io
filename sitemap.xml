@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Core Website Root Pages -->
 <url>
 <loc>https://venadglobal.org/</loc>
 <lastmod>2026-06-28</lastmod>
@@ -72,8 +70,6 @@
 <lastmod>2026-06-28</lastmod>
 <priority>0.50</priority>
 </url>
-
-<!-- Blog Repository Articles -->
 <url>
 <loc>https://venadglobal.org/blog/</loc>
 <lastmod>2026-07-25</lastmod>
@@ -95,13 +91,13 @@
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://venadglobal.org/blog/architecture-of-a-flood.html</loc>
-<lastmod>2026-08-23</lastmod>
+<loc>https://venadglobal.org/blog/anniversary-2026.html</loc>
+<lastmod>2026-06-28</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://venadglobal.org/blog/anniversary-2026.html</loc>
-<lastmod>2026-06-28</lastmod>
+<loc>https://venadglobal.org/blog/architecture-of-a-flood.html</loc>
+<lastmod>2026-08-23</lastmod>
 <priority>0.80</priority>
 </url>
 <url>
@@ -290,7 +286,7 @@
 <priority>0.80</priority>
 </url>
 <url>
-<loc>https://venadglobal.org/blog/happy-independence-day.html.html</loc>
+<loc>https://venadglobal.org/blog/happy-independence-day.html</loc>
 <lastmod>2026-08-15</lastmod>
 <priority>0.80</priority>
 </url>
@@ -403,11 +399,6 @@
 <loc>https://venadglobal.org/blog/ksrtc-accountability.html</loc>
 <lastmod>2026-06-28</lastmod>
 <priority>0.80</priority>
-</url>
-<url>
-<loc>https://venadglobal.org/blog/letter-of-wishes-burial-or-donation.html</loc>
-<lastmod>2026-07-21</lastmod>
-<priority>0.70</priority>
 </url>
 <url>
 <loc>https://venadglobal.org/blog/libertarian-referee.html</loc>
@@ -724,5 +715,4 @@
 <lastmod>2026-06-28</lastmod>
 <priority>0.70</priority>
 </url>
-
 </urlset>

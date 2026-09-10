@@ -210,6 +210,16 @@ img{max-width:100%}
 .about-stat{text-align:center;background:var(--light);border-radius:8px;padding:0.75rem}
 .about-stat .n{font-size:1.5rem;font-weight:700;color:var(--navy)}
 .about-stat .l{font-size:0.72rem;color:var(--muted)}
+.about-section{background:var(--light);padding:2.5rem 1.5rem}
+.about-inner{max-width:800px;margin:0 auto}
+.about-inner h2{font-size:1.4rem;color:var(--navy);margin-bottom:1rem}
+.about-inner p{color:var(--muted);font-size:0.92rem;margin-bottom:1rem;line-height:1.75}
+.certs{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1rem 0}
+.cert-pill{background:#fff;border:1px solid var(--border);padding:4px 12px;border-radius:20px;font-size:0.8rem;color:var(--navy)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem}
+.stat{text-align:center;background:#fff;border:1px solid var(--border);border-radius:8px;padding:1rem}
+.stat .num{font-size:1.5rem;font-weight:800;color:var(--navy)}
+.stat .label{font-size:0.78rem;color:var(--muted)}
 
 /* PROCESS */
 .process{background:var(--light);padding:3rem 1.5rem}
@@ -531,7 +541,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   <!-- Country Flags -->
-  <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;margin-bottom:2rem">
+  <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;margin-bottom:1rem">
     <button class="country-btn active" onclick="showCountry('canada')" id="btn-canada">🇨🇦 Canada</button>
     <button class="country-btn" onclick="showCountry('uk')" id="btn-uk">🇬🇧 United Kingdom</button>
     <button class="country-btn" onclick="showCountry('australia')" id="btn-australia">🇦🇺 Australia</button>
@@ -541,7 +551,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   <!-- Country Details Panel -->
-  <div id="country-panel" style="background:#0d1628;border:1px solid rgba(201,162,39,0.3);border-radius:16px;padding:2rem;transition:all 0.3s">
+  <div id="country-panel" style="background:#0d1628;border:1px solid rgba(201,162,39,0.3);border-radius:16px;padding:0.2rem;transition:all 0.3s">
 
     <!-- CANADA -->
     <div class="country-detail" id="detail-canada">
@@ -549,7 +559,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div>
           <div style="font-size:2.5rem;margin-bottom:0.5rem">🇨🇦</div>
           <h3 style="color:#C9A227;font-size:1.3rem;margin-bottom:0.5rem">Canada — Atlantic Immigration Program</h3>
-          <p style="color:#8892a4;font-size:0.9rem;margin-bottom:1rem">Our strongest service. Antony personally went through this process. Complete guidance for permanent residency in Atlantic Canada.</p>
+          <p style="color:#8892a4;font-size:0.9rem;margin-bottom:1rem">Our strongest service. I, personally went through this process. Complete guidance for permanent residency in Atlantic Canada.</p>
           <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem">
             <span class="service-tag">AIP Eligibility Check</span>
             <span class="service-tag">NOC Code Assessment</span>
@@ -764,11 +774,9 @@ function showCountry(country) {
 
     <div class="card gold-top" id="canada-section">
       <div class="card-icon">🇨🇦</div>
-      <span class="badge badge-best">⭐ Best Pathway</span>
       <h3>Canada AIP Package</h3>
       <p class="card-sub">Atlantic Immigration Program</p>
-      <p>My strongest service — I personally went through this process.</p>
-      <ul>
+        <ul>
         <li>AIP eligibility &amp; NOC code assessment</li>
         <li>Canadian CV &amp; LinkedIn optimisation</li>
         <li>Cover letter for each application</li>
@@ -859,11 +867,9 @@ function showCountry(country) {
 
     <div class="card gold-top" id="middle-east">
       <div class="card-icon">🇦🇪</div>
-      <span class="badge badge-best">⭐ 30+ Yrs UAE Experience</span>
       <h3>Middle East GCC</h3>
       <p class="card-sub">UAE · Saudi · Qatar · Kuwait · Oman</p>
-      <p>My home ground — I know exactly how Gulf employers hire.</p>
-      <ul>
+        <ul>
         <li>Gulf-format CV creation</li>
         <li>Direct employer email strategy</li>
         <li>GCC job portal guidance</li>
@@ -882,11 +888,9 @@ function showCountry(country) {
   <div class="section-label">🏥 Nursing &amp; Healthcare</div>
   <div class="cards">
     <div class="card green-top" style="grid-column:1/-1">
-      <div class="card-icon">🏥</div>
-      <span class="badge badge-new-green">NEW SERVICE</span>
-      <h3>Nursing &amp; Allied Healthcare Abroad</h3>
-      <p class="card-sub">🇨🇦 Canada · 🇬🇧 UK · 🇦🇺 Australia · 🇦🇪 Middle East</p>
-      <p>We helped our own family member — a Radiographer — successfully relocate to the UK. Real experience. Honest guidance. For RN, GNM, BSc Nursing, Radiographers, Lab Technicians, Allied Health.</p>
+      <div class="card-icon">🏥 Nursing &amp; Allied Healthcare Abroad</div>
+      <span class="badge badge-new-green">🇨🇦 Canada · 🇬🇧 UK · 🇦🇺 Australia · 🇦🇪 Middle East</span>
+      <p>A Radiographer — successfully relocate to the UK. Real experience. Honest guidance. For RN, GNM, BSc Nursing, Radiographers, Lab Technicians, Allied Health.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.5rem;margin-bottom:0.75rem">
         <ul>
           <li>Canada — NNAS, NCLEX-RN, AIP pathway</li>
@@ -914,10 +918,8 @@ function showCountry(country) {
   <div class="section-label">🌐 Website Development</div>
   <div class="cards">
     <div class="card web-top" style="grid-column:1/-1">
-      <div class="card-icon">🌐</div>
-      <span class="badge badge-new">NEW SERVICE</span>
-      <h3>Website Development &amp; Hosting</h3>
-      <p class="card-sub">India · UAE · GCC · Any Business, Any Size</p>
+      <div class="card-icon">🌐 Website Development &amp; Hosting</div>
+      <span class="badge badge-new">India · UAE · GCC · Any Business, Any Size</span>
       <p>Professional, mobile-friendly websites. Our founder built this bilingual English + Arabic site from scratch — we deliver the same quality for your business. Free hosting option available forever.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem;margin-bottom:0.75rem;background:#EBF0FA;padding:0.75rem;border-radius:8px">
         <div style="text-align:center"><div style="font-weight:700;color:var(--web);font-size:0.82rem">Basic</div><div style="font-size:1.1rem;font-weight:700;color:var(--navy)">₹8,000–12,000</div><div style="font-size:0.73rem;color:var(--muted)">3 pages · Free hosting</div></div>
@@ -984,19 +986,10 @@ function showCountry(country) {
         <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20need%20a%20cover%20letter" class="btn-wa">💬 Enquire</a>
       </div>
     </div>
-    <div class="card free-top">
-      <div class="card-icon">🤝</div>
-      <h3>Free Initial Consultation</h3>
-      <p class="card-sub">Always FREE — No Obligation</p>
-      <ul>
-        <li>30-minute WhatsApp or video call</li>
-        <li>Honest eligibility assessment</li>
-        <li>Best pathway recommendation</li>
-        <li>Realistic expectations</li>
-        <li>No payment · No obligation</li>
-      </ul>
-      <div class="price" style="color:#059669">FREE</div>
-      <div class="price-note">Understand your options first</div>
+   <div class="cards">
+    <div class="card web-top" style="grid-column:1/41">
+      <div class="card-icon">🤝 ALWAYS FREE — NO OBLIGATION </div>
+<span class="badge badge-new">30-minute WhatsApp or video call | Honest eligibility assessment | Best pathway recommendation | Realistic expectations | Understand the requirement</span>
       <div class="card-btns">
         <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20would%20like%20a%20free%20consultation%20with%20Venad%20Global" class="btn-wa">💬 Book Free Call</a>
       </div>
@@ -1027,32 +1020,25 @@ function showCountry(country) {
 </section>
 
 <!-- ABOUT -->
-<section style="background:var(--light);padding:3.5rem 1.5rem" id="about">
-  <div class="about">
-    <div class="about-badge-col">
-      <div class="avatar-lg">AA</div>
-      <div style="font-family:Georgia,serif;font-size:1.1rem;color:var(--navy);margin-bottom:0.25rem">Antony Ancil</div>
-      <div style="font-size:0.8rem;color:var(--muted);margin-bottom:1rem">Founder &amp; Career Consultant</div>
-      <div class="cert-pills">
-        <span class="cert-pill">IOSH Managing Safely</span>
-        <span class="cert-pill">ISO 9001</span>
-        <span class="cert-pill">30 Yrs HCT UAE</span>
-        <span class="cert-pill">🇨🇦 AIP Candidate</span>
-        <span class="cert-pill">5 Languages</span>
-        <span class="cert-pill">🏥 Healthcare Exp</span>
-      </div>
+<section class="about-section">
+  <div class="about-inner">
+    <h2>About Antony Ancil</h2>
+    <p>I am an Administration and Facilities Management  | SDE | Author, Op-Ed Writing professional with over 30 years of international experience — 20 of which were spent with the Higher Colleges of Technology in the UAE, one of the Gulf's most prestigious government institutions.</p>
+    <p>I have recently navigated the Canadian immigration process myself through the Atlantic Immigration Program — building a Canadian CV, optimising LinkedIn, collecting recommendation letters from a Canadian university Dean (Concordia University, Montreal), and applying for jobs in Nova Scotia — all without paying a consultant.</p>
+    <p>A Radiographer — successfully relocate to the United Kingdom, and I launched this bilingual English + Arabic website entirely from scratch. Having seen how fake agencies exploit vulnerable people — especially from Kerala — I felt a responsibility to offer genuine, affordable, and honest guidance.</p>
+    <div class="certs">
+      <span class="cert-pill">🎓 IOSH Managing Safely</span>
+      <span class="cert-pill">📋 ISO 9001 Certified</span>
+      <span class="cert-pill">🇦🇪 20 Years HCT UAE</span>
+      <span class="cert-pill">🇨🇦 AIP Candidate</span>
+      <span class="cert-pill">🌐 Multilingual</span>
+      <span class="cert-pill">🏥 Healthcare Immigration Experience</span>
     </div>
-    <div class="about-text">
-      <h2>About Antony Ancil</h2>
-      <p>I am an Administration and Facilities Management professional with over 30 years of international experience — including 20+ years with the Higher Colleges of Technology (HCT) in the UAE, one of the Gulf's most prestigious government institutions.</p>
-      <p>I have personally navigated the Canadian Atlantic Immigration Program — building a Canadian CV, collecting reference letters from a Concordia University Dean in Montreal, and applying for jobs in Nova Scotia — without paying a single consultant.</p>
-      <p>I also helped a family member — a Radiographer — successfully relocate to the United Kingdom. And I built this bilingual English + Arabic website entirely from scratch. Having seen how fake agencies exploit people from Kerala, I felt a responsibility to offer genuine, affordable, and honest guidance.</p>
-      <div class="about-stats">
-        <div class="about-stat"><div class="n">36+</div><div class="l">Years Experience</div></div>
-        <div class="about-stat"><div class="n">30+</div><div class="l">Years UAE</div></div>
-        <div class="about-stat"><div class="n">8</div><div class="l">Countries</div></div>
-        <div class="about-stat"><div class="n">5</div><div class="l">Languages</div></div>
-      </div>
+    <div class="stats">
+      <div class="stat"><div class="num">30+</div><div class="label">Years Experience</div></div>
+      <div class="stat"><div class="num">30+</div><div class="label">Years in UAE</div></div>
+      <div class="stat"><div class="num">8</div><div class="label">Countries Served</div></div>
+      <div class="stat"><div class="num">5</div><div class="label">Languages</div></div>
     </div>
   </div>
 </section>
@@ -1277,7 +1263,7 @@ function calculateFee() {
 <section style="background:#0a0f1e;padding:3rem 1.5rem">
 <div style="max-width:900px;margin:0 auto;text-align:center">
   <div style="font-family:monospace;font-size:0.7rem;letter-spacing:4px;color:#C9A227;text-transform:uppercase;margin-bottom:0.5rem">✦ Verified Credentials</div>
-  <h2 style="font-size:1.8rem;color:#F5F0E8;font-weight:700;margin-bottom:0.75rem">40+ Professional Certifications</h2>
+  <h2 style="font-size:1.8rem;color:#F5F0E8;font-weight:700;margin-bottom:0.75rem">45+ Professional Certifications</h2>
   <p style="color:#8892a4;margin-bottom:2rem;font-size:0.95rem">Every certificate is earned, verified and current. Not collected — applied.</p>
   <div style="display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;margin-bottom:2rem">
     <span class="cert-tag">Cisco Cybersecurity</span>
@@ -1296,7 +1282,7 @@ function calculateFee() {
     <span class="cert-tag">+ 16 More</span>
   </div>
   <a href="https://venadglobal.org/references" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(201,162,39,0.1);border:1px solid rgba(201,162,39,0.3);color:#C9A227;padding:0.6rem 1.5rem;border-radius:8px;font-size:0.85rem;text-decoration:none;transition:all 0.2s" onmouseover="this.style.background='rgba(201,162,39,0.2)'" onmouseout="this.style.background='rgba(201,162,39,0.1)'">
-    View All 40 Certifications →
+    View All 45 Certifications →
   </a>
 </div>
 </section>

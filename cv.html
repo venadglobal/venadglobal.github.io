@@ -200,6 +200,16 @@ html[dir="rtl"] .hero-contact{justify-content:flex-end}
 }
 </style>
 
+
+<style>
+@media (max-width: 1100px) {
+  .one-row-profiles { grid-template-columns: repeat(3, 1fr) !important; }
+}
+@media (max-width: 900px) {
+  .one-row-profiles { grid-template-columns: 1fr !important; }
+}
+</style>
+
 </head>
 <body>
 
@@ -554,69 +564,132 @@ html[dir="rtl"] .hero-contact{justify-content:flex-end}
       <button onclick="window.print()" class="print-btn" style="background:linear-gradient(135deg,#c4922a,#f0c060); border:none; color:#000; font-family:'DM Mono',monospace; font-size:11px; letter-spacing:1.5px; padding:10px 20px; border-radius:4px; cursor:pointer; font-weight:600;">
         🖨️ PRINT CV / SAVE AS PDF
       </button>
-      <a href="/Antony-Ancil-CV.pdf" download style="background:var(--surface); border:1px solid var(--border); color:var(--gold); font-family:'DM Mono',monospace; font-size:11px; letter-spacing:1.5px; padding:10px 20px; border-radius:4px; text-decoration:none;">⬇ DOWNLOAD PDF</a>
-      <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de" target="_blank" style="background:var(--surface); border:1px solid var(--border); color:var(--muted); font-family:'DM Mono',monospace; font-size:11px; padding:10px 20px; border-radius:4px; text-decoration:none;">GOOGLE SKILLS PROFILE</a>
+      <a href="https://venadglobal.org/Antony-Ancil-CV.docx" download style="background:var(--surface); border:1px solid var(--border); color:var(--gold); font-family:'DM Mono',monospace; font-size:11px; letter-spacing:1.5px; padding:10px 20px; border-radius:4px; text-decoration:none;">⬇ DOWNLOAD DOCX</a>
+      <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de" target="_blank" style="background:#ffffff; border:1px solid #dadce0; font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.5px; padding:10px 20px; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center;">
+<span style="color:#4285F4">G</span><span style="color:#EA4335">O</span><span style="color:#FBBC05">O</span><span style="color:#4285F4">G</span><span style="color:#34A853">L</span><span style="color:#EA4335">E</span><span style="color:#5f6368; margin-left:6px;">SKILLS PROFILE</span>
+</a>
     </div>
 
-    <!-- Public Profiles - Premium Cards -->
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:12px; margin-bottom:24px;">
-      <div class="cert-badge" style="border-left:3px solid #c4922a; background:linear-gradient(135deg,#1c2128,#161b22); padding:16px;">
-        <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--gold); letter-spacing:2px; margin-bottom:6px;">PUBLIC PROFILE — VERIFIED</div>
-        <div style="font-weight:600; color:var(--white); margin-bottom:4px;">Google Skills Boost Profile</div>
-        <div style="font-size:12px; color:var(--muted); margin-bottom:8px;">10+ Badges — Sept 2026 — Core Professional</div>
-        <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de" target="_blank" style="color:var(--gold); font-family:'DM Mono',monospace; font-size:11px;">View Profile → skills.google/94ed9c64</a>
+    
+    <!-- Public Profiles - IMPROVED HORIZONTAL CLARITY -->
+    <div class="one-row-profiles" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-bottom:24px;">
+
+      <!-- GOOGLE BOX - Improved -->
+      <div class="cert-badge" style="border-left:4px solid #4285F4; background:linear-gradient(135deg,#1c2128,#161b22); padding:20px; display:flex; flex-direction:column; gap:12px; border-radius:6px;">
+        <!-- Row 1: Label horizontal -->
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(66,133,244,0.2); padding-bottom:10px;">
+          <span style="font-family:'DM Mono',monospace; font-size:10px; color:#4285F4; letter-spacing:2px; font-weight:600;">PUBLIC PROFILE — VERIFIED</span>
+          <span style="font-family:'DM Mono',monospace; font-size:10px; background:#4285F4; color:white; padding:3px 8px; border-radius:3px;">GOOGLE</span>
+        </div>
+        <!-- Row 2: Title horizontal -->
+        <div style="font-weight:700; color:#fff; font-size:16px; line-height:1.2;">
+          <span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span> Skills Boost Profile
+        </div>
+        <!-- Row 3: Details horizontal -->
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; color:#8b949e; flex-wrap:wrap; line-height:1.4;">
+          <span style="background:rgba(66,133,244,0.1); padding:2px 8px; border-radius:3px; color:#4285F4; font-weight:600;">10+ Badges</span>
+          <span style="opacity:0.4;">•</span>
+          <span>Sept 2026</span>
+          <span style="opacity:0.4;">•</span>
+          <span>Core Professional</span>
+        </div>
+        <!-- Row 4: Link horizontal - clean button -->
+        <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de" target="_blank" style="margin-top:auto; display:inline-flex; align-items:center; gap:6px; background:#ffffff; border:1px solid #dadce0; color:#4285F4; font-family:'DM Mono',monospace; font-size:11px; font-weight:600; padding:8px 14px; border-radius:4px; text-decoration:none; width:fit-content;">
+          View Profile → skills.google/94ed9c64
+        </a>
       </div>
-      <div class="cert-badge" style="border-left:3px solid #1a56db; background:linear-gradient(135deg,#1c2128,#161b22); padding:16px;">
-        <div style="font-family:'DM Mono',monospace; font-size:10px; color:#60a5fa; letter-spacing:2px; margin-bottom:6px;">CREDLY BY PEARSON — VERIFIED</div>
-        <div style="font-weight:600; color:var(--white); margin-bottom:4px;">Credly Profile — All Cisco + Google Badges</div>
-        <div style="font-size:12px; color:var(--muted); margin-bottom:8px;">Python, Cybersecurity, Cloud Foundations</div>
-        <a href="https://www.credly.com/users/antony-ancil" target="_blank" style="color:#60a5fa; font-family:'DM Mono',monospace; font-size:11px;">View Profile → credly.com/antony-ancil</a>
+
+      <!-- CREDLY BOX - Improved -->
+      <div class="cert-badge" style="border-left:4px solid #FF6B00; background:linear-gradient(135deg,#1c2128,#161b22); padding:20px; display:flex; flex-direction:column; gap:12px; border-radius:6px;">
+        <!-- Row 1 -->
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,107,0,0.2); padding-bottom:10px;">
+          <span style="font-family:'DM Mono',monospace; font-size:10px; color:#FF6B00; letter-spacing:2px; font-weight:600;">CREDLY — VERIFIED</span>
+          <span style="font-family:'DM Mono',monospace; font-size:10px; background:#FF6B00; color:white; padding:3px 8px; border-radius:3px;">PEARSON</span>
+        </div>
+        <!-- Row 2 -->
+        <div style="font-weight:700; color:#fff; font-size:16px; line-height:1.2;">
+          <span style="color:#FF6B00">Credly</span> Profile
+        </div>
+        <!-- Row 3 -->
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; color:#8b949e; flex-wrap:wrap; line-height:1.4;">
+          <span style="background:rgba(255,107,0,0.1); padding:2px 8px; border-radius:3px; color:#FF6B00; font-weight:600;">All Badges</span>
+          <span style="opacity:0.4;">•</span>
+          <span>Python</span>
+          <span style="opacity:0.4;">•</span>
+          <span>Cybersecurity</span>
+          <span style="opacity:0.4;">•</span>
+          <span>Cloud</span>
+        </div>
+        <!-- Row 4 -->
+        <a href="https://www.credly.com/users/antony-ancil" target="_blank" style="margin-top:auto; display:inline-flex; align-items:center; gap:6px; background:#ffffff; border:1px solid #dadce0; color:#FF6B00; font-family:'DM Mono',monospace; font-size:11px; font-weight:600; padding:8px 14px; border-radius:4px; text-decoration:none; width:fit-content;">
+          View Profile → credly.com/antony-ancil
+        </a>
       </div>
-      <div class="cert-badge" style="border-left:3px solid #0d5c63; background:linear-gradient(135deg,#1c2128,#161b22); padding:16px;">
-        <div style="font-family:'DM Mono',monospace; font-size:10px; color:#2dd4bf; letter-spacing:2px; margin-bottom:6px;">DEVELOPER & PORTFOLIO</div>
-        <div style="font-weight:600; color:var(--white); margin-bottom:4px;">Google Dev + LinkedIn + Portfolio</div>
-        <div style="font-size:12px; color:var(--muted); margin-bottom:8px;">g.dev/idivet · linkedin.com/in/idivet</div>
-        <a href="https://www.linkedin.com/in/idivet/" target="_blank" style="color:#2dd4bf; font-family:'DM Mono',monospace; font-size:11px;">View Portfolio → venadglobal.org/cv</a>
+
+      <!-- DEVELOPER BOX - Improved -->
+      <div class="cert-badge" style="border-left:4px solid #0077B5; background:linear-gradient(135deg,#1c2128,#161b22); padding:20px; display:flex; flex-direction:column; gap:12px; border-radius:6px;">
+        <!-- Row 1 -->
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(0,119,181,0.2); padding-bottom:10px;">
+          <span style="font-family:'DM Mono',monospace; font-size:10px; color:#0077B5; letter-spacing:2px; font-weight:600;">DEVELOPER — PORTFOLIO</span>
+          <span style="font-family:'DM Mono',monospace; font-size:10px; background:#0077B5; color:white; padding:3px 8px; border-radius:3px;">VERIFIED</span>
+        </div>
+        <!-- Row 2 -->
+        <div style="font-weight:700; color:#fff; font-size:15px; line-height:1.3;">
+          <span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span> Dev + <span style="color:#0077B5">LinkedIn</span>
+        </div>
+        <!-- Row 3 -->
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; color:#8b949e; flex-wrap:wrap; line-height:1.4;">
+          <a href="https://g.dev/idivet"<span style="background:rgba(0,119,181,0.1); padding:2px 8px; border-radius:3px; color:#0077B5; font-weight:600;">g.dev/idivet</span>
+          <span style="opacity:0.4;">•</span>
+          <a href="https://www.linkedin.com/in/idivet/"<span>linkedin.com/in/idivet</span>
+        </div>
+        <!-- Row 4 -->
+        <a href="https://venadglobal.org/references.html" target="_blank" style="margin-top:auto; display:inline-flex; align-items:center; gap:6px; background:#ffffff; border:1px solid #dadce0; color:#0077B5; font-family:'DM Mono',monospace; font-size:11px; font-weight:600; padding:8px 14px; border-radius:4px; text-decoration:none; width:fit-content;">
+          View References → venadglobal.org/references
+        </a>
       </div>
+
     </div>
 
-    <!-- Clean Grouped List Like DOCX - CORRECTED LINKS AS PER USER -->
+
+    
+    <!-- Clean Grouped List Like DOCX - CORRECTED LINKS AS PER USER - CLEANED -->
     <div style="background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:24px; margin-bottom:24px;">
-      <div style="font-family:'Cinzel',serif; font-size:16px; color:var(--gold); margin-bottom:16px; letter-spacing:1px;">Google Cloud & AI — Core Professional (September 2026) — Latest</div>
+      <div style="font-family:'Cinzel',serif; font-size:16px; margin-bottom:16px; letter-spacing:1px;"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span> <span style="color:var(--gold)">Cloud & AI — Core Professional (September 2026) — Latest</span></div>
       
       <div style="display:grid; gap:10px; font-size:13px; line-height:1.7;">
-        <div>🆕 <strong>Discover the Art of Prompting</strong> — Google / Coursera — Sept 22, 2026 · Prompt Engineering · LLM · <a href="https://www.coursera.org/account/accomplishments/verify/FQ3158TJ8P4W" target="_blank" style="color:var(--gold)">Verify FQ3158TJ8P4W</a></div>
-        <div>🆕 <strong>Google Cloud Computing Foundations Certificate</strong> — Google Cloud — Sept 10, 2026 · Cloud Native · <a href="https://www.credly.com/badges/983253f0-c0e9-48f5-88cb-b805ee50a599/public_url" target="_blank" style="color:var(--gold)">View Badge</a></div>
-        <div>🆕 <strong>CS50x 2026 — Harvard / edX</strong> — 9/11 weeks — Gradebook 9/11 · <a href="https://submit.cs50.io/users/idivet" target="_blank" style="color:var(--gold)">View Submissions</a> · Final Project In Progress</div>
+        <div>🆕 <strong>Discover the Art of Prompting</strong> — <span style="color:#4285F4">Google</span> / <span style="color:#0056D2">Coursera</span> — Sept 22, 2026 · Prompt Engineering · LLM · <a href="https://www.coursera.org/account/accomplishments/verify/FQ3158TJ8P4W" target="_blank" style="color:#0056D2; font-weight:600;">Verify FQ3158TJ8P4W</a></div>
+        <div>🆕 <strong>Google Cloud Computing Foundations Certificate</strong> — Google Cloud — Sept 10, 2026 · Cloud Native · <a href="https://www.credly.com/badges/983253f0-c0e9-48f5-88cb-b805ee50a599/public_url" target="_blank" style="color:#FF6B00; font-weight:600;">View Badge</a></div>
+        <div>🆕 <strong>CS50x 2026 — <span style="color:#A51C30">Harvard</span> / edX</strong> — 9/11 weeks — Gradebook 9/11 · <a href="https://submit.cs50.io/users/idivet" target="_blank" style="color:var(--gold); font-weight:600;">View Submissions</a> · Final Project In Progress</div>
         <div style="height:1px; background:var(--border); margin:8px 0;"></div>
 
         <div>✓ Monitor Resources with Google Cloud Observability — CBL012 — Sept 11, 2026</div>
-        <div>✓ Build a Secure Google Cloud Network — Sept 2026 · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/27813629" target="_blank" style="color:var(--gold)">View Badge</a> — This is your Google Cloud: Networking & Security — Aug 2026 link</div>
-        <div>✓ Prepare Data for ML APIs on Google Cloud — Sept 2026 · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/27802432" target="_blank" style="color:var(--gold)">View Badge</a> · Google Cloud Foundations: Data, ML & AI — <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/27801752" target="_blank" style="color:var(--gold)">Badge</a></div>
+        <div>✓ Build a Secure Google Cloud Network — Sept 2026 · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/27813629" target="_blank" style="color:#4285F4; font-weight:600;">View Badge</a> — Google Cloud: Networking & Security — Aug 2026</div>
+        <div>✓ Prepare Data for ML APIs on Google Cloud — Sept 2026 · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/27802432" target="_blank" style="color:#4285F4; font-weight:600;">View Badge</a> · Google Cloud Foundations: Data, ML & AI — <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/27801752" target="_blank" style="color:#4285F4; font-weight:600;">Badge</a></div>
 
         <div style="height:1px; background:var(--border); margin:8px 0;"></div>
 
-        <div>✓ <strong>Python Essentials 1 (PE1)</strong> — Cisco Networking Academy x OpenEDG Python Institute — August 2026 · <a href="https://www.credly.com/badges/c97771dd-5f8b-4d08-90e0-03f00f45a97c" target="_blank" style="color:var(--gold)">View Badge</a> · Completion: Aug 22, 2026</div>
-        <div>✓ <strong>Discovering Entrepreneurship</strong> — Cisco Networking Academy — August 2026 · <a href="https://www.credly.com/badges/5c3b6e5e-589f-46b4-a67b-9396889fa93b" target="_blank" style="color:var(--gold)">View Badge</a> · Completion: Aug 21, 2026</div>
+        <div>✓ <strong>Python Essentials 1 (PE1)</strong> — <span style="color:#049FD9; font-weight:700">Cisco</span> Networking Academy x OpenEDG Python Institute — August 2026 · <a href="https://www.credly.com/badges/c97771dd-5f8b-4d08-90e0-03f00f45a97c/public_url" target="_blank" style="color:#FF6B00; font-weight:600;">View Badge</a> · Completion: Aug 22, 2026</div>
+        <div>✓ <strong>Discovering Entrepreneurship</strong> — <span style="color:#049FD9; font-weight:700">Cisco</span> Networking Academy — August 2026 · <a href="https://www.credly.com/badges/5c3b6e5e-589f-46b4-a67b-9396889fa93b/public_url" target="_blank" style="color:#FF6B00; font-weight:600;">View Badge</a> · Completion: Aug 21, 2026</div>
 
         <div style="height:1px; background:var(--border); margin:8px 0;"></div>
 
-        <div>✓ <strong>Introduction to Cybersecurity — Cisco — May 2026</strong> · <a href="https://www.credly.com/badges/3aa4e9fc-fc8d-4048-b8c2-bd6f99bb101f/public_url" target="_blank" style="color:var(--gold)">View Badge — CORRECTED</a></div>
-        <div>✓ <strong>Create Digital Content & Collaborate Online — Cisco — Apr 2026</strong> · <a href="https://www.credly.com/badges/9009c7a2-cfeb-4ebc-b47c-b86cf797db60" target="_blank" style="color:var(--gold)">View Badge — CORRECTED</a></div>
+        <div>✓ <strong>Introduction to Cybersecurity — <span style="color:#049FD9">Cisco</span> — May 2026</strong> · <a href="https://www.credly.com/badges/3aa4e9fc-fc8d-4048-b8c2-bd6f99bb101f/public_url" target="_blank" style="color:#FF6B00; font-weight:600;">View Badge</a></div>
+        <div>✓ <strong>Create Digital Content & Collaborate Online — <span style="color:#049FD9">Cisco</span> — Apr 2026</strong> · <a href="https://www.credly.com/badges/9009c7a2-cfeb-4ebc-b47c-b86cf797db60/public_url" target="_blank" style="color:#FF6B00; font-weight:600;">View Badge</a></div>
 
         <div style="height:1px; background:var(--border); margin:8px 0;"></div>
 
-        <div>✓ <strong>Maximize Productivity With AI Tools — Google / Coursera (June 2026)</strong> · <a href="https://coursera.org/share/af91d4c02279d2e460bbceb1d6999ab1" target="_blank" style="color:var(--gold)">Verify — CORRECTED</a></div>
-        <div>✓ <strong>Google Analytics Certified — Apr 2026 — G-2BZDPM9EZM</strong> · <a href="https://skillshop.credential.net/4bb7df29-b270-4326-8861-1e8f7ed212aa#acc.0DyAnwUh" target="_blank" style="color:var(--gold)">View Badge — CORRECTED</a></div>
-        <div>✓ <strong>Introduction to Generative AI — Google — May 2026</strong> · <a href="https://coursera.org/share/b2af349c28d6c899263555da3735a175" target="_blank" style="color:var(--gold)">View Badge — CORRECTED</a> · Also covers Introduction to AI — Google AI Essentials</div>
+        <div>✓ <strong>Maximize Productivity With AI Tools — <span style="color:#4285F4">Google</span> / <span style="color:#0056D2">Coursera</span> (June 2026)</strong> · <a href="https://coursera.org/share/af91d4c02279d2e460bbceb1d6999ab1" target="_blank" style="color:#0056D2; font-weight:600;">Verify</a></div>
+        <div>✓ <strong>Google Analytics Certified — Apr 2026 — G-2BZDPM9EZM</strong> · <a href="https://skillshop.credential.net/4bb7df29-b270-4326-8861-1e8f7ed212aa#acc.0DyAnwUh" target="_blank" style="color:#4285F4; font-weight:600;">View Badge</a></div>
+        <div>✓ <strong>Introduction to Generative AI — Google — May 2026</strong> · <a href="https://coursera.org/share/b2af349c28d6c899263555da3735a175" target="_blank" style="color:#0056D2; font-weight:600;">Verify</a> · Also covers Introduction to AI — Google AI Essentials</div>
 
         <div style="height:1px; background:var(--border); margin:8px 0;"></div>
 
-        <div>✓ <strong>Digital Marketing — Wadhwani Foundation (April 2026)</strong> · <a href="https://venadglobal.org/Digital_Marketing_Certificate.pdf" target="_blank" style="color:var(--gold)">View Certificate — CORRECTED</a></div>
-        <div>✓ <strong>Child Protection Awareness — British Council UAE (2019)</strong> · <a href="https://venadglobal.org/British_Council_Child_Protection.pdf" target="_blank" style="color:var(--gold)">View Certificate — CORRECTED</a></div>
-        <div>✓ <strong>HABC Level 2 Emergency First Aid (2017)</strong> · <a href="https://venadglobal.org/HABC_Emergency_First_Aid.pdf" target="_blank" style="color:var(--gold)">View Certificate — CORRECTED</a></div>
-        <div>✓ <strong>Basic Fire Fighting — NFPA</strong> · <a href="https://venadglobal.org/Basic_Fire_Fighting_NFPA.pdf" target="_blank" style="color:var(--gold)">View Certificate — CORRECTED</a></div>
-        <div>✓ <strong>Excel Advanced Expert — Microsoft/Lynda.com (2019)</strong> · <a href="https://venadglobal.org/Excel_Advanced_Formulas_Lynda.pdf" target="_blank" style="color:var(--gold)">View Certificate — CORRECTED</a></div>
+        <div>✓ <strong>Digital Marketing — <span style="color:#FF6B00">Wadhwani Foundation</span> (April 2026)</strong> · <a href="https://venadglobal.org/Digital_Marketing_Certificate.pdf" target="_blank" style="color:#c4922a; font-weight:600;">View Certificate</a></div>
+        <div>✓ <strong>Child Protection Awareness — <span style="color:#003078">British Council</span> UAE (2019)</strong> · <a href="https://venadglobal.org/British_Council_Child_Protection.pdf" target="_blank" style="color:#c4922a; font-weight:600;">View Certificate</a></div>
+        <div>✓ <strong>HABC Level 2 Emergency First Aid (2017)</strong> · <a href="https://venadglobal.org/HABC_Emergency_First_Aid.pdf" target="_blank" style="color:#c4922a; font-weight:600;">View Certificate</a></div>
+        <div>✓ <strong>Basic Fire Fighting — NFPA</strong> · <a href="https://venadglobal.org/Basic_Fire_Fighting_NFPA.pdf" target="_blank" style="color:#c4922a; font-weight:600;">View Certificate</a></div>
+        <div>✓ <strong>Excel Advanced Expert — Microsoft/Lynda.com (2019)</strong> · <a href="https://venadglobal.org/Excel_Advanced_Formulas_Lynda.pdf" target="_blank" style="color:#c4922a; font-weight:600;">View Certificate</a></div>
 
         <div style="height:1px; background:var(--border); margin:8px 0;"></div>
 
@@ -624,8 +697,9 @@ html[dir="rtl"] .hero-contact{justify-content:flex-end}
       </div>
     </div>
 
+
     <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--muted); letter-spacing:1px; text-align:center; margin-top:12px;">
-      All links double-checked as per your list — Sharp & Verified — Like COPY DOCX logic — Print Ready
+     Print & Save button above.
     </div>
 
   </div>

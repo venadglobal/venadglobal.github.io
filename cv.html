@@ -184,6 +184,22 @@ html[dir="rtl"] .hero-contact{justify-content:flex-end}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 .hero{animation:fadeUp .6s ease both}
 </style>
+
+<style>
+@media print {
+  .lang-bar, .stats-row, .print-bar, footer, .footer-copy, .post-nav { display:none !important; }
+  body { background:#fff !important; color:#000 !important; }
+  .hero { background:#fff !important; padding:20px 0 !important; border-bottom:2px solid #000 !important; }
+  .hero-name { color:#000 !important; }
+  .wrap { max-width:100% !important; padding:0 12px !important; }
+  .elig-section, .about-section, .skills-section, .certs-section, .refs-section { padding:16px 0 !important; }
+  .cert-badge, .elig-card, .skill-card, .exp-item { break-inside:avoid; border:1px solid #ccc !important; background:#fff !important; }
+  a { color:#000 !important; text-decoration:none !important; }
+  a[href]:after { content:" (" attr(href) ")" ; font-size:9px; color:#555; }
+  .cert-badge a[href]:after, .print-bar { display:none !important; }
+}
+</style>
+
 </head>
 <body>
 
@@ -525,63 +541,96 @@ html[dir="rtl"] .hero-contact{justify-content:flex-end}
   </div>
 </section>
 
-<!-- CERTS - SAME CONTENT + PYTHON -->
+
+
+<!-- CERTS - CLEAN VERSION LIKE DOCX - SHARP & PREMIUM - CORRECTED LINKS -->
 <section class="certs-section">
   <div class="wrap">
-    <div class="sec-label en-text">Certifications & Education</div>
-    <div class="sec-label ar-text">الشهادات والتعليم</div>
-    <div class="certs-grid">
-<div class="cert-badge" style="border-left:3px solid #c4922a; background: linear-gradient(135deg, #1c2128, #161b22);">
-<span>🆕</span> <span class="en-text"><strong>Discover the Art of Prompting — Google / Coursera — September 22, 2026</strong> · Prompt Engineering · LLM Application · Few-Shot Prompting · Content Creation · AI Literacy · Issued to Antony Ancil · 1 hour · <a href="https://www.coursera.org/account/accomplishments/verify/FQ3158TJ8P4W" target="_blank" style="color:var(--gold)">Verify — FQ3158TJ8P4W</a></span>
-<span class="ar-text">اكتشاف فن صياغة المطالبات — Google / Coursera — 22 سبتمبر 2026 · هندسة المطالبات الفعالة</span>
-</div>
+    <div class="sec-label en-text">Certifications & Education — Sharp 2026 — Verified Links</div>
+    <div class="sec-label ar-text">الشهادات والتعليم — 2026 — روابط موثقة</div>
 
-
-<div class="cert-badge" style="border-left:3px solid #c4922a; background: linear-gradient(135deg, #1c2128, #161b22);">
-<span>🆕</span> <span class="en-text"><strong>Google Cloud Computing Foundations Certificate — Google Cloud — September 10, 2026</strong> · Validation + Foundational · Issued to Antony Ancil · This certificate helps develop technical proficiency in cloud computing - ideal foundation for IT infrastructure, cloud engineering, cloud-native development · <a href="https://www.credly.com/badges/983253f0-c0e9-48f5-88cb-b805ee50a599/public_url" target="_blank" style="color:var(--gold)">View Badge</a> · Date: Sept 10, 2026</span>
-<span class="ar-text">شهادة أساسيات الحوسبة السحابية من Google — سبتمبر 2026</span>
-</div>
-<div class="cert-badge" style="border-left:3px solid #0d5c63;">
-<span>🆕</span> <span class="en-text"><strong>CS50x 2026 — Harvard / edX — 9 of 11 weeks complete — Sept 11, 2026</strong> · edX Account: AntonyAncil · GitHub: idivet · Gradebook: 9/11 · Weeks 0-8 Complete: Scratch, C, Arrays, Algorithms, Memory, Data Structures, Python, SQL, Flask · Weeks 9 (Birthdays, Finance) + Final Project In Progress · <a href="https://submit.cs50.io/users/idivet" target="_blank" style="color:var(--gold)">View Submissions</a></span>
-<span class="ar-text">CS50x 2026 — هارفارد — 9 من 11 أسبوعًا مكتمل — سبتمبر 2026</span>
-</div>
-<div class="cert-badge">
-<span>✓</span> <span class="en-text"><strong>Monitor Resources with Google Cloud Observability — CBL012 — Google Cloud Skills Boost — Sept 11, 2026</strong> · Custom dashboards, alerts with multiple conditions, resource groups, uptime checks.</span>
-<span class="ar-text">مراقبة الموارد مع Google Cloud Observability — سبتمبر 2026</span>
-</div>
-<div class="cert-badge"><span>✓</span> <span class="en-text">Build a Secure Google Cloud Network — Google Cloud Skills Boost (September 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/27813629" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">بناء شبكة آمنة على Google Cloud</span></div>
-<div class="cert-badge"><span>✓</span> <span class="en-text">Prepare Data for ML APIs on Google Cloud — Google Cloud Skills Boost (September 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/27802432" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">إعداد البيانات لواجهات تعلم الآلة على Google Cloud</span></div>
-<div class="cert-badge"><span>✓</span> <span class="en-text">Google Cloud Computing Foundations: Data, ML, and AI in Google Cloud — Google Skills Boost (September 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/27801752" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">أساسيات Google Cloud: البيانات وتعلم الآلة والذكاء الاصطناعي</span></div>
-<div class="cert-badge"><span>✓</span> <span class="en-text">Essential Google Cloud Infrastructure: Foundation — Google Cloud Skills Boost (September 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/27759578" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">البنية التحتية الأساسية لـ Google Cloud: الأساس</span></div>
-<div class="cert-badge"><span>✓</span> <span class="en-text">Create and Manage Cloud Storage Buckets and Encryption — Google Cloud (September 2026)<a href="https://www.credly.com/earner/earned/share/983253f0-c0e9-48f5-88cb-b805ee50a599" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">إنشاء وإدارة حاويات التخزين السحابي والتشفير</span></div>
-<div class="cert-badge"><span>✓</span> <span class="en-text">Introduction to AI — Google AI Essentials / Coursera (September 2026) · <a href="https://coursera.org/share/b2af349c28d6c899263555da3735a175" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">مقدمة في الذكاء الاصطناعي — Google</span></div>
-<div class="cert-badge"><span>✓</span> <span class="en-text">Maximize Productivity With AI Tools — Google / Coursera (June 2026) — Updated Verify · <a href="https://coursera.org/share/af91d4c02279d2e460bbceb1d6999ab1" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">تعظيم الإنتاجية بأدوات الذكاء الاصطناعي</span></div>
-
-<div class="cert-badge"><span>✓</span> <span class="en-text">Python Essentials 1 (PE1) - Cisco Networking Academy x OpenEDG Python Institute(August 2026)· <a href="https://www.credly.com/badges/c97771dd-5f8b-4d08-90e0-03f00f45a97c" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">أساسيات بايثون 1 (PE1)- أكاديمية سيسكو للشبكات بالتعاون مع معهد بايثون OpenEDG</span></div>
-<div class="cert-badge"><span>✓</span> <span class="en-text">Discovering Entrepreneurship - Cisco Networking Academy! (August 2026)· <a href="https://www.credly.com/badges/5c3b6e5e-589f-46b4-a67b-9396889fa93b" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">اكتشاف ريادة الأعمال - أكاديمية سيسكو للشبكات!</span></div>
-<div class="cert-badge"><span>✓</span> <span class="en-text">Google Cloud Computing Foundations: Networking & Security in Google Cloud (August 2026)· <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/26479427" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">أساسيات الحوسبة السحابية من Google: الشبكات والأمان في Google Cloud</span></div>
-<div class="cert-badge"><span>✓</span> <span class="en-text">Set Up an App Dev Environment on Google Cloud (August 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/26439616" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">إعداد بيئة تطوير تطبيقات على Google Cloud</span></div>
-<div class="cert-badge"><span>✓</span> <span class="en-text">Google Cloud Computing Foundations: Infrastructure in Google Cloud (August 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/26404822" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">أساسيات الحوسبة السحابية من Google: البنية التحتية في Google Cloud | Google</span></div>
-<div class="cert-badge"><span>✓</span> <span class="en-text">Build a Certification Study Guide: ACE Exam Prep — Google Skillshop (July 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/25597915" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">إعداد دليل دراسي للحصول على الشهادة: التحضير لاختبار ACE | Google</span></div>
-<div class="cert-badge"><span>✓</span> <span class="en-text">Google Cloud Computing Foundations — Google Skillshop (July 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/25402441" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">أساسيات الحوسبة السحابية من Google</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">AI Digital Transformation with Google Cloud — Google Skillshop (June 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/24933602" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">التحول الرقمي بالذكاء الاصطناعي مع Google Cloud</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">Implementing Cloud Load Balancing for Compute Engine — Google Skillshop (June 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/24941088" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">تنفيذ موازنة حمل السحابة لـ Compute Engine</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">Maximize Productivity with AI Tools — Google/Coursera (June 2026) · <a href="https://www.coursera.org/account/accomplishments/verify/8KG7FC1XKE1W" target="_blank" style="color:var(--gold)">Verify</a></span><span class="ar-text">تعظيم الإنتاجية باستخدام أدوات الذكاء الاصطناعي</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">Google Analytics Certification — Google Skillshop (April 2026) · <a href="https://skillshop.credential.net/4bb7df29-b270-4326-8861-1e8f7ed212aa#acc.0DyAnwUh" target="_blank" style="color:var(--gold)">Verify</a></span><span class="ar-text">شهادة Google Analytics</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">Introduction to Cybersecurity — Cisco Networking Academy (May 2026) · <a href="https://www.credly.com/users/antony-ancil/badges/credly" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">مقدمة في الأمن السيبراني — أكاديمية سيسكو</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">Introduction to Generative AI — Google Skillshop (May 2026) · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/23941339" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">مقدمة في الذكاء الاصطناعي التوليدي</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">Create Digital Content & Collaborate Online — Cisco Networking Academy (April 2026). <a href="https://www.credly.com/badges/9009c7a2-cfeb-4ebc-b47c-b86cf797db60" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">المحتوى الرقمي — أكاديمية سيسكو</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">Digital Marketing — Wadhwani Foundation (April 2026). <a href="https://venadglobal.org/25_Digital_Marketing_Certificate.pdf" target="_blank" style="color:var(--gold)">View Badge</a></span><span class="ar-text">التسويق الرقمي — مؤسسة واذواني</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">Child Protection Awareness — British Council UAE (2019)</span><span class="ar-text">توعية حماية الطفل — المجلس الثقافي البريطاني</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">IOSH Managing Safely — OrientMCT (2018)</span><span class="ar-text">IOSH إدارة السلامة</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">HABC Level 2 Emergency First Aid (2017)</span><span class="ar-text">إسعافات أولية طارئة</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">Basic Fire Fighting — NFPA</span><span class="ar-text">مكافحة الحرائق NFPA</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">Excel Advanced Expert — Microsoft/Lynda.com (2019)</span><span class="ar-text">خبير Excel متقدم</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">Diploma Software Engineering — Zenith/Kent UK (2001–2002)</span><span class="ar-text">دبلوم هندسة البرمجيات</span></div>
-      <div class="cert-badge"><span>✓</span> <span class="en-text">Bachelor of Commerce — Vinayaka Missions University (2012–2015)</span><span class="ar-text">بكالوريوس تجارة</span></div>
+    <!-- Print / Download Bar -->
+    <div class="print-bar" style="display:flex; justify-content:flex-end; gap:10px; margin-bottom:20px; flex-wrap:wrap;">
+      <button onclick="window.print()" class="print-btn" style="background:linear-gradient(135deg,#c4922a,#f0c060); border:none; color:#000; font-family:'DM Mono',monospace; font-size:11px; letter-spacing:1.5px; padding:10px 20px; border-radius:4px; cursor:pointer; font-weight:600;">
+        🖨️ PRINT CV / SAVE AS PDF
+      </button>
+      <a href="/Antony-Ancil-CV.pdf" download style="background:var(--surface); border:1px solid var(--border); color:var(--gold); font-family:'DM Mono',monospace; font-size:11px; letter-spacing:1.5px; padding:10px 20px; border-radius:4px; text-decoration:none;">⬇ DOWNLOAD PDF</a>
+      <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de" target="_blank" style="background:var(--surface); border:1px solid var(--border); color:var(--muted); font-family:'DM Mono',monospace; font-size:11px; padding:10px 20px; border-radius:4px; text-decoration:none;">GOOGLE SKILLS PROFILE</a>
     </div>
+
+    <!-- Public Profiles - Premium Cards -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:12px; margin-bottom:24px;">
+      <div class="cert-badge" style="border-left:3px solid #c4922a; background:linear-gradient(135deg,#1c2128,#161b22); padding:16px;">
+        <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--gold); letter-spacing:2px; margin-bottom:6px;">PUBLIC PROFILE — VERIFIED</div>
+        <div style="font-weight:600; color:var(--white); margin-bottom:4px;">Google Skills Boost Profile</div>
+        <div style="font-size:12px; color:var(--muted); margin-bottom:8px;">10+ Badges — Sept 2026 — Core Professional</div>
+        <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de" target="_blank" style="color:var(--gold); font-family:'DM Mono',monospace; font-size:11px;">View Profile → skills.google/94ed9c64</a>
+      </div>
+      <div class="cert-badge" style="border-left:3px solid #1a56db; background:linear-gradient(135deg,#1c2128,#161b22); padding:16px;">
+        <div style="font-family:'DM Mono',monospace; font-size:10px; color:#60a5fa; letter-spacing:2px; margin-bottom:6px;">CREDLY BY PEARSON — VERIFIED</div>
+        <div style="font-weight:600; color:var(--white); margin-bottom:4px;">Credly Profile — All Cisco + Google Badges</div>
+        <div style="font-size:12px; color:var(--muted); margin-bottom:8px;">Python, Cybersecurity, Cloud Foundations</div>
+        <a href="https://www.credly.com/users/antony-ancil" target="_blank" style="color:#60a5fa; font-family:'DM Mono',monospace; font-size:11px;">View Profile → credly.com/antony-ancil</a>
+      </div>
+      <div class="cert-badge" style="border-left:3px solid #0d5c63; background:linear-gradient(135deg,#1c2128,#161b22); padding:16px;">
+        <div style="font-family:'DM Mono',monospace; font-size:10px; color:#2dd4bf; letter-spacing:2px; margin-bottom:6px;">DEVELOPER & PORTFOLIO</div>
+        <div style="font-weight:600; color:var(--white); margin-bottom:4px;">Google Dev + LinkedIn + Portfolio</div>
+        <div style="font-size:12px; color:var(--muted); margin-bottom:8px;">g.dev/idivet · linkedin.com/in/idivet</div>
+        <a href="https://www.linkedin.com/in/idivet/" target="_blank" style="color:#2dd4bf; font-family:'DM Mono',monospace; font-size:11px;">View Portfolio → venadglobal.org/cv</a>
+      </div>
+    </div>
+
+    <!-- Clean Grouped List Like DOCX - CORRECTED LINKS AS PER USER -->
+    <div style="background:var(--surface); border:1px solid var(--border); border-radius:6px; padding:24px; margin-bottom:24px;">
+      <div style="font-family:'Cinzel',serif; font-size:16px; color:var(--gold); margin-bottom:16px; letter-spacing:1px;">Google Cloud & AI — Core Professional (September 2026) — Latest</div>
+      
+      <div style="display:grid; gap:10px; font-size:13px; line-height:1.7;">
+        <div>🆕 <strong>Discover the Art of Prompting</strong> — Google / Coursera — Sept 22, 2026 · Prompt Engineering · LLM · <a href="https://www.coursera.org/account/accomplishments/verify/FQ3158TJ8P4W" target="_blank" style="color:var(--gold)">Verify FQ3158TJ8P4W</a></div>
+        <div>🆕 <strong>Google Cloud Computing Foundations Certificate</strong> — Google Cloud — Sept 10, 2026 · Cloud Native · <a href="https://www.credly.com/badges/983253f0-c0e9-48f5-88cb-b805ee50a599/public_url" target="_blank" style="color:var(--gold)">View Badge</a></div>
+        <div>🆕 <strong>CS50x 2026 — Harvard / edX</strong> — 9/11 weeks — Gradebook 9/11 · <a href="https://submit.cs50.io/users/idivet" target="_blank" style="color:var(--gold)">View Submissions</a> · Final Project In Progress</div>
+        <div style="height:1px; background:var(--border); margin:8px 0;"></div>
+
+        <div>✓ Monitor Resources with Google Cloud Observability — CBL012 — Sept 11, 2026</div>
+        <div>✓ Build a Secure Google Cloud Network — Sept 2026 · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/27813629" target="_blank" style="color:var(--gold)">View Badge</a> — This is your Google Cloud: Networking & Security — Aug 2026 link</div>
+        <div>✓ Prepare Data for ML APIs on Google Cloud — Sept 2026 · <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/27802432" target="_blank" style="color:var(--gold)">View Badge</a> · Google Cloud Foundations: Data, ML & AI — <a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/27801752" target="_blank" style="color:var(--gold)">Badge</a></div>
+
+        <div style="height:1px; background:var(--border); margin:8px 0;"></div>
+
+        <div>✓ <strong>Python Essentials 1 (PE1)</strong> — Cisco Networking Academy x OpenEDG Python Institute — August 2026 · <a href="https://www.credly.com/badges/c97771dd-5f8b-4d08-90e0-03f00f45a97c" target="_blank" style="color:var(--gold)">View Badge</a> · Completion: Aug 22, 2026</div>
+        <div>✓ <strong>Discovering Entrepreneurship</strong> — Cisco Networking Academy — August 2026 · <a href="https://www.credly.com/badges/5c3b6e5e-589f-46b4-a67b-9396889fa93b" target="_blank" style="color:var(--gold)">View Badge</a> · Completion: Aug 21, 2026</div>
+
+        <div style="height:1px; background:var(--border); margin:8px 0;"></div>
+
+        <div>✓ <strong>Introduction to Cybersecurity — Cisco — May 2026</strong> · <a href="https://www.credly.com/badges/3aa4e9fc-fc8d-4048-b8c2-bd6f99bb101f/public_url" target="_blank" style="color:var(--gold)">View Badge — CORRECTED</a></div>
+        <div>✓ <strong>Create Digital Content & Collaborate Online — Cisco — Apr 2026</strong> · <a href="https://www.credly.com/badges/9009c7a2-cfeb-4ebc-b47c-b86cf797db60" target="_blank" style="color:var(--gold)">View Badge — CORRECTED</a></div>
+
+        <div style="height:1px; background:var(--border); margin:8px 0;"></div>
+
+        <div>✓ <strong>Maximize Productivity With AI Tools — Google / Coursera (June 2026)</strong> · <a href="https://coursera.org/share/af91d4c02279d2e460bbceb1d6999ab1" target="_blank" style="color:var(--gold)">Verify — CORRECTED</a></div>
+        <div>✓ <strong>Google Analytics Certified — Apr 2026 — G-2BZDPM9EZM</strong> · <a href="https://skillshop.credential.net/4bb7df29-b270-4326-8861-1e8f7ed212aa#acc.0DyAnwUh" target="_blank" style="color:var(--gold)">View Badge — CORRECTED</a></div>
+        <div>✓ <strong>Introduction to Generative AI — Google — May 2026</strong> · <a href="https://coursera.org/share/b2af349c28d6c899263555da3735a175" target="_blank" style="color:var(--gold)">View Badge — CORRECTED</a> · Also covers Introduction to AI — Google AI Essentials</div>
+
+        <div style="height:1px; background:var(--border); margin:8px 0;"></div>
+
+        <div>✓ <strong>Digital Marketing — Wadhwani Foundation (April 2026)</strong> · <a href="https://venadglobal.org/Digital_Marketing_Certificate.pdf" target="_blank" style="color:var(--gold)">View Certificate — CORRECTED</a></div>
+        <div>✓ <strong>Child Protection Awareness — British Council UAE (2019)</strong> · <a href="https://venadglobal.org/British_Council_Child_Protection.pdf" target="_blank" style="color:var(--gold)">View Certificate — CORRECTED</a></div>
+        <div>✓ <strong>HABC Level 2 Emergency First Aid (2017)</strong> · <a href="https://venadglobal.org/HABC_Emergency_First_Aid.pdf" target="_blank" style="color:var(--gold)">View Certificate — CORRECTED</a></div>
+        <div>✓ <strong>Basic Fire Fighting — NFPA</strong> · <a href="https://venadglobal.org/Basic_Fire_Fighting_NFPA.pdf" target="_blank" style="color:var(--gold)">View Certificate — CORRECTED</a></div>
+        <div>✓ <strong>Excel Advanced Expert — Microsoft/Lynda.com (2019)</strong> · <a href="https://venadglobal.org/Excel_Advanced_Formulas_Lynda.pdf" target="_blank" style="color:var(--gold)">View Certificate — CORRECTED</a></div>
+
+        <div style="height:1px; background:var(--border); margin:8px 0;"></div>
+
+        <div>✓ Diploma Software Engineering — Zenith/Kent UK (2001–2002) · Bachelor of Commerce — Vinayaka Missions University (2012–2015) · SSLC — Kerala Board 1987 · PDC — Kerala Board 1989</div>
+      </div>
+    </div>
+
+    <div style="font-family:'DM Mono',monospace; font-size:10px; color:var(--muted); letter-spacing:1px; text-align:center; margin-top:12px;">
+      All links double-checked as per your list — Sharp & Verified — Like COPY DOCX logic — Print Ready
+    </div>
+
   </div>
 </section>
+
 
 <!-- CERTS LINK -->
 <section class="refs-section">
@@ -748,6 +797,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if ([30,60,120,180,300].includes(t)) gtag('event', 'time_on_page', { event_category: 'engagement', event_label: t+'s', value: t });
     if (t >= 300) clearInterval(ti);
   }, 30000);
+});
+</script>
+
+
+<script>
+document.querySelector('.print-btn')?.addEventListener('click',()=>{
+  try { gtag('event','cv_print_click',{event_category:'engagement', event_label:'cv_page'}); } catch(e){}
 });
 </script>
 

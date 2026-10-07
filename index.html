@@ -394,6 +394,89 @@ footer strong{color:var(--gold)}
 }
 </style>
 
+
+<style id="vgc-service-fix-oct7">
+/* === OCT 7 2026 FIX - Service Panel Website & Nursing Cards Overflow === */
+#panel-services .card.web-top .card-icon,
+#panel-services .card.green-top .card-icon {
+  width: auto !important;
+  height: auto !important;
+  min-height: auto !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  padding: 0 !important;
+  margin-bottom: 0.7rem !important;
+  display: block !important;
+  color: #ffffff !important;
+  line-height: 1.3 !important;
+  text-align: left !important;
+  flex-shrink: 1 !important;
+}
+
+#panel-services .card.web-top,
+#panel-services .card.green-top {
+  overflow: visible !important;
+}
+
+#panel-services .card.web-top .badge,
+#panel-services .card.green-top .badge,
+#panel-services .badge.badge-new,
+#panel-services .badge.badge-new-green {
+  display: inline-block !important;
+  background: rgba(201,162,39,0.18) !important;
+  color: #f0c060 !important;
+  border: 1px solid rgba(201,162,39,0.35) !important;
+  padding: 5px 12px !important;
+  border-radius: 20px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.9rem !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  max-width: 100% !important;
+  line-height: 1.4 !important;
+}
+
+#panel-services .card.green-top .badge,
+#panel-services .badge.badge-new-green {
+  background: rgba(26,107,58,0.18) !important;
+  color: #7FD99F !important;
+  border-color: rgba(26,107,58,0.4) !important;
+}
+
+/* Pricing grid fix - make muted text readable on light background */
+#panel-services .card.web-top div[style*="EBF0FA"] {
+  background: #E8EEFF !important;
+  border: 1px solid #C5D1F0 !important;
+}
+
+#panel-services .card.web-top div[style*="EBF0FA"] div div:last-child,
+#panel-services .card.web-top div[style*="EBF0FA"] div[style*="color:var(--muted)"],
+#panel-services .card.web-top [style*="color:var(--muted)"] {
+  color: #334155 !important;
+  font-weight: 500 !important;
+}
+
+/* Ensure all cards don't clip */
+#panel-services .cards {
+  overflow: visible !important;
+}
+#panel-services .card {
+  overflow: visible !important;
+  min-height: auto !important;
+}
+
+/* Nursing card list fix */
+#panel-services .card.green-top ul li {
+  color: #d1d5db !important;
+  line-height: 1.6 !important;
+}
+</style>
+
 </head>
 <body>
 <style>
@@ -1432,7 +1515,7 @@ function calculateFee() {
 <section style="padding:3rem 1.5rem">
 <div style="max-width:900px;margin:0 auto;text-align:center">
   <div style="font-family:monospace;font-size:0.7rem;letter-spacing:4px;color:#C9A227;text-transform:uppercase;margin-bottom:0.5rem">✦ Verified Credentials</div>
-  <h2 style="font-size:1.8rem;color:#F5F0E8;font-weight:700;margin-bottom:0.75rem">34+ Professional Certifications</h2>
+  <h2 style="font-size:1.8rem;color:#F5F0E8;font-weight:700;margin-bottom:0.75rem">41+ Professional Certifications</h2>
   <p style="color:#8892a4;margin-bottom:2rem;font-size:0.95rem">Every certificate is earned, verified and current. Not collected — applied.</p>
   <div style="display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;margin-bottom:2rem">
     <span class="cert-tag">Cisco Cybersecurity</span>
@@ -1451,7 +1534,7 @@ function calculateFee() {
     <span class="cert-tag">+ 16 More</span>
   </div>
   <a href="https://venadglobal.org/references" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(201,162,39,0.1);border:1px solid rgba(201,162,39,0.3);color:#C9A227;padding:0.6rem 1.5rem;border-radius:8px;font-size:0.85rem;text-decoration:none;transition:all 0.2s" onmouseover="this.style.background='rgba(201,162,39,0.2)'" onmouseout="this.style.background='rgba(201,162,39,0.1)'">
-    View All 34 Certifications →
+    View All 41 Certifications →
   </a>
 </div>
 </section>
@@ -6314,7 +6397,7 @@ footer{background:#010409;border-top:1px solid var(--border);padding:32px 0;marg
       <img class="hero-logo" src="vgc_logo.png" alt="VGC" onerror="this.style.display='none'">
       <div>
         <div class="hero-eyebrow">Verified</div>
-        <h1 class="hero-name">Certificates & References — 34</h1>
+        <h1 class="hero-name">Certificates & References — 41</h1>
         <p class="hero-sub"></p>
         <div class="hero-stats">
       
@@ -6334,8 +6417,8 @@ footer{background:#010409;border-top:1px solid var(--border);padding:32px 0;marg
   </div>
 
   <div class="filters">
-    <button class="filter-btn active" onclick="filter('all', event)">All (34)</button>
-    <button class="filter-btn" onclick="filter('digital', event)">Digital & IT (22)</button>
+    <button class="filter-btn active" onclick="filter('all', event)">All (41)</button>
+    <button class="filter-btn" onclick="filter('digital', event)">Digital & IT (29)</button>
     <button class="filter-btn" onclick="filter('british', event)">British (2)</button>
     <button class="filter-btn" onclick="filter('safety', event)">Safety (3)</button>
     <button class="filter-btn" onclick="filter('awards', event)">Awards (4)</button>
@@ -6514,6 +6597,49 @@ footer{background:#010409;border-top:1px solid var(--border);padding:32px 0;marg
       <div class="card-footer"><div class="card-date">Aug 2026</div><a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/26439616" class="dl-btn" target="_blank">Badge</a></div>
     </div>
 
+    
+    <div class="card" style="--card-accent:#4285F4" data-cat="digital">
+      <div class="card-header"><div class="card-icon" style="background:#4285F4">⚖️</div><div class="card-meta"><div class="card-cat">Digital — Google Cloud — Infra Scaling</div><div class="card-title">Elastic Google Cloud Infrastructure: Scaling and Automation</div><div class="card-issuer">Google Cloud Skills Boost — Oct 2026</div></div></div>
+      <div class="card-desc">Autoscaling, load balancing, managed instance groups, scaling and automation patterns.</div>
+      <div class="card-footer"><div class="card-date">Oct 2026 — 28644897</div><a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/28644897" class="dl-btn" target="_blank">View Badge</a></div>
+    </div>
+
+    <div class="card" style="--card-accent:#4285F4" data-cat="digital">
+      <div class="card-header"><div class="card-icon" style="background:#4285F4">☸️</div><div class="card-meta"><div class="card-cat">Digital — Google Cloud — GKE</div><div class="card-title">Getting Started with Google Kubernetes Engine</div><div class="card-issuer">Google Cloud Skills Boost — Oct 2026</div></div></div>
+      <div class="card-desc">GKE clusters, deployments, services, Kubernetes fundamentals on Google Cloud.</div>
+      <div class="card-footer"><div class="card-date">Oct 2026 — 28646911</div><a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/28646911" class="dl-btn" target="_blank">View Badge</a></div>
+    </div>
+
+    <div class="card" style="--card-accent:#4285F4" data-cat="digital">
+      <div class="card-header"><div class="card-icon" style="background:#4285F4">🏃</div><div class="card-meta"><div class="card-cat">Digital — Google Cloud — Cloud Run</div><div class="card-title">Developing Applications with Cloud Run on Google Cloud: Fundamentals</div><div class="card-issuer">Google Cloud Skills Boost — Oct 2026</div></div></div>
+      <div class="card-desc">Cloud Run, containerized apps, serverless development fundamentals.</div>
+      <div class="card-footer"><div class="card-date">Oct 2026 — 28671346</div><a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/28671346" class="dl-btn" target="_blank">View Badge</a></div>
+    </div>
+
+    <div class="card" style="--card-accent:#34A853" data-cat="digital">
+      <div class="card-header"><div class="card-icon" style="background:#34A853">🎮</div><div class="card-meta"><div class="card-cat">Digital — Google Cloud — AI Infrastructure</div><div class="card-title">AI Infrastructure: Cloud GPUs</div><div class="card-issuer">Google Cloud Skills Boost — Oct 2026</div></div></div>
+      <div class="card-desc">GPU provisioning, AI workloads, accelerated computing on Google Cloud.</div>
+      <div class="card-footer"><div class="card-date">Oct 2026 — 28673222</div><a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/28673222" class="dl-btn" target="_blank">View Badge</a></div>
+    </div>
+
+    <div class="card" style="--card-accent:#34A853" data-cat="digital">
+      <div class="card-header"><div class="card-icon" style="background:#34A853">🧠</div><div class="card-meta"><div class="card-cat">Digital — Google Cloud — AI Infrastructure</div><div class="card-title">AI Infrastructure: Cloud TPUs</div><div class="card-issuer">Google Cloud Skills Boost — Oct 2026</div></div></div>
+      <div class="card-desc">TPU architectures, training optimization, large model workloads.</div>
+      <div class="card-footer"><div class="card-date">Oct 2026 — 28673559</div><a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/28673559" class="dl-btn" target="_blank">View Badge</a></div>
+    </div>
+
+    <div class="card" style="--card-accent:#34A853" data-cat="digital">
+      <div class="card-header"><div class="card-icon" style="background:#34A853">🚀</div><div class="card-meta"><div class="card-cat">Digital — Google Cloud — AI Infrastructure</div><div class="card-title">AI Infrastructure: Deployment Types</div><div class="card-issuer">Google Cloud Skills Boost — Oct 2026</div></div></div>
+      <div class="card-desc">Deployment strategies, model serving, infrastructure patterns for AI.</div>
+      <div class="card-footer"><div class="card-date">Oct 2026 — 28673987</div><a href="https://www.skills.google/public_profiles/94ed9c64-b219-4e43-8f23-b411eb4a37de/badges/28673987" class="dl-btn" target="_blank">View Badge</a></div>
+    </div>
+
+    <div class="card" style="--card-accent:#EA4335" data-cat="digital">
+      <div class="card-header"><div class="card-icon" style="background:#EA4335">👨‍💻</div><div class="card-meta"><div class="card-cat">Digital — Google Developer Profile</div><div class="card-title">Google Developer Profile — g.dev/idivet — Verified</div><div class="card-issuer">Google Developers — 2026</div></div></div>
+      <div class="card-desc">Official Google Developer profile: g.dev/idivet — Cloud Skills, badges, contributions verified.</div>
+      <div class="card-footer"><div class="card-date">Oct 2026</div><a href="https://g.dev/idivet" class="dl-btn" target="_blank">View Profile</a></div>
+    </div>
+
     <div class="card" style="--card-accent:#c4922a" data-cat="digital">
       <div class="card-header"><div class="card-icon" style="background:#c4922a">💡</div><div class="card-meta"><div class="card-cat">Entrepreneurship — Cisco — Aug 2026</div><div class="card-title">Discovering Entrepreneurship</div><div class="card-issuer">Cisco Networking Academy — Aug 2026</div></div></div>
       <div class="card-desc">Opportunity, journey, pitching.</div>
@@ -6574,7 +6700,7 @@ footer{background:#010409;border-top:1px solid var(--border);padding:32px 0;marg
         <img class="footer-logo" src="vgc_logo.png" alt="VGC">
         <div>
           <div class="footer-name">VENAD GLOBAL CONSULTANCY</div>
-          <div style="font-size:9px;color:#8b949e;margin-top:2px;">Digital 22 · British 2 · Safety 3 · Awards 4 · Education 3 = 34 — Oct 2026</div>
+          <div style="font-size:9px;color:#8b949e;margin-top:2px;">Digital 29 · British 2 · Safety 3 · Awards 4 · Education 3 = 41 — Oct 2026 — Oct 2026</div>
         </div>
       </div>
       <div class="footer-copy">
@@ -6586,7 +6712,7 @@ footer{background:#010409;border-top:1px solid var(--border);padding:32px 0;marg
       </div>
     </div>
   </div>
-  <p style="text-align:center;font-family:'DM Mono',monospace;font-size:0.7rem;color:#6b7280;margin-top:1.2rem;">© 2026 Antony Ancil —34 Certificates — October 2026</p>
+  <p style="text-align:center;font-family:'DM Mono',monospace;font-size:0.7rem;color:#6b7280;margin-top:1.2rem;">© 2026 Antony Ancil — 41 Certificates — October 2026</p>
 </footer>
 
 <script>

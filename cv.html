@@ -906,5 +906,55 @@ document.querySelector('.print-btn')?.addEventListener('click',()=>{
 });
 </script>
 
+
+<script id="vgc-mask-detect">
+/* VGC - Mask / VPN Visit Detector - NO BLOCKING, ONLY LOGGING */
+(function(){
+  try {
+    // ipwho.is is free HTTPS + CORS enabled, no token needed
+    fetch('https://ipwho.is/?fields=ip,asn,org,isp,country,city,proxy,hosting,type')
+      .then(r=>r.json())
+      .then(d=>{
+        if(!d || !d.ip) return;
+        const isMask = !!(d.proxy || d.hosting);
+        const asnLabel = 'AS' + (d.asn||'') + ' ' + (d.org||d.isp||'');
+        const info = {
+          ip: d.ip,
+          asn: asnLabel.trim(),
+          isp: d.isp || d.org || '',
+          country: d.country || '',
+          city: d.city || '',
+          isMask: isMask,
+          proxy: !!d.proxy,
+          hosting: !!d.hosting,
+          page: location.pathname
+        };
+        console.log('[VGC] Visitor:', info);
+        // GA4 event - you already have gtag
+        if(typeof gtag === 'function'){
+          gtag('event', isMask ? 'mask_visit' : 'normal_visit', {
+            event_category: 'visit_intel',
+            event_label: asnLabel,
+            country: info.country,
+            city: info.city,
+            proxy: info.proxy,
+            hosting: info.hosting,
+            page_path: info.page
+          });
+        }
+        // For your own quick debug: last 50 visits in browser localStorage
+        try{
+          const key='vgc_visits_log';
+          let logs = JSON.parse(localStorage.getItem(key)||'[]');
+          logs.unshift(Object.assign({}, info, {ts: new Date().toISOString()}));
+          logs = logs.slice(0,50);
+          localStorage.setItem(key, JSON.stringify(logs));
+        }catch(e){}
+      })
+      .catch(function(){});
+  } catch(e){}
+})();
+</script>
 </body>
+
 </html>

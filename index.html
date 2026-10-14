@@ -246,6 +246,97 @@ footer strong{color:var(--gold)}
   gtag('js', new Date());
   gtag('config', 'G-2BZDPM9EZM');
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'whatsapp_click', { event_category: 'engagement', event_label: window.location.pathname });
+    });
+  });
+  document.querySelectorAll('a[href*="mailto"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'email_click', { event_category: 'engagement', event_label: el.href });
+    });
+  });
+  document.querySelectorAll('a[href*="tel:"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'phone_click', { event_category: 'engagement', event_label: el.href });
+    });
+  });
+  var depths = [25,50,75,100], reached = [];
+  window.addEventListener('scroll', function() {
+    var pct = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+    depths.forEach(function(d) {
+      if (pct >= d && !reached.includes(d)) {
+        reached.push(d);
+        gtag('event', 'scroll_depth', { event_category: 'engagement', event_label: d+'%', value: d });
+      }
+    });
+  });
+  var t = 0;
+  var ti = setInterval(function() {
+    t += 30;
+    if ([30,60,120,180,300].includes(t)) gtag('event', 'time_on_page', { event_category: 'engagement', event_label: t+'s', value: t });
+    if (t >= 300) clearInterval(ti);
+  }, 30000);
+});
+</script>
+
+<script>
+document.querySelector('.print-btn')?.addEventListener('click',()=>{
+  try { gtag('event','cv_print_click',{event_category:'engagement', event_label:'cv_page'}); } catch(e){}
+});
+</script>
+
+
+<script id="vgc-mask-detect">
+/* VGC - Mask / VPN Visit Detector - NO BLOCKING, ONLY LOGGING */
+(function(){
+  try {
+    // ipwho.is is free HTTPS + CORS enabled, no token needed
+    fetch('https://ipwho.is/?fields=ip,asn,org,isp,country,city,proxy,hosting,type')
+      .then(r=>r.json())
+      .then(d=>{
+        if(!d || !d.ip) return;
+        const isMask = !!(d.proxy || d.hosting);
+        const asnLabel = 'AS' + (d.asn||'') + ' ' + (d.org||d.isp||'');
+        const info = {
+          ip: d.ip,
+          asn: asnLabel.trim(),
+          isp: d.isp || d.org || '',
+          country: d.country || '',
+          city: d.city || '',
+          isMask: isMask,
+          proxy: !!d.proxy,
+          hosting: !!d.hosting,
+          page: location.pathname
+        };
+        console.log('[VGC] Visitor:', info);
+        // GA4 event - you already have gtag
+        if(typeof gtag === 'function'){
+          gtag('event', isMask ? 'mask_visit' : 'normal_visit', {
+            event_category: 'visit_intel',
+            event_label: asnLabel,
+            country: info.country,
+            city: info.city,
+            proxy: info.proxy,
+            hosting: info.hosting,
+            page_path: info.page
+          });
+        }
+        // For your own quick debug: last 50 visits in browser localStorage
+        try{
+          const key='vgc_visits_log';
+          let logs = JSON.parse(localStorage.getItem(key)||'[]');
+          logs.unshift(Object.assign({}, info, {ts: new Date().toISOString()}));
+          logs = logs.slice(0,50);
+          localStorage.setItem(key, JSON.stringify(logs));
+        }catch(e){}
+      })
+      .catch(function(){});
+  } catch(e){}
+})();
+</script>
 <style>
 .vgc-tab-bar{background:var(--navy);border-bottom:3px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px;padding:0 1rem 10px;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,0.25)}
 .vgc-tab-btn{padding:7px 15px;border:1.5px solid rgba(255,255,255,0.28);border-radius:22px;font-size:0.78rem;font-weight:700;cursor:pointer;background:transparent;color:#e8edf7;font-family:Arial,sans-serif;transition:all .18s;line-height:1.2}.vgc-tab-btn:hover{border-color:var(--gold);color:var(--gold)}
@@ -2454,16 +2545,6 @@ function fileToBase64(file){
 <div class="step"><div class="step-num">5</div><div class="step-body"><h4>We Deliver</h4><p>Your CV, cover letters, guidance reports, and documents are delivered on time. All WhatsApp communication kept in writing.</p></div></div>
 <div class="step"><div class="step-num">6</div><div class="step-body"><h4>Ongoing Support</h4><p>I continue to support you until your goal is achieved — job offer, university admission, or visa application submitted.</p></div></div>
 </div>
-</section>
-<section class="agreement-section">
-<h2>📄 Download Our Service Agreement</h2>
-<p>Before we begin any work, we sign a simple Service Agreement — so you know exactly what you are paying for and what to expect. This is what separates us from fake agencies.</p>
-<div class="agreement-btns">
-<a class="a-gold" href="https://wa.me/918589895659?text=Hi%20Antony%2C%20Please%20send%20Service%20Agreement%20Sept%202026">⬇ Request for Agreement (PDF)</a>
-<a class="a-gold" href="https://wa.me/918589895659?text=Hi%20Antony%2C%20Please%20send%20Pricing%20Guide%20Sept%202026%20-%209%20countries">📋 Request Pricing Guide — Sept 2026 (9 Countries)</a>
-<a class="a-outline" href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20have%20filled%20the%20service%20agreement%20and%20ready%20to%20proceed">💬 Send Signed Agreement</a>
-</div>
-<p style="margin-top:1rem;font-size:0.82rem;opacity:0.7">Download → Fill your details → Sign → WhatsApp photo to +91 8589895659</p>
 </section>
 <section class="promises-section">
 <h2>My Promise to You</h2>
@@ -6715,5 +6796,55 @@ window.addEventListener('DOMContentLoaded',()=>{
 })();
 </script>
 
+
+<script id="vgc-mask-detect">
+/* VGC - Mask / VPN Visit Detector - NO BLOCKING, ONLY LOGGING */
+(function(){
+  try {
+    // ipwho.is is free HTTPS + CORS enabled, no token needed
+    fetch('https://ipwho.is/?fields=ip,asn,org,isp,country,city,proxy,hosting,type')
+      .then(r=>r.json())
+      .then(d=>{
+        if(!d || !d.ip) return;
+        const isMask = !!(d.proxy || d.hosting);
+        const asnLabel = 'AS' + (d.asn||'') + ' ' + (d.org||d.isp||'');
+        const info = {
+          ip: d.ip,
+          asn: asnLabel.trim(),
+          isp: d.isp || d.org || '',
+          country: d.country || '',
+          city: d.city || '',
+          isMask: isMask,
+          proxy: !!d.proxy,
+          hosting: !!d.hosting,
+          page: location.pathname
+        };
+        console.log('[VGC] Visitor:', info);
+        // GA4 event - you already have gtag
+        if(typeof gtag === 'function'){
+          gtag('event', isMask ? 'mask_visit' : 'normal_visit', {
+            event_category: 'visit_intel',
+            event_label: asnLabel,
+            country: info.country,
+            city: info.city,
+            proxy: info.proxy,
+            hosting: info.hosting,
+            page_path: info.page
+          });
+        }
+        // For your own quick debug: last 50 visits in browser localStorage
+        try{
+          const key='vgc_visits_log';
+          let logs = JSON.parse(localStorage.getItem(key)||'[]');
+          logs.unshift(Object.assign({}, info, {ts: new Date().toISOString()}));
+          logs = logs.slice(0,50);
+          localStorage.setItem(key, JSON.stringify(logs));
+        }catch(e){}
+      })
+      .catch(function(){});
+  } catch(e){}
+})();
+</script>
 </body>
+
 </html>

@@ -3,6 +3,97 @@
 <head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BZDPM9EZM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2BZDPM9EZM');</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'whatsapp_click', { event_category: 'engagement', event_label: window.location.pathname });
+    });
+  });
+  document.querySelectorAll('a[href*="mailto"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'email_click', { event_category: 'engagement', event_label: el.href });
+    });
+  });
+  document.querySelectorAll('a[href*="tel:"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'phone_click', { event_category: 'engagement', event_label: el.href });
+    });
+  });
+  var depths = [25,50,75,100], reached = [];
+  window.addEventListener('scroll', function() {
+    var pct = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+    depths.forEach(function(d) {
+      if (pct >= d && !reached.includes(d)) {
+        reached.push(d);
+        gtag('event', 'scroll_depth', { event_category: 'engagement', event_label: d+'%', value: d });
+      }
+    });
+  });
+  var t = 0;
+  var ti = setInterval(function() {
+    t += 30;
+    if ([30,60,120,180,300].includes(t)) gtag('event', 'time_on_page', { event_category: 'engagement', event_label: t+'s', value: t });
+    if (t >= 300) clearInterval(ti);
+  }, 30000);
+});
+</script>
+
+<script>
+document.querySelector('.print-btn')?.addEventListener('click',()=>{
+  try { gtag('event','cv_print_click',{event_category:'engagement', event_label:'cv_page'}); } catch(e){}
+});
+</script>
+
+
+<script id="vgc-mask-detect">
+/* VGC - Mask / VPN Visit Detector - NO BLOCKING, ONLY LOGGING */
+(function(){
+  try {
+    // ipwho.is is free HTTPS + CORS enabled, no token needed
+    fetch('https://ipwho.is/?fields=ip,asn,org,isp,country,city,proxy,hosting,type')
+      .then(r=>r.json())
+      .then(d=>{
+        if(!d || !d.ip) return;
+        const isMask = !!(d.proxy || d.hosting);
+        const asnLabel = 'AS' + (d.asn||'') + ' ' + (d.org||d.isp||'');
+        const info = {
+          ip: d.ip,
+          asn: asnLabel.trim(),
+          isp: d.isp || d.org || '',
+          country: d.country || '',
+          city: d.city || '',
+          isMask: isMask,
+          proxy: !!d.proxy,
+          hosting: !!d.hosting,
+          page: location.pathname
+        };
+        console.log('[VGC] Visitor:', info);
+        // GA4 event - you already have gtag
+        if(typeof gtag === 'function'){
+          gtag('event', isMask ? 'mask_visit' : 'normal_visit', {
+            event_category: 'visit_intel',
+            event_label: asnLabel,
+            country: info.country,
+            city: info.city,
+            proxy: info.proxy,
+            hosting: info.hosting,
+            page_path: info.page
+          });
+        }
+        // For your own quick debug: last 50 visits in browser localStorage
+        try{
+          const key='vgc_visits_log';
+          let logs = JSON.parse(localStorage.getItem(key)||'[]');
+          logs.unshift(Object.assign({}, info, {ts: new Date().toISOString()}));
+          logs = logs.slice(0,50);
+          localStorage.setItem(key, JSON.stringify(logs));
+        }catch(e){}
+      })
+      .catch(function(){});
+  } catch(e){}
+})();
+</script>
 <meta charset="UTF-8">
 <link rel="canonical" href="https://venadglobal.org/references.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -378,5 +469,55 @@ else c.classList.add('hidden');
 });
 }
 </script>
+
+<script id="vgc-mask-detect">
+/* VGC - Mask / VPN Visit Detector - NO BLOCKING, ONLY LOGGING */
+(function(){
+  try {
+    // ipwho.is is free HTTPS + CORS enabled, no token needed
+    fetch('https://ipwho.is/?fields=ip,asn,org,isp,country,city,proxy,hosting,type')
+      .then(r=>r.json())
+      .then(d=>{
+        if(!d || !d.ip) return;
+        const isMask = !!(d.proxy || d.hosting);
+        const asnLabel = 'AS' + (d.asn||'') + ' ' + (d.org||d.isp||'');
+        const info = {
+          ip: d.ip,
+          asn: asnLabel.trim(),
+          isp: d.isp || d.org || '',
+          country: d.country || '',
+          city: d.city || '',
+          isMask: isMask,
+          proxy: !!d.proxy,
+          hosting: !!d.hosting,
+          page: location.pathname
+        };
+        console.log('[VGC] Visitor:', info);
+        // GA4 event - you already have gtag
+        if(typeof gtag === 'function'){
+          gtag('event', isMask ? 'mask_visit' : 'normal_visit', {
+            event_category: 'visit_intel',
+            event_label: asnLabel,
+            country: info.country,
+            city: info.city,
+            proxy: info.proxy,
+            hosting: info.hosting,
+            page_path: info.page
+          });
+        }
+        // For your own quick debug: last 50 visits in browser localStorage
+        try{
+          const key='vgc_visits_log';
+          let logs = JSON.parse(localStorage.getItem(key)||'[]');
+          logs.unshift(Object.assign({}, info, {ts: new Date().toISOString()}));
+          logs = logs.slice(0,50);
+          localStorage.setItem(key, JSON.stringify(logs));
+        }catch(e){}
+      })
+      .catch(function(){});
+  } catch(e){}
+})();
+</script>
 </body>
+
 </html>

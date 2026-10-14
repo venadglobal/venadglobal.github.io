@@ -246,97 +246,6 @@ footer strong{color:var(--gold)}
   gtag('js', new Date());
   gtag('config', 'G-2BZDPM9EZM');
 </script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      gtag('event', 'whatsapp_click', { event_category: 'engagement', event_label: window.location.pathname });
-    });
-  });
-  document.querySelectorAll('a[href*="mailto"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      gtag('event', 'email_click', { event_category: 'engagement', event_label: el.href });
-    });
-  });
-  document.querySelectorAll('a[href*="tel:"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      gtag('event', 'phone_click', { event_category: 'engagement', event_label: el.href });
-    });
-  });
-  var depths = [25,50,75,100], reached = [];
-  window.addEventListener('scroll', function() {
-    var pct = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
-    depths.forEach(function(d) {
-      if (pct >= d && !reached.includes(d)) {
-        reached.push(d);
-        gtag('event', 'scroll_depth', { event_category: 'engagement', event_label: d+'%', value: d });
-      }
-    });
-  });
-  var t = 0;
-  var ti = setInterval(function() {
-    t += 30;
-    if ([30,60,120,180,300].includes(t)) gtag('event', 'time_on_page', { event_category: 'engagement', event_label: t+'s', value: t });
-    if (t >= 300) clearInterval(ti);
-  }, 30000);
-});
-</script>
-
-<script>
-document.querySelector('.print-btn')?.addEventListener('click',()=>{
-  try { gtag('event','cv_print_click',{event_category:'engagement', event_label:'cv_page'}); } catch(e){}
-});
-</script>
-
-
-<script id="vgc-mask-detect">
-/* VGC - Mask / VPN Visit Detector - NO BLOCKING, ONLY LOGGING */
-(function(){
-  try {
-    // ipwho.is is free HTTPS + CORS enabled, no token needed
-    fetch('https://ipwho.is/?fields=ip,asn,org,isp,country,city,proxy,hosting,type')
-      .then(r=>r.json())
-      .then(d=>{
-        if(!d || !d.ip) return;
-        const isMask = !!(d.proxy || d.hosting);
-        const asnLabel = 'AS' + (d.asn||'') + ' ' + (d.org||d.isp||'');
-        const info = {
-          ip: d.ip,
-          asn: asnLabel.trim(),
-          isp: d.isp || d.org || '',
-          country: d.country || '',
-          city: d.city || '',
-          isMask: isMask,
-          proxy: !!d.proxy,
-          hosting: !!d.hosting,
-          page: location.pathname
-        };
-        console.log('[VGC] Visitor:', info);
-        // GA4 event - you already have gtag
-        if(typeof gtag === 'function'){
-          gtag('event', isMask ? 'mask_visit' : 'normal_visit', {
-            event_category: 'visit_intel',
-            event_label: asnLabel,
-            country: info.country,
-            city: info.city,
-            proxy: info.proxy,
-            hosting: info.hosting,
-            page_path: info.page
-          });
-        }
-        // For your own quick debug: last 50 visits in browser localStorage
-        try{
-          const key='vgc_visits_log';
-          let logs = JSON.parse(localStorage.getItem(key)||'[]');
-          logs.unshift(Object.assign({}, info, {ts: new Date().toISOString()}));
-          logs = logs.slice(0,50);
-          localStorage.setItem(key, JSON.stringify(logs));
-        }catch(e){}
-      })
-      .catch(function(){});
-  } catch(e){}
-})();
-</script>
 <style>
 .vgc-tab-bar{background:var(--navy);border-bottom:3px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px;padding:0 1rem 10px;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,0.25)}
 .vgc-tab-btn{padding:7px 15px;border:1.5px solid rgba(255,255,255,0.28);border-radius:22px;font-size:0.78rem;font-weight:700;cursor:pointer;background:transparent;color:#e8edf7;font-family:Arial,sans-serif;transition:all .18s;line-height:1.2}.vgc-tab-btn:hover{border-color:var(--gold);color:var(--gold)}
@@ -876,8 +785,8 @@ document.querySelector('.print-btn')?.addEventListener('click',()=>{
 </div>
 <script>
 // ===== VENAD GLOBAL - NEW DATABASE LOGIC - CV UPLOAD TO GDRIVE + SHEET + CSV =====
-const VGC_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyUF9V9Mfw5HKFAW-07iZBwSCJjguCHbUi39_cK-3c6MmRKdzNmdA2EutgUFF17EW1P/exec'; // DEPLOYED ✅ // <-- PASTE HERE
-const VGC_WHATSAPP_NUMBER = '918589895659';
+var VGC_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyUF9V9Mfw5HKFAW-07iZBwSCJjguCHbUi39_cK-3c6MmRKdzNmdA2EutgUFF17EW1P/exec'; // DEPLOYED ✅ // <-- PASTE HERE
+var VGC_WHATSAPP_NUMBER = '918589895659';
 
 function openRegisterModal(type){
   document.getElementById('vgc-register-modal').style.display='flex';
@@ -1999,211 +1908,9 @@ if (s) observer.observe(s);
 </div>
 </div>
 </div>
-<script>
-// ===== VENAD GLOBAL - NEW DATABASE LOGIC - CV UPLOAD TO GDRIVE + SHEET + CSV =====
-const VGC_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyUF9V9Mfw5HKFAW-07iZBwSCJjguCHbUi39_cK-3c6MmRKdzNmdA2EutgUFF17EW1P/exec'; // DEPLOYED ✅ // <-- PASTE HERE
-const VGC_WHATSAPP_NUMBER = '918589895659';
 
-function openRegisterModal(type){
-  document.getElementById('vgc-register-modal').style.display='flex';
-  document.body.style.overflow='hidden';
-  if(type==='candidate'){
-    document.getElementById('candidate-form-box').style.display='block';
-    document.getElementById('employer-form-box').style.display='none';
-  } else {
-    document.getElementById('candidate-form-box').style.display='none';
-    document.getElementById('employer-form-box').style.display='block';
-  }
-  if(typeof gtag!=='undefined') gtag('event','registration_modal_open',{type:type});
-}
-function closeRegisterModal(){
-  document.getElementById('vgc-register-modal').style.display='none';
-  document.body.style.overflow='';
-}
-document.getElementById('vgc-register-modal').addEventListener('click', function(e){
-  if(e.target===this) closeRegisterModal();
-});
+<!-- Duplicate VGC DB logic removed to fix const redeclaration -->
 
-// File name preview
-document.addEventListener('DOMContentLoaded', ()=>{
-  const cvInput = document.getElementById('cv_file');
-  if(cvInput){
-    cvInput.addEventListener('change', (e)=>{
-      const f = e.target.files[0];
-      if(f) document.getElementById('cv_file_name').textContent = '📎 ' + f.name + ' (' + (f.size/1024).toFixed(0) + ' KB)';
-    });
-  }
-  const empInput = document.getElementById('employer_doc');
-  if(empInput){
-    empInput.addEventListener('change', (e)=>{
-      const f = e.target.files[0];
-      if(f) document.getElementById('employer_doc_name').textContent = '📎 ' + f.name;
-    });
-  }
-});
-
-async function submitCandidate(e){
-  e.preventDefault();
-  const f=e.target;
-  const fileInput = document.getElementById('cv_file');
-  const file = fileInput.files[0];
-  
-  if(!file){
-    alert('Please attach your CV (PDF/DOC)');
-    return;
-  }
-  if(file.size > 5*1024*1024){
-    alert('File too large! Max 5MB please. Compress PDF or send DOC.');
-    return;
-  }
-
-  const btn = document.getElementById('btnCandidateSubmit');
-  const progress = document.getElementById('uploadProgress');
-  btn.disabled = true;
-  btn.textContent = '⏳ Uploading...';
-  progress.style.display = 'block';
-
-  try{
-    const base64 = await fileToBase64(file);
-    
-    const data={
-      type:'candidate',
-      timestamp:new Date().toISOString(),
-      name:f.name.value.trim(),
-      whatsapp:f.whatsapp.value.trim(),
-      email:f.email.value.trim(),
-      qualification:f.qualification.value,
-      experience:f.experience.value,
-      target_country:f.target_country.value,
-      location:f.location.value.trim(),
-      message:f.message.value.trim(),
-      cv_name: file.name,
-      cv_type: file.type || 'application/pdf',
-      cv_base64: base64.split(',')[1], // remove data:... prefix
-      source: 'venadglobal.org - 9 countries map'
-    };
-
-    // 1. Save to localStorage backup (still keep)
-    const existing=JSON.parse(localStorage.getItem('vgc_candidates')||'[]');
-    existing.push({...data, cv_base64: '[saved to drive]'}); // don't store huge base64 in localStorage
-    localStorage.setItem('vgc_candidates', JSON.stringify(existing));
-
-    // 2. Send to Google Apps Script -> Sheet + Drive + CSV
-    if(VGC_APPS_SCRIPT_URL.includes('REPLACE')){
-      console.warn('Apps Script URL not set - saving to localStorage only');
-      alert('⚠️ Apps Script URL not configured yet. Data saved locally. Please set URL in code.');
-    } else {
-      const res = await fetch(VGC_APPS_SCRIPT_URL, {
-        method:'POST',
-        headers:{'Content-Type':'text/plain;charset=utf-8'},
-        body: JSON.stringify(data)
-      });
-      const result = await res.json();
-      console.log('Saved to GDrive:', result);
-      
-      if(result.status === 'ok'){
-        // 3. Open WhatsApp to Antony with CV link
-        const waMsg = `*NEW CANDIDATE WITH CV* — Sept 2026%0A%0AName: ${data.name}%0AWhatsApp: ${data.whatsapp}%0AEmail: ${data.email}%0AQualification: ${data.qualification}%0AExperience: ${data.experience}%0ATarget: ${data.target_country}%0ALocation: ${data.location}%0ACV: ${result.cvLink || 'Saved to Drive'}%0AMessage: ${data.message}%0A%0A— from venadglobal.org`;
-        window.open('https://wa.me/'+VGC_WHATSAPP_NUMBER+'?text='+waMsg, '_blank');
-        alert('✅ CV Uploaded! Saved to GDrive: ' + (result.cvLink ? 'Link in Sheet' : '') + '\nWhatsApp opened to Antony. We will contact you within 24 hours.');
-      } else {
-        throw new Error(result.message || 'Save failed');
-      }
-    }
-    
-    closeRegisterModal();
-    f.reset();
-    document.getElementById('cv_file_name').textContent = '';
-  } catch(err){
-    console.error(err);
-    alert('❌ Upload failed: ' + err.message + '\n\nData saved locally. Please WhatsApp CV directly to +91 85898 95659');
-    // Fallback to WhatsApp only
-    const waMsg=`*NEW CANDIDATE (Fallback)*%0AName: ${f.name.value}%0AWhatsApp: ${f.whatsapp.value}%0ATarget: ${f.target_country.value}%0AQual: ${f.qualification.value}%0A— CV upload failed, will send via WhatsApp`;
-    window.open('https://wa.me/'+VGC_WHATSAPP_NUMBER+'?text='+waMsg, '_blank');
-  } finally {
-    btn.disabled = false;
-    btn.textContent = '✅ Upload CV & Register FREE';
-    progress.style.display = 'none';
-  }
-}
-
-async function submitEmployer(e){
-  e.preventDefault();
-  const f=e.target;
-  const fileInput = document.getElementById('employer_doc');
-  const file = fileInput && fileInput.files[0] ? fileInput.files[0] : null;
-
-  const btn = document.getElementById('btnEmployerSubmit');
-  const progress = document.getElementById('uploadProgressEmployer');
-  btn.disabled = true;
-  btn.textContent = '⏳ Uploading...';
-  if(progress) progress.style.display = 'block';
-
-  try{
-    let cv_base64 = null, cv_name = null, cv_type = null;
-    if(file){
-      if(file.size > 5*1024*1024){ alert('Max 5MB'); throw new Error('File too large'); }
-      const b64 = await fileToBase64(file);
-      cv_base64 = b64.split(',')[1];
-      cv_name = file.name;
-      cv_type = file.type;
-    }
-
-    const data={
-      type:'employer',
-      timestamp:new Date().toISOString(),
-      company:f.company.value.trim(),
-      contact_person:f.contact_person.value.trim(),
-      designation:f.designation.value.trim(),
-      email:f.email.value.trim(),
-      phone:f.phone.value.trim(),
-      country:f.country.value.trim(),
-      company_type:f.company_type.value,
-      workers_needed:f.workers_needed.value,
-      positions:f.positions.value,
-      salary:f.salary.value,
-      message:f.message.value.trim(),
-      cv_name: cv_name,
-      cv_type: cv_type,
-      cv_base64: cv_base64,
-      source: 'venadglobal.org employer'
-    };
-
-    const existing=JSON.parse(localStorage.getItem('vgc_employers')||'[]');
-    existing.push({...data, cv_base64: '[saved]'});
-    localStorage.setItem('vgc_employers', JSON.stringify(existing));
-
-    if(!VGC_APPS_SCRIPT_URL.includes('REPLACE')){
-      const res = await fetch(VGC_APPS_SCRIPT_URL, {method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify(data)});
-      const result = await res.json();
-      console.log('Employer saved:', result);
-    }
-
-    const waMsg=`*NEW EMPLOYER* — Sept 2026%0A%0ACompany: ${data.company}%0AContact: ${data.contact_person} (${data.designation})%0AEmail: ${data.email}%0APhone: ${data.phone}%0ACountry: ${data.country}%0AType: ${data.company_type}%0ANeeded: ${data.workers_needed}%0APositions: ${data.positions}%0ASalary: ${data.salary}%0AMessage: ${data.message}%0A%0A— from venadglobal.org`;
-    window.open('https://wa.me/'+VGC_WHATSAPP_NUMBER+'?text='+waMsg, '_blank');
-    
-    alert('✅ Employer registered! CV/Doc saved to GDrive if attached. WhatsApp opened.');
-    closeRegisterModal();
-    f.reset();
-  } catch(err){
-    console.error(err);
-    alert('Error: ' + err.message);
-  } finally {
-    btn.disabled = false;
-    btn.textContent = '🏥 Upload & Register as Employer';
-    if(progress) progress.style.display = 'none';
-  }
-}
-
-function fileToBase64(file){
-  return new Promise((resolve, reject)=>{
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  });
-}
-</script>
 <section class="services-section" id="services">
 <h2>Global Career &amp; Immigration Services</h2>
 <p class="sub">Honest, experience-based guidance for Canada, Australia, NZ, UK, Germany, Middle East, Nursing, Websites and more. All services include direct WhatsApp support throughout.</p>
@@ -2545,6 +2252,16 @@ function fileToBase64(file){
 <div class="step"><div class="step-num">5</div><div class="step-body"><h4>We Deliver</h4><p>Your CV, cover letters, guidance reports, and documents are delivered on time. All WhatsApp communication kept in writing.</p></div></div>
 <div class="step"><div class="step-num">6</div><div class="step-body"><h4>Ongoing Support</h4><p>I continue to support you until your goal is achieved — job offer, university admission, or visa application submitted.</p></div></div>
 </div>
+</section>
+<section class="agreement-section">
+<h2>📄 Download Our Service Agreement</h2>
+<p>Before we begin any work, we sign a simple Service Agreement — so you know exactly what you are paying for and what to expect. This is what separates us from fake agencies.</p>
+<div class="agreement-btns">
+<a class="a-gold" href="https://wa.me/918589895659?text=Hi%20Antony%2C%20Please%20send%20Service%20Agreement%20Sept%202026">⬇ Request for Agreement (PDF)</a>
+<a class="a-gold" href="https://wa.me/918589895659?text=Hi%20Antony%2C%20Please%20send%20Pricing%20Guide%20Sept%202026%20-%209%20countries">📋 Request Pricing Guide — Sept 2026 (9 Countries)</a>
+<a class="a-outline" href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20have%20filled%20the%20service%20agreement%20and%20ready%20to%20proceed">💬 Send Signed Agreement</a>
+</div>
+<p style="margin-top:1rem;font-size:0.82rem;opacity:0.7">Download → Fill your details → Sign → WhatsApp photo to +91 8589895659</p>
 </section>
 <section class="promises-section">
 <h2>My Promise to You</h2>
@@ -4152,7 +3869,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="faq-a">
 <strong>Gulf is the fastest pathway — typically 3 to 6 months.</strong> Our founder spent 20+ years with HCT UAE and knows exactly how Gulf employers recruit.<br/><br/>
 <strong>However — permanent residency is generally not available in Gulf countries.</strong> You work on a renewable employment visa. If permanent residency is your goal, Canada or Australia is a better pathway. Gulf is excellent for building savings and experience quickly.<br/><br/>
-<div class="ml"></div>
+<div class="ml">Gulf fastest pathway — 3–6 months. പക്ഷേ permanent residency generally ഇല്ല. PR goal-ആണെങ്കിൽ Canada better option.</div>
 </div>
 </div>
 </div>
@@ -5750,211 +5467,9 @@ document.querySelector('.print-btn')?.addEventListener('click',()=>{
 </div>
 </div>
 </div>
-<script>
-// ===== VENAD GLOBAL - NEW DATABASE LOGIC - CV UPLOAD TO GDRIVE + SHEET + CSV =====
-const VGC_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyUF9V9Mfw5HKFAW-07iZBwSCJjguCHbUi39_cK-3c6MmRKdzNmdA2EutgUFF17EW1P/exec'; // DEPLOYED ✅ // <-- PASTE HERE
-const VGC_WHATSAPP_NUMBER = '918589895659';
 
-function openRegisterModal(type){
-  document.getElementById('vgc-register-modal').style.display='flex';
-  document.body.style.overflow='hidden';
-  if(type==='candidate'){
-    document.getElementById('candidate-form-box').style.display='block';
-    document.getElementById('employer-form-box').style.display='none';
-  } else {
-    document.getElementById('candidate-form-box').style.display='none';
-    document.getElementById('employer-form-box').style.display='block';
-  }
-  if(typeof gtag!=='undefined') gtag('event','registration_modal_open',{type:type});
-}
-function closeRegisterModal(){
-  document.getElementById('vgc-register-modal').style.display='none';
-  document.body.style.overflow='';
-}
-document.getElementById('vgc-register-modal').addEventListener('click', function(e){
-  if(e.target===this) closeRegisterModal();
-});
+<!-- Duplicate VGC DB logic removed to fix const redeclaration -->
 
-// File name preview
-document.addEventListener('DOMContentLoaded', ()=>{
-  const cvInput = document.getElementById('cv_file');
-  if(cvInput){
-    cvInput.addEventListener('change', (e)=>{
-      const f = e.target.files[0];
-      if(f) document.getElementById('cv_file_name').textContent = '📎 ' + f.name + ' (' + (f.size/1024).toFixed(0) + ' KB)';
-    });
-  }
-  const empInput = document.getElementById('employer_doc');
-  if(empInput){
-    empInput.addEventListener('change', (e)=>{
-      const f = e.target.files[0];
-      if(f) document.getElementById('employer_doc_name').textContent = '📎 ' + f.name;
-    });
-  }
-});
-
-async function submitCandidate(e){
-  e.preventDefault();
-  const f=e.target;
-  const fileInput = document.getElementById('cv_file');
-  const file = fileInput.files[0];
-  
-  if(!file){
-    alert('Please attach your CV (PDF/DOC)');
-    return;
-  }
-  if(file.size > 5*1024*1024){
-    alert('File too large! Max 5MB please. Compress PDF or send DOC.');
-    return;
-  }
-
-  const btn = document.getElementById('btnCandidateSubmit');
-  const progress = document.getElementById('uploadProgress');
-  btn.disabled = true;
-  btn.textContent = '⏳ Uploading...';
-  progress.style.display = 'block';
-
-  try{
-    const base64 = await fileToBase64(file);
-    
-    const data={
-      type:'candidate',
-      timestamp:new Date().toISOString(),
-      name:f.name.value.trim(),
-      whatsapp:f.whatsapp.value.trim(),
-      email:f.email.value.trim(),
-      qualification:f.qualification.value,
-      experience:f.experience.value,
-      target_country:f.target_country.value,
-      location:f.location.value.trim(),
-      message:f.message.value.trim(),
-      cv_name: file.name,
-      cv_type: file.type || 'application/pdf',
-      cv_base64: base64.split(',')[1], // remove data:... prefix
-      source: 'venadglobal.org - 9 countries map'
-    };
-
-    // 1. Save to localStorage backup (still keep)
-    const existing=JSON.parse(localStorage.getItem('vgc_candidates')||'[]');
-    existing.push({...data, cv_base64: '[saved to drive]'}); // don't store huge base64 in localStorage
-    localStorage.setItem('vgc_candidates', JSON.stringify(existing));
-
-    // 2. Send to Google Apps Script -> Sheet + Drive + CSV
-    if(VGC_APPS_SCRIPT_URL.includes('REPLACE')){
-      console.warn('Apps Script URL not set - saving to localStorage only');
-      alert('⚠️ Apps Script URL not configured yet. Data saved locally. Please set URL in code.');
-    } else {
-      const res = await fetch(VGC_APPS_SCRIPT_URL, {
-        method:'POST',
-        headers:{'Content-Type':'text/plain;charset=utf-8'},
-        body: JSON.stringify(data)
-      });
-      const result = await res.json();
-      console.log('Saved to GDrive:', result);
-      
-      if(result.status === 'ok'){
-        // 3. Open WhatsApp to Antony with CV link
-        const waMsg = `*NEW CANDIDATE WITH CV* — Sept 2026%0A%0AName: ${data.name}%0AWhatsApp: ${data.whatsapp}%0AEmail: ${data.email}%0AQualification: ${data.qualification}%0AExperience: ${data.experience}%0ATarget: ${data.target_country}%0ALocation: ${data.location}%0ACV: ${result.cvLink || 'Saved to Drive'}%0AMessage: ${data.message}%0A%0A— from venadglobal.org`;
-        window.open('https://wa.me/'+VGC_WHATSAPP_NUMBER+'?text='+waMsg, '_blank');
-        alert('✅ CV Uploaded! Saved to GDrive: ' + (result.cvLink ? 'Link in Sheet' : '') + '\nWhatsApp opened to Antony. We will contact you within 24 hours.');
-      } else {
-        throw new Error(result.message || 'Save failed');
-      }
-    }
-    
-    closeRegisterModal();
-    f.reset();
-    document.getElementById('cv_file_name').textContent = '';
-  } catch(err){
-    console.error(err);
-    alert('❌ Upload failed: ' + err.message + '\n\nData saved locally. Please WhatsApp CV directly to +91 85898 95659');
-    // Fallback to WhatsApp only
-    const waMsg=`*NEW CANDIDATE (Fallback)*%0AName: ${f.name.value}%0AWhatsApp: ${f.whatsapp.value}%0ATarget: ${f.target_country.value}%0AQual: ${f.qualification.value}%0A— CV upload failed, will send via WhatsApp`;
-    window.open('https://wa.me/'+VGC_WHATSAPP_NUMBER+'?text='+waMsg, '_blank');
-  } finally {
-    btn.disabled = false;
-    btn.textContent = '✅ Upload CV & Register FREE';
-    progress.style.display = 'none';
-  }
-}
-
-async function submitEmployer(e){
-  e.preventDefault();
-  const f=e.target;
-  const fileInput = document.getElementById('employer_doc');
-  const file = fileInput && fileInput.files[0] ? fileInput.files[0] : null;
-
-  const btn = document.getElementById('btnEmployerSubmit');
-  const progress = document.getElementById('uploadProgressEmployer');
-  btn.disabled = true;
-  btn.textContent = '⏳ Uploading...';
-  if(progress) progress.style.display = 'block';
-
-  try{
-    let cv_base64 = null, cv_name = null, cv_type = null;
-    if(file){
-      if(file.size > 5*1024*1024){ alert('Max 5MB'); throw new Error('File too large'); }
-      const b64 = await fileToBase64(file);
-      cv_base64 = b64.split(',')[1];
-      cv_name = file.name;
-      cv_type = file.type;
-    }
-
-    const data={
-      type:'employer',
-      timestamp:new Date().toISOString(),
-      company:f.company.value.trim(),
-      contact_person:f.contact_person.value.trim(),
-      designation:f.designation.value.trim(),
-      email:f.email.value.trim(),
-      phone:f.phone.value.trim(),
-      country:f.country.value.trim(),
-      company_type:f.company_type.value,
-      workers_needed:f.workers_needed.value,
-      positions:f.positions.value,
-      salary:f.salary.value,
-      message:f.message.value.trim(),
-      cv_name: cv_name,
-      cv_type: cv_type,
-      cv_base64: cv_base64,
-      source: 'venadglobal.org employer'
-    };
-
-    const existing=JSON.parse(localStorage.getItem('vgc_employers')||'[]');
-    existing.push({...data, cv_base64: '[saved]'});
-    localStorage.setItem('vgc_employers', JSON.stringify(existing));
-
-    if(!VGC_APPS_SCRIPT_URL.includes('REPLACE')){
-      const res = await fetch(VGC_APPS_SCRIPT_URL, {method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify(data)});
-      const result = await res.json();
-      console.log('Employer saved:', result);
-    }
-
-    const waMsg=`*NEW EMPLOYER* — Sept 2026%0A%0ACompany: ${data.company}%0AContact: ${data.contact_person} (${data.designation})%0AEmail: ${data.email}%0APhone: ${data.phone}%0ACountry: ${data.country}%0AType: ${data.company_type}%0ANeeded: ${data.workers_needed}%0APositions: ${data.positions}%0ASalary: ${data.salary}%0AMessage: ${data.message}%0A%0A— from venadglobal.org`;
-    window.open('https://wa.me/'+VGC_WHATSAPP_NUMBER+'?text='+waMsg, '_blank');
-    
-    alert('✅ Employer registered! CV/Doc saved to GDrive if attached. WhatsApp opened.');
-    closeRegisterModal();
-    f.reset();
-  } catch(err){
-    console.error(err);
-    alert('Error: ' + err.message);
-  } finally {
-    btn.disabled = false;
-    btn.textContent = '🏥 Upload & Register as Employer';
-    if(progress) progress.style.display = 'none';
-  }
-}
-
-function fileToBase64(file){
-  return new Promise((resolve, reject)=>{
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  });
-}
-</script>
 <div class="section-label">Our Services</div>
 <div class="section-label" style="color:#ff6b6b;">🚨 MUST READ — Before You Pay Anyone</div>
 <a class="link-btn" href="https://venadglobal.org/blog/before-you-sign-overseas-education.html" style="background:#8B0000;color:#fff;border:2px solid #ff6b6b;">
@@ -6294,7 +5809,7 @@ document.addEventListener('DOMContentLoaded', function() {
 @media(max-width:600px){.float-back{bottom:16px;left:16px;padding:8px 14px;font-size:12px;}}
 </style><div id="ref-root">
 <div class="lang-bar"><div class="wrap"><div class="lang-bar-left"><span>VENAD GLOBAL</span>  October 2026</div><div class="lang-btns"><a class="back-btn" href="https://venadglobal.org/cv.html">← Back to CV</a><a class="back-btn" href="https://venadglobal.org/Antony-Ancil-CV.docx" target="_blank">↓ CV DOCX</a></div></div></div>
-<section class="hero"><div class="wrap"><div class="hero-inner"><img alt="VGC" class="hero-logo" src="vgc_logo.png"/><div><div class="hero-eyebrow">Verified</div><h1 class="hero-name">Certificates &amp; References — 64</h1><p class="hero-sub"> </p><div class="hero-stats"><div class="stat"><div class="stat-n">64</div><div class="stat-l">Total Verified</div></div><div class="stat"><div class="stat-n">15</div><div class="stat-l">Credly</div></div><div class="stat"><div class="stat-n">28</div><div class="stat-l">Skills Boost</div></div><div class="stat"><div class="stat-n">6</div><div class="stat-l">Coursera AI</div></div><div class="stat"><div class="stat-n">8</div><div class="stat-l">References</div></div></div></div></div></div></section>
+<section class="hero"><div class="wrap"><div class="hero-inner"><img alt="VGC" class="hero-logo" src="vgc_logo.png"/><div><div class="hero-eyebrow">Verified</div><h1 class="hero-name">Certificates &amp; References — 63</h1><p class="hero-sub"> </p><div class="hero-stats"><div class="stat"><div class="stat-n">63</div><div class="stat-l">Total Verified</div></div><div class="stat"><div class="stat-n">15</div><div class="stat-l">Credly</div></div><div class="stat"><div class="stat-n">28</div><div class="stat-l">Skills Boost</div></div><div class="stat"><div class="stat-n">6</div><div class="stat-l">Coursera AI</div></div><div class="stat"><div class="stat-n">8</div><div class="stat-l">References</div></div></div></div></div></div></section>
 <div class="wrap">
 <div class="verify-bar">
 ✅ Profile Sources:<br/>
@@ -6729,7 +6244,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     <button id="vgcBotSendBtn" class="vgc-bot-send">➤</button>
   </div>
   <div class="vgc-bot-footer">
-    <span>⚡ Venad Global Consultancy</span>
+    <span>⚡ 64 Certs • 32 Google Skills</span>
     <a href="https://wa.me/918589895659?text=Hi%20Antony%2C%20I%20talked%20to%20your%20bot" target="_blank">💬 Talk to Antony</a>
   </div>
 </div>
@@ -6798,10 +6313,11 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 
 <script id="vgc-mask-detect">
-/* VGC - Mask / VPN Visit Detector - NO BLOCKING, ONLY LOGGING */
+/* VGC - Mask / VPN Visit Detector - NO BLOCKING, ONLY LOGGING - single instance */
 (function(){
+  if(window.__vgcMaskInstalled) return;
+  window.__vgcMaskInstalled = true;
   try {
-    // ipwho.is is free HTTPS + CORS enabled, no token needed
     fetch('https://ipwho.is/?fields=ip,asn,org,isp,country,city,proxy,hosting,type')
       .then(r=>r.json())
       .then(d=>{
@@ -6820,7 +6336,6 @@ window.addEventListener('DOMContentLoaded',()=>{
           page: location.pathname
         };
         console.log('[VGC] Visitor:', info);
-        // GA4 event - you already have gtag
         if(typeof gtag === 'function'){
           gtag('event', isMask ? 'mask_visit' : 'normal_visit', {
             event_category: 'visit_intel',
@@ -6832,7 +6347,6 @@ window.addEventListener('DOMContentLoaded',()=>{
             page_path: info.page
           });
         }
-        // For your own quick debug: last 50 visits in browser localStorage
         try{
           const key='vgc_visits_log';
           let logs = JSON.parse(localStorage.getItem(key)||'[]');

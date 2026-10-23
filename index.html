@@ -246,6 +246,51 @@ footer strong{color:var(--gold)}
   gtag('js', new Date());
   gtag('config', 'G-2BZDPM9EZM');
 </script>
+<script>
+  const VGC_PANELS = [
+    'cv','reference','contact','about','services',
+    'canada','australia','nz','uk','germany','spain','sop',
+    'ireland','finland','uae','nursing','blog'
+  ];
+
+  function trackVGCPanel(panelId, source) {
+    if(!panelId) return;
+    panelId = panelId.replace('#','').toLowerCase();
+    gtag('event', 'panel_view', {
+      panel_name: panelId,
+      panel_source: source,
+      page_location: location.href,
+      page_path: location.pathname + location.search + '#' + panelId
+    });
+    gtag('event', 'page_view', {
+      page_title: 'VGC - ' + panelId.toUpperCase() + ' Panel',
+      page_location: location.href,
+      page_path: '/#' + panelId
+    });
+  }
+
+  window.addEventListener('hashchange', function() {
+    trackVGCPanel(location.hash, 'hashchange');
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if(location.hash){
+      trackVGCPanel(location.hash, 'initial_load');
+    }
+    const observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          trackVGCPanel(entry.target.id, 'scroll_into_view');
+        }
+      });
+    }, {threshold: 0.5});
+
+    VGC_PANELS.forEach(function(id){
+      const el = document.getElementById(id);
+      if(el) observer.observe(el);
+    });
+  });
+</script>
 <style>
 .vgc-tab-bar{background:var(--navy);border-bottom:3px solid var(--gold);display:flex;flex-wrap:wrap;gap:6px;padding:0 1rem 10px;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,0.25)}
 .vgc-tab-btn{padding:7px 15px;border:1.5px solid rgba(255,255,255,0.28);border-radius:22px;font-size:0.78rem;font-weight:700;cursor:pointer;background:transparent;color:#e8edf7;font-family:Arial,sans-serif;transition:all .18s;line-height:1.2}.vgc-tab-btn:hover{border-color:var(--gold);color:var(--gold)}

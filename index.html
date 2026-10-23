@@ -270,7 +270,7 @@ footer strong{color:var(--gold)}
     'blog':'panel-home'
   };
 
-  function trackVGCPanel(panelId, source) {
+  function trackVGCPanel(panelId, source) { console.log('[VGC] panel_view firing:', panelId, source);
     if(!panelId) return;
     var raw = panelId.replace('#','').toLowerCase();
     var shortName = raw.replace('panel-','');
@@ -6291,14 +6291,12 @@ else c.classList.add('hidden');
 function vgcOpen(tab){
   document.querySelectorAll('.vgc-tab-panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.vgc-tab-btn').forEach(b=>b.classList.remove('active'));
-  var panelEl = document.getElementById('panel-'+tab);
-  if(panelEl) panelEl.classList.add('active');
-  var btn = document.querySelector('[data-tab="'+tab+'"]');
-  if(btn) btn.classList.add('active');
+  document.getElementById('panel-'+tab).classList.add('active');
+  document.querySelector('[data-tab="'+tab+'"]').classList.add('active');
   history.replaceState(null,null,'#'+tab);
   window.scrollTo({top:0,behavior:'smooth'});
+  /* a Leaflet map sized inside a hidden panel renders blank — refresh it on reveal */
   if(tab === 'home' && window.vgcMap){ setTimeout(function(){ window.vgcMap.invalidateSize(); }, 60); }
-  try{ if(typeof trackVGCPanel === 'function'){ trackVGCPanel(tab, 'vgcOpen_tab_click'); } }catch(e){}
 }
 function vgcSubLegal(which){
   ['terms','disclaimer','privacy'].forEach(k=>{

@@ -248,24 +248,43 @@ footer strong{color:var(--gold)}
 </script>
 <script>
   const VGC_PANELS = [
-    'cv','reference','contact','about','services',
+    'cv','reference','references','contact','about','services',
     'canada','australia','nz','uk','germany','spain','sop',
-    'ireland','finland','uae','nursing','blog'
+    'ireland','finland','uae','nursing','blog','home','links','faq','legal','students'
   ];
+  const ID_MAP = {
+    'cv':'panel-cv',
+    'reference':'panel-references',
+    'references':'panel-references',
+    'contact':'contact',
+    'about':'about',
+    'services':'panel-services',
+    'home':'panel-home',
+    'canada':'detail-canada',
+    'nursing':'panel-nursing',
+    'students':'panel-students',
+    'sop':'panel-sop',
+    'faq':'panel-faq',
+    'legal':'panel-legal',
+    'links':'panel-links',
+    'blog':'panel-home'
+  };
 
   function trackVGCPanel(panelId, source) {
     if(!panelId) return;
-    panelId = panelId.replace('#','').toLowerCase();
+    var raw = panelId.replace('#','').toLowerCase();
+    var shortName = raw.replace('panel-','');
     gtag('event', 'panel_view', {
-      panel_name: panelId,
+      panel_name: shortName,
+      panel_id_full: raw,
       panel_source: source,
       page_location: location.href,
-      page_path: location.pathname + location.search + '#' + panelId
+      page_path: location.pathname + location.search + '#' + shortName
     });
     gtag('event', 'page_view', {
-      page_title: 'VGC - ' + panelId.toUpperCase() + ' Panel',
+      page_title: 'VGC - ' + shortName.toUpperCase() + ' Panel',
       page_location: location.href,
-      page_path: '/#' + panelId
+      page_path: '/#' + shortName
     });
   }
 
@@ -277,17 +296,28 @@ footer strong{color:var(--gold)}
     if(location.hash){
       trackVGCPanel(location.hash, 'initial_load');
     }
-    const observer = new IntersectionObserver(function(entries){
+    var observer = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
         if(entry.isIntersecting){
-          trackVGCPanel(entry.target.id, 'scroll_into_view');
+          var id = entry.target.id || '';
+          trackVGCPanel(id, 'scroll_into_view');
         }
       });
     }, {threshold: 0.5});
 
-    VGC_PANELS.forEach(function(id){
-      const el = document.getElementById(id);
+    VGC_PANELS.forEach(function(shortId){
+      var realId = ID_MAP[shortId] || shortId;
+      var realId2 = 'panel-' + shortId;
+      var el = document.getElementById(realId) || document.getElementById(realId2) || document.getElementById(shortId);
       if(el) observer.observe(el);
+    });
+    
+    var directIds = ['panel-cv','panel-references','panel-services','panel-home','panel-nursing','contact','about'];
+    directIds.forEach(function(did){
+      var el = document.getElementById(did);
+      if(el){
+        try{ observer.observe(el); }catch(e){}
+      }
     });
   });
 </script>
